@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { useStore } from "../store/useStore";
@@ -13,32 +13,20 @@ L.Icon.Default.mergeOptions({
   shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
 });
 
+// Composant pour gérer les clics sur la carte
+const MapClickHandler = ({ onMapClick }: { onMapClick: (e: L.LeafletMouseEvent) => void }) => {
+  useMapEvents({
+    click: onMapClick,
+  });
+  return null;
+};
+
 const LocationSearch = () => {
   const [error, setError] = useState<string | null>(null);
   const [showMap, setShowMap] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState<{ lat: number; lon: number } | null>(null);
   const [nearestCity, setNearestCity] = useState<string | null>(null);
   const setLocation = useStore((state) => state.setLocation);
-
-  const checkWaveData = async (lat: number, lon: number): Promise<boolean> => {
-    try {
-      const response = await fetch(
-        `${import.meta.env.VITE_WEATHER_API_URL}/forecast?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_period,wind_speed_10m,wind_direction_10m,wave_direction`
-      );
-      const data = await response.json();
-      
-      if (!data.hourly || !data.hourly.wave_height || !data.hourly.wave_period) {
-        return false;
-      }
-
-      const waveHeight = data.hourly.wave_height[0];
-      const wavePeriod = data.hourly.wave_period[0];
-
-      return waveHeight !== null && wavePeriod !== null;
-    } catch (error) {
-      return false;
-    }
-  };
 
   const getNearestCity = async (lat: number, lon: number) => {
     try {
@@ -56,14 +44,6 @@ const LocationSearch = () => {
     try {
       const { lat, lng } = e.latlng;
       
-      // Vérifier si on a les données de vagues
-      const hasWaveData = await checkWaveData(lat, lng);
-      if (!hasWaveData) {
-        setError("Votre point doit être trop éloigné de la mer, veuillez réessayer");
-        setTimeout(() => setError(null), 5000);
-        return;
-      }
-
       // Récupérer le nom de la commune
       const cityName = await getNearestCity(lat, lng);
       setNearestCity(cityName);
@@ -87,14 +67,6 @@ const LocationSearch = () => {
       async (position) => {
         const { latitude, longitude } = position.coords;
         
-        // Vérifier si on a les données de vagues
-        const hasWaveData = await checkWaveData(latitude, longitude);
-        if (!hasWaveData) {
-          setError("Votre point doit être trop éloigné de la mer, veuillez réessayer");
-          setTimeout(() => setError(null), 5000);
-          return;
-        }
-
         // Récupérer le nom de la commune
         const cityName = await getNearestCity(latitude, longitude);
         setNearestCity(cityName);
@@ -153,18 +125,12 @@ const LocationSearch = () => {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
+            <MapClickHandler onMapClick={handleMapClick} />
             {selectedLocation && (
               <Marker position={[selectedLocation.lat, selectedLocation.lon]}>
                 <Popup>Position sélectionnée</Popup>
               </Marker>
             )}
-            <div
-              className="absolute inset-0 z-[1000]"
-              onClick={(e) => {
-                const leafletEvent = e as unknown as L.LeafletMouseEvent;
-                handleMapClick(leafletEvent);
-              }}
-            />
           </MapContainer>
         </div>
       )}
