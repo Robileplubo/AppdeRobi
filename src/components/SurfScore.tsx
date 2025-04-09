@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { useStore } from '../store/useStore'
 
 const SurfScore = () => {
@@ -16,112 +16,140 @@ const SurfScore = () => {
     }
   }, [error])
 
-  // Fonctions de calcul des scores
-  const calculateHeightScore = (height: number): number => {
-    // Score progressif basé sur la hauteur des vagues
-    // Plus la vague est haute, plus le score est élevé
-    // Score minimal à 0.3m, score maximal à 4m
-    if (height < 0.3) return 0
-    if (height > 4) return 100
-    return Math.min(100, ((height - 0.3) / (4 - 0.3)) * 100)
-  }
-
-  const calculatePowerScore = (height: number, period: number): number => {
-    const energy = Math.pow(height, 2) * period
-    if (energy < 10) return 0
-    if (energy < 30) return ((energy - 10) / 20) * 100
-    if (energy <= 50) return 100
-    return Math.max(0, 100 - (energy - 50) * 3)
-  }
-
-  const calculatePeriodScore = (period: number): number => {
-    if (period < 7) return 0
-    if (period <= 14) return ((period - 7) / 7) * 100
-    return Math.max(0, 100 - (period - 14) * 10)
-  }
-
-  const calculateDirectionScore = (waveDirection: number, spotOrientation: number): number => {
-    const delta = Math.abs(waveDirection - spotOrientation) % 360
-    return Math.max(0, 100 - (delta / 180) * 100)
-  }
-
-  const calculateWindScore = (windSpeed: number, windDirection: number, spotOrientation: number): number => {
-    const delta = Math.abs((windDirection - spotOrientation + 180) % 360 - 180)
-    if (delta < 45 && windSpeed < 15) return 100
-    if (windSpeed > 30) return 0
-    return Math.max(0, 100 - windSpeed * 2)
-  }
-
   useEffect(() => {
-    const fetchSurfScore = async () => {
-      if (!location) return
-
-      setLoading(true)
-      setError(null)
-      setScore(null)
-
-      try {
-        const response = await fetch(
-          `${import.meta.env.VITE_WEATHER_API_URL}/forecast?latitude=${location.lat}&longitude=${location.lon}&hourly=wave_height,wave_period,wind_speed_10m,wind_direction_10m,wave_direction`
-        )
-        
-        if (!response.ok) {
-          throw new Error('Erreur de connexion')
-        }
-
-        const data = await response.json()
-
-        if (!data.hourly || !data.hourly.wave_height || !data.hourly.wave_period) {
-          setError('Choisissez un point plus proche de la mer')
-          setLoading(false)
-          return
-        }
-
-        const waveHeight = data.hourly.wave_height[0]
-        const wavePeriod = data.hourly.wave_period[0]
-        const windSpeed = data.hourly.wind_speed_10m[0]
-        const windDirection = data.hourly.wind_direction_10m[0]
-        const waveDirection = data.hourly.wave_direction[0]
-
-        if (waveHeight === null || wavePeriod === null) {
-          setError('Choisissez un point plus proche de la mer')
-          setLoading(false)
-          return
-        }
-          
-        const spotOrientation = waveDirection
-
-        const heightScore = calculateHeightScore(waveHeight)
-        const powerScore = calculatePowerScore(waveHeight, wavePeriod)
-        const periodScore = calculatePeriodScore(wavePeriod)
-        const directionScore = calculateDirectionScore(waveDirection, spotOrientation)
-        const windScore = calculateWindScore(windSpeed, windDirection, spotOrientation)
-
-        const finalScore = Math.round(
-          0.50 * heightScore +  // La hauteur représente 50% du score
-          0.20 * powerScore +
-          0.15 * periodScore +
-          0.10 * directionScore +
-          0.05 * windScore
-        )
-
-        setScore(finalScore)
-      } catch (error) {
-        setError('Choisissez un point plus proche de la mer')
-      } finally {
-        setLoading(false)
-      }
+    if (location) {
+      console.log('Nouvelle location détectée:', location)
+      calculateScore()
     }
-
-    fetchSurfScore()
   }, [location])
 
-  const getScoreColor = (score: number): { bg: string, ring: string } => {
-    if (score <= 20) return { bg: 'bg-red-500', ring: 'ring-red-300' }
-    if (score <= 40) return { bg: 'bg-orange-500', ring: 'ring-orange-300' }
-    if (score <= 60) return { bg: 'bg-yellow-500', ring: 'ring-yellow-300' }
-    if (score <= 80) return { bg: 'bg-green-500', ring: 'ring-green-300' }
-    return { bg: 'bg-blue-500', ring: 'ring-blue-300' }
+  const calculateScore = useCallback(async () => {
+    if (!location) return
+
+    setLoading(true)
+    setError(null)
+    setScore(null)
+
+    try {
+      console.log('Début du calcul du score pour:', location)
+      
+      // Appel à l'API Marine Weather
+      const url = `${import.meta.env.VITE_WEATHER_API_URL}/marine?latitude=${location.lat}&longitude=${location.lon}&hourly=wave_height,wave_period,wind_wave_height,wind_wave_period,wind_wave_direction,wind_speed_10m,wind_direction_10m`
+      console.log('URL de l\'API:', url)
+
+      const response = await fetch(url)
+      console.log('Statut de la réponse:', response.status)
+
+      if (!response.ok) {
+        throw new Error(`Erreur de connexion à l'API météo: ${response.status}`)
+      }
+
+      const data = await response.json()
+      console.log('Données complètes de l\'API:', data)
+
+      if (!data.hourly) {
+        throw new Error('Données horaires non disponibles')
+      }
+
+      // Vérification des données disponibles
+      const availableData = {
+        waveHeight: data.hourly.wave_height?.[0] !== undefined,
+        wavePeriod: data.hourly.wave_period?.[0] !== undefined,
+        windSpeed: data.hourly.wind_speed_10m?.[0] !== undefined,
+        windDirection: data.hourly.wind_direction_10m?.[0] !== undefined,
+        waveDirection: data.hourly.wind_wave_direction?.[0] !== undefined
+      }
+      console.log('Données disponibles:', availableData)
+
+      // Extraction des données avec vérification
+      const currentData = {
+        waveHeight: data.hourly.wave_height?.[0] ?? 0,
+        wavePeriod: data.hourly.wave_period?.[0] ?? 0,
+        windSpeed: data.hourly.wind_speed_10m?.[0] ?? 0,
+        windDirection: data.hourly.wind_direction_10m?.[0] ?? 0,
+        waveDirection: data.hourly.wind_wave_direction?.[0] ?? 0
+      }
+
+      console.log('Données extraites:', currentData)
+
+      // Vérification si nous avons des données valides
+      if (currentData.waveHeight === 0 && currentData.wavePeriod === 0) {
+        throw new Error('Aucune donnée de vagues disponible pour ce point')
+      }
+
+      // Calcul des scores individuels
+      const scores = {
+        height: calculateWaveHeightScore(currentData.waveHeight),
+        period: calculateWavePeriodScore(currentData.wavePeriod),
+        power: calculateWavePowerScore(currentData.waveHeight, currentData.wavePeriod),
+        wind: calculateWindScore(currentData.windSpeed, currentData.windDirection, currentData.waveDirection)
+      }
+
+      console.log('Scores individuels calculés:', scores)
+
+      // Calcul du score final avec pondération
+      const finalScore = Math.round(
+        scores.height * 0.4 +    // Hauteur des vagues (40%)
+        scores.period * 0.2 +    // Période des vagues (20%)
+        scores.power * 0.3 +     // Puissance des vagues (30%)
+        scores.wind * 0.1        // Vent (10%)
+      )
+
+      console.log('Score final calculé:', finalScore)
+      setScore(finalScore)
+    } catch (error) {
+      console.error('Erreur détaillée:', error)
+      setError(error instanceof Error ? error.message : 'Impossible de calculer le score pour ce point')
+    } finally {
+      setLoading(false)
+    }
+  }, [location])
+
+  // Fonctions de calcul des scores individuels
+  const calculateWaveHeightScore = (height: number): number => {
+    if (height <= 0) return 0
+    if (height >= 3) return 100
+    return Math.round((height / 3) * 100)
+  }
+
+  const calculateWavePeriodScore = (period: number): number => {
+    if (period <= 0) return 0
+    if (period >= 15) return 100
+    return Math.round((period / 15) * 100)
+  }
+
+  const calculateWavePowerScore = (height: number, period: number): number => {
+    const power = height * period
+    if (power <= 0) return 0
+    if (power >= 20) return 100
+    return Math.round((power / 20) * 100)
+  }
+
+  const calculateWindScore = (speed: number, direction: number, waveDirection: number): number => {
+    // Calcul de la différence d'angle entre le vent et les vagues
+    const angleDiff = Math.abs((direction - waveDirection + 180) % 360 - 180)
+    
+    // Score basé sur la vitesse du vent
+    let speedScore = 100
+    if (speed > 25) speedScore = 0
+    else if (speed > 15) speedScore = 50
+    else if (speed > 10) speedScore = 75
+
+    // Score basé sur l'angle
+    let angleScore = 100
+    if (angleDiff > 90) angleScore = 0
+    else if (angleDiff > 45) angleScore = 50
+    else if (angleDiff > 30) angleScore = 75
+
+    return Math.round((speedScore + angleScore) / 2)
+  }
+
+  const getScoreColor = (score: number): string => {
+    if (score >= 80) return 'bg-green-500'
+    if (score >= 60) return 'bg-blue-500'
+    if (score >= 40) return 'bg-yellow-500'
+    if (score >= 20) return 'bg-orange-500'
+    return 'bg-red-500'
   }
 
   if (loading) {
@@ -132,24 +160,26 @@ const SurfScore = () => {
     )
   }
 
-  return (
-    <div className="text-center space-y-6">
-      {error && (
+  if (error) {
+    return (
+      <div className="text-center">
         <div className="error-popup animate-fade-out bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg">
           {error}
         </div>
-      )}
+      </div>
+    )
+  }
 
-      {score !== null && (
-        <>
-          <h2 className="text-2xl font-bold">Score de Surf</h2>
-          <div 
-            className={`inline-flex items-center justify-center ${getScoreColor(score).bg} rounded-full w-40 h-40 ring-4 ${getScoreColor(score).ring} shadow-lg transition-all duration-300`}
-          >
-            <span className="text-white text-6xl font-bold">{score}</span>
-          </div>
-        </>
-      )}
+  if (!score) {
+    return null
+  }
+
+  return (
+    <div className="text-center">
+      <h2 className="text-2xl font-bold mb-4">Score de Surf</h2>
+      <div className={`inline-flex items-center justify-center ${getScoreColor(score)} text-white rounded-full w-32 h-32 text-4xl font-bold shadow-lg`}>
+        {score}
+      </div>
     </div>
   )
 }
