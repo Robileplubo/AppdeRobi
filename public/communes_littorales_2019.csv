@@ -1,0 +1,997 @@
+Région;ID département;Nom département;Code Insee comm.;Nom commune;Classement;Motif du classement;nom de l'entité géographique dont le littoral est protégé;Population;commune déleguée
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06004;Antibes;Mer;Commune riveraine de la mer ou d'un océan;;74982;0
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06011;Beaulieu-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;3749;0
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06027;Cagnes-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;50385;0
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06029;Cannes;Mer;Commune riveraine de la mer ou d'un océan;;75046;0
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06032;Cap-d'Ail;Mer;Commune riveraine de la mer ou d'un océan;;4727;0
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06059;Eze;Mer;Commune riveraine de la mer ou d'un océan;;2310;0
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06079;Mandelieu-la-Napoule;Mer;Commune riveraine de la mer ou d'un océan;;22381;0
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06083;Menton;Mer;Commune riveraine de la mer ou d'un océan;;28942;0
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06088;Nice;Mer;Commune riveraine de la mer ou d'un océan;;345998;0
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06104;Roquebrune-Cap-Martin;Mer;Commune riveraine de la mer ou d'un océan;;13093;0
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06121;Saint-Jean-Cap-Ferrat;Mer;Commune riveraine de la mer ou d'un océan;;1637;0
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06123;Saint-Laurent-du-Var;Mer;Commune riveraine de la mer ou d'un océan;;28831;0
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06138;Théoule-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;1491;0
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06155;Vallauris;Mer;Commune riveraine de la mer ou d'un océan;;26787;0
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06159;Villefranche-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;5146;0
+Provence-Alpes-Côte d'Azur;06;Alpes-Maritimes;06161;Villeneuve-Loubet;Mer;Commune riveraine de la mer ou d'un océan;;14844;0
+Occitanie;11;Aude;11024;Bages;Mer;Commune riveraine d'un étang salé;Etang de Bages et de Sigean;849;0
+Occitanie;11;Aude;11144;Fitou;Mer;Commune riveraine d'un étang salé;Etang de Salses-Leucate;1067;0
+Occitanie;11;Aude;11145;Fleury;Mer;Commune riveraine de la mer ou d'un océan;;3932;0
+Occitanie;11;Aude;11170;Gruissan;Mer;Commune riveraine de la mer ou d'un océan;;5075;0
+Occitanie;11;Aude;11188;La Palme;Mer;Commune riveraine de la mer ou d'un océan;;1741;0
+Occitanie;11;Aude;11202;Leucate;Mer;Commune riveraine d'un étang salé;Etang de Salses-Leucate;4400;0
+Occitanie;11;Aude;11262;Narbonne;Mer;Commune riveraine d'un étang salé;Etang de Bages et de Sigean;55001;0
+Occitanie;11;Aude;11266;Port-la-Nouvelle;Mer;Commune riveraine de la mer ou d'un océan;;5670;0
+Occitanie;11;Aude;11285;Peyriac-de-Mer;Mer;Commune riveraine d'un étang salé;Etang de Bages et de Sigean;1130;0
+Occitanie;11;Aude;11379;Sigean;Mer;Commune riveraine d'un étang salé;Etang de Bages et de Sigean;5566;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13004;Arles;Mer;Commune riveraine d'un étang salé;Etang Vaccares;53807;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13014;Berre-l'Etang;Mer;Commune riveraine d'un étang salé;Etang de Berre;13594;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13021;Carry-le-Rouet;Mer;Commune riveraine de la mer ou d'un océan;;6020;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13022;Cassis;Mer;Commune riveraine de la mer ou d'un océan;;7265;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13026;Châteauneuf-les-Martigues;Mer;Commune riveraine d'un étang salé;Etang de Berre;16442;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13028;La Ciotat;Mer;Commune riveraine de la mer ou d'un océan;;35758;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13033;Ensuès-la-Redonne;Mer;Commune riveraine de la mer ou d'un océan;;5575;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13039;Fos-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;15988;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13047;Istres;Mer;Commune riveraine d'un étang salé;Etang de Berre;44248;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13054;Marignane;Mer;Commune riveraine d'un étang salé;Etang de Berre;33949;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13055;Marseille;Mer;Commune riveraine de la mer ou d'un océan;;870018;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13056;Martigues;Mer;Commune riveraine d'un étang salé;Etang de Berre;49310;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13063;Miramas;Mer;Commune riveraine d'un étang salé;Etang de Berre;26217;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13077;Port-de-Bouc;Mer;Commune riveraine de la mer ou d'un océan;;17200;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13078;Port-Saint-Louis-du-Rhône;Mer;Commune riveraine de la mer ou d'un océan;;8605;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13081;Rognac;Mer;Commune riveraine d'un étang salé;Etang de Berre;12121;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13088;Le Rove;Mer;Commune riveraine de la mer ou d'un océan;;5168;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13092;Saint-Chamas;Mer;Commune riveraine d'un étang salé;Etang de Berre;8619;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13096;Saintes-Maries-de-la-Mer;Mer;Commune riveraine d'un étang salé;Etang Vaccares;2527;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13098;Saint-Mitre-les-Remparts;Mer;Commune riveraine d'un étang salé;Etang de Berre;5983;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13104;Sausset-les-Pins;Mer;Commune riveraine de la mer ou d'un océan;;7754;0
+Provence-Alpes-Côte d'Azur;13;Bouches-du-Rhône;13117;Vitrolles;Mer;Commune riveraine d'un étang salé;Etang de Berre;34301;0
+Normandie;14;Calvados;14001;Ablon;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;1255;0
+Normandie;14;Calvados;14009;Amfreville;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;1437;0
+Normandie;14;Calvados;14021;Arromanches-les-Bains;Mer;Commune riveraine de la mer ou d'un océan;;515;0
+Normandie;14;Calvados;14022;Asnelles;Mer;Commune riveraine de la mer ou d'un océan;;610;0
+Normandie;14;Calvados;14024;Auberville;Mer;Commune riveraine de la mer ou d'un océan;;553;0
+Normandie;14;Calvados;14059;Benerville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;472;0
+Normandie;14;Calvados;14066;Bernières-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2360;0
+Normandie;14;Calvados;14079;Blonville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;1568;0
+Normandie;14;Calvados;14117;Cabourg;Mer;Commune riveraine de la mer ou d'un océan;;3698;0
+Normandie;14;Calvados;14165;Colleville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;180;0
+Normandie;14;Calvados;14166;Colleville-Montgomery;Mer;Commune riveraine de la mer ou d'un océan;;2425;0
+Normandie;14;Calvados;14172;Commes;Mer;Commune riveraine de la mer ou d'un océan;;411;0
+Normandie;14;Calvados;14191;Courseulles-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;4217;0
+Normandie;14;Calvados;14202;Cricqueboeuf;Mer;Commune riveraine de la mer ou d'un océan;;314;0
+Normandie;14;Calvados;14204;Cricqueville-en-Bessin;Mer;Commune riveraine de la mer ou d'un océan;;196;0
+Normandie;14;Calvados;14220;Deauville;Mer;Commune riveraine de la mer ou d'un océan;;3757;0
+Normandie;14;Calvados;14225;Dives-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;5887;0
+Normandie;14;Calvados;14239;Englesqueville-la-Percée;Mer;Commune riveraine de la mer ou d'un océan;;102;0
+Normandie;14;Calvados;14298;Géfosse-Fontenay;Mer;Commune riveraine de la mer ou d'un océan;;141;0
+Normandie;14;Calvados;14305;Gonneville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;689;0
+Normandie;14;Calvados;14312;Grandcamp-Maisy;Mer;Commune riveraine de la mer ou d'un océan;;1585;0
+Normandie;14;Calvados;14318;Graye-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;664;0
+Normandie;14;Calvados;14325;Hermanville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;3108;0
+Normandie;14;Calvados;14333;Honfleur;Mer;Commune riveraine de la mer ou d'un océan;;7972;0
+Normandie;14;Calvados;14338;Houlgate;Mer;Commune riveraine de la mer ou d'un océan;;1989;0
+Normandie;14;Calvados;14354;Langrune-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;1788;0
+Normandie;14;Calvados;14365;Lion-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2482;0
+Normandie;14;Calvados;14377;Longues-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;626;0
+Normandie;14;Calvados;14382;Louvières;Mer;Commune riveraine de la mer ou d'un océan;;79;14281
+Normandie;14;Calvados;14384;Luc-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;3236;0
+Normandie;14;Calvados;14401;Manvieux;Mer;Commune riveraine de la mer ou d'un océan;;136;0
+Normandie;14;Calvados;14409;Merville-Franceville-Plage;Mer;Commune riveraine de la mer ou d'un océan;;2218;0
+Normandie;14;Calvados;14430;Meuvaines;Mer;Commune riveraine de la mer ou d'un océan;;149;0
+Normandie;14;Calvados;14488;Ouistreham;Mer;Commune riveraine de la mer ou d'un océan;;9279;0
+Normandie;14;Calvados;14492;Pennedepie;Mer;Commune riveraine de la mer ou d'un océan;;295;0
+Normandie;14;Calvados;14515;Port-en-Bessin-Huppain;Mer;Commune riveraine de la mer ou d'un océan;;1976;0
+Normandie;14;Calvados;14530;Ranville;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;1810;0
+Normandie;14;Calvados;14536;La Rivière-Saint-Sauveur;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;2552;0
+Normandie;14;Calvados;14562;Saint-Aubin-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2446;0
+Normandie;14;Calvados;14565;Saint-Côme-de-Fresné;Mer;Commune riveraine de la mer ou d'un océan;;279;0
+Normandie;14;Calvados;14591;Sainte-Honorine-des-Pertes;Mer;Commune riveraine de la mer ou d'un océan;;582;14591
+Normandie;14;Calvados;14605;Saint-Laurent-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;262;0
+Normandie;14;Calvados;14652;Saint-Pierre-du-Mont;Mer;Commune riveraine de la mer ou d'un océan;;81;0
+Normandie;14;Calvados;14665;Sallenelles;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;302;0
+Normandie;14;Calvados;14701;Tourgéville;Mer;Commune riveraine de la mer ou d'un océan;;833;0
+Normandie;14;Calvados;14709;Tracy-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;345;0
+Normandie;14;Calvados;14715;Trouville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;4784;0
+Normandie;14;Calvados;14724;Varaville;Mer;Commune riveraine de la mer ou d'un océan;;976;0
+Normandie;14;Calvados;14739;Ver-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;1646;0
+Normandie;14;Calvados;14745;Vierville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;241;0
+Normandie;14;Calvados;14754;Villers-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2765;0
+Normandie;14;Calvados;14755;Villerville;Mer;Commune riveraine de la mer ou d'un océan;;676;0
+Normandie;14;Calvados;14281;Formigny La Bataille;Mer;Commune riveraine de la mer ou d'un océan;;740;0
+Normandie;14;Calvados;14591;Aure sur Mer;Mer;Commune riveraine de la mer ou d'un océan;;753;0
+Nouvelle Aquitaine;17;Charente-Maritime;17004;Ile-d'Aix;Mer;Commune riveraine de la mer ou d'un océan;Ile d'Aix;241;0
+Nouvelle Aquitaine;17;Charente-Maritime;17010;Angoulins;Mer;Commune riveraine de la mer ou d'un océan;;4017;0
+Nouvelle Aquitaine;17;Charente-Maritime;17019;Ars-en-Ré;Mer;Commune riveraine de la mer ou d'un océan;Ile de Ré;1334;0
+Nouvelle Aquitaine;17;Charente-Maritime;17021;Arvert;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Seudre;3491;0
+Nouvelle Aquitaine;17;Charente-Maritime;17028;Aytré;Mer;Commune riveraine de la mer ou d'un océan;;8885;0
+Nouvelle Aquitaine;17;Charente-Maritime;17051;Le Bois-Plage-en-Ré;Mer;Commune riveraine de la mer ou d'un océan;Ile de Ré;2317;0
+Nouvelle Aquitaine;17;Charente-Maritime;17058;Bourcefranc-le-Chapus;Mer;Commune riveraine de la mer ou d'un océan;;3562;0
+Nouvelle Aquitaine;17;Charente-Maritime;17064;Breuillet;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Seudre;2908;0
+Nouvelle Aquitaine;17;Charente-Maritime;17079;Chaillevette;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Seudre;1571;0
+Nouvelle Aquitaine;17;Charente-Maritime;17091;Charron;Mer;Commune riveraine de la mer ou d'un océan;;2005;0
+Nouvelle Aquitaine;17;Charente-Maritime;17093;Le Château-d'Oléron;Mer;Commune riveraine de la mer ou d'un océan;Ile d'Oléron;4242;0
+Nouvelle Aquitaine;17;Charente-Maritime;17094;Châtelaillon-Plage;Mer;Commune riveraine de la mer ou d'un océan;;6029;0
+Nouvelle Aquitaine;17;Charente-Maritime;17121;La Couarde-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;Ile de Ré;1225;0
+Nouvelle Aquitaine;17;Charente-Maritime;17140;Dolus-d'Oléron;Mer;Commune riveraine de la mer ou d'un océan;Ile d'Oléron;3343;0
+Nouvelle Aquitaine;17;Charente-Maritime;17151;L'Eguille;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Seudre;907;0
+Nouvelle Aquitaine;17;Charente-Maritime;17153;Esnandes;Mer;Commune riveraine de la mer ou d'un océan;;2081;0
+Nouvelle Aquitaine;17;Charente-Maritime;17155;Etaules;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Seudre;2455;0
+Nouvelle Aquitaine;17;Charente-Maritime;17161;La Flotte;Mer;Commune riveraine de la mer ou d'un océan;Ile de Ré;2799;0
+Nouvelle Aquitaine;17;Charente-Maritime;17168;Fouras;Mer;Commune riveraine de la mer ou d'un océan;;4143;0
+Nouvelle Aquitaine;17;Charente-Maritime;17185;Le Gua;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Seudre;2153;0
+Nouvelle Aquitaine;17;Charente-Maritime;17189;Hiers-Brouage;Mer;Commune riveraine de la mer ou d'un océan;;630;17219
+Nouvelle Aquitaine;17;Charente-Maritime;17190;L'Houmeau;Mer;Commune riveraine de la mer ou d'un océan;;2903;0
+Nouvelle Aquitaine;17;Charente-Maritime;17207;Loix;Mer;Commune riveraine de la mer ou d'un océan;Ile de Ré;732;0
+Nouvelle Aquitaine;17;Charente-Maritime;17219;Marennes;Mer;Commune riveraine de la mer ou d'un océan;;5662;17219
+Nouvelle Aquitaine;17;Charente-Maritime;17222;Marsilly;Mer;Commune riveraine de la mer ou d'un océan;;3090;0
+Nouvelle Aquitaine;17;Charente-Maritime;17225;Les Mathes;Mer;Commune riveraine de la mer ou d'un océan;;1999;0
+Nouvelle Aquitaine;17;Charente-Maritime;17237;Moëze;Mer;Commune riveraine de la mer ou d'un océan;;564;0
+Nouvelle Aquitaine;17;Charente-Maritime;17247;Mornac-sur-Seudre;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Seudre;859;0
+Nouvelle Aquitaine;17;Charente-Maritime;17264;Nieul-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;5918;0
+Nouvelle Aquitaine;17;Charente-Maritime;17265;Nieulle-sur-Seudre;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Seudre;1264;0
+Nouvelle Aquitaine;17;Charente-Maritime;17286;Les Portes-en-Ré;Mer;Commune riveraine de la mer ou d'un océan;Ile de Ré;624;0
+Nouvelle Aquitaine;17;Charente-Maritime;17297;Rivedoux-Plage;Mer;Commune riveraine de la mer ou d'un océan;Ile de Ré;2334;0
+Nouvelle Aquitaine;17;Charente-Maritime;17300;La Rochelle;Mer;Commune riveraine de la mer ou d'un océan;;78623;0
+Nouvelle Aquitaine;17;Charente-Maritime;17306;Royan;Mer;Commune riveraine de la mer ou d'un océan;;19047;0
+Nouvelle Aquitaine;17;Charente-Maritime;17318;Saint-Clément-des-Baleines;Mer;Commune riveraine de la mer ou d'un océan;Ile de Ré;637;0
+Nouvelle Aquitaine;17;Charente-Maritime;17323;Saint-Denis-d'Oléron;Mer;Commune riveraine de la mer ou d'un océan;Ile d'Oléron;1383;0
+Nouvelle Aquitaine;17;Charente-Maritime;17329;Saint-Froult;Mer;Commune riveraine de la mer ou d'un océan;;346;0
+Nouvelle Aquitaine;17;Charente-Maritime;17333;Saint-Georges-de-Didonne;Mer;Commune riveraine de la mer ou d'un océan;;5475;0
+Nouvelle Aquitaine;17;Charente-Maritime;17337;Saint-Georges-d'Oléron;Mer;Commune riveraine de la mer ou d'un océan;Ile d'Oléron;3757;0
+Nouvelle Aquitaine;17;Charente-Maritime;17351;Saint-Just-Luzac;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Seudre;2016;0
+Nouvelle Aquitaine;17;Charente-Maritime;17360;Sainte-Marie-de-Ré;Mer;Commune riveraine de la mer ou d'un océan;Ile de Ré;3479;0
+Nouvelle Aquitaine;17;Charente-Maritime;17369;Saint-Martin-de-Ré;Mer;Commune riveraine de la mer ou d'un océan;Ile de Ré;2311;0
+Nouvelle Aquitaine;17;Charente-Maritime;17380;Saint-Palais-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;3987;0
+Nouvelle Aquitaine;17;Charente-Maritime;17385;Saint-Pierre-d'Oléron;Mer;Commune riveraine de la mer ou d'un océan;Ile d'Oléron;6911;0
+Nouvelle Aquitaine;17;Charente-Maritime;17409;Saint-Sulpice-de-Royan;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Seudre;3217;0
+Nouvelle Aquitaine;17;Charente-Maritime;17411;Saint-Trojan-les-Bains;Mer;Commune riveraine de la mer ou d'un océan;Ile d'Oléron;1355;0
+Nouvelle Aquitaine;17;Charente-Maritime;17421;Saujon;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Seudre;7317;0
+Nouvelle Aquitaine;17;Charente-Maritime;17452;La Tremblade;Mer;Commune riveraine de la mer ou d'un océan;;4554;0
+Nouvelle Aquitaine;17;Charente-Maritime;17461;Vaux-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;3864;0
+Nouvelle Aquitaine;17;Charente-Maritime;17483;Yves;Mer;Commune riveraine de la mer ou d'un océan;;1503;0
+Nouvelle Aquitaine;17;Charente-Maritime;17484;Port-des-Barques;Mer;Commune riveraine de la mer ou d'un océan;;1815;0
+Nouvelle Aquitaine;17;Charente-Maritime;17485;Le Grand-Village-Plage;Mer;Commune riveraine de la mer ou d'un océan;Ile d'Oléron;1062;0
+Nouvelle Aquitaine;17;Charente-Maritime;17486;La Brée-les-Bains;Mer;Commune riveraine de la mer ou d'un océan;Ile d'Oléron;710;0
+Nouvelle Aquitaine;17;Charente-Maritime;17219;Marennes-Hiers-Brouage ;Mer;Commune riveraine de la mer ou d'un océan;;6403;0
+Bretagne;22;Côtes-d'Armor;22007;Binic;Mer;Commune riveraine de la mer ou d'un océan;;3914;22055
+Bretagne;22;Côtes-d'Armor;22016;Ile-de-Bréhat;Mer;Commune riveraine de la mer ou d'un océan;Ile de Bréhat;378;0
+Bretagne;22;Côtes-d'Armor;22049;Créhen;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;1698;0
+Bretagne;22;Côtes-d'Armor;22054;Erquy;Mer;Commune riveraine de la mer ou d'un océan;;3985;0
+Bretagne;22;Côtes-d'Armor;22055;Etables-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;3126;22055
+Bretagne;22;Côtes-d'Armor;22081;Hillion;Mer;Commune riveraine de la mer ou d'un océan;;4217;0
+Bretagne;22;Côtes-d'Armor;22085;Kerbors;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;322;0
+Bretagne;22;Côtes-d'Armor;22094;Lancieux;Mer;Commune riveraine de la mer ou d'un océan;;1566;0
+Bretagne;22;Côtes-d'Armor;22103;Langrolay-sur-Rance;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;949;0
+Bretagne;22;Côtes-d'Armor;22106;Langueux;Mer;Commune riveraine de la mer ou d'un océan;;7919;0
+Bretagne;22;Côtes-d'Armor;22111;Lanmodez;Mer;Commune riveraine de la mer ou d'un océan;;435;0
+Bretagne;22;Côtes-d'Armor;22113;Lannion;Mer;Commune riveraine de la mer ou d'un océan;;20811;0
+Bretagne;22;Côtes-d'Armor;22127;Lézardrieux;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;1508;0
+Bretagne;22;Côtes-d'Armor;22134;Louannec;Mer;Commune riveraine de la mer ou d'un océan;;3188;0
+Bretagne;22;Côtes-d'Armor;22143;Matignon;Mer;Commune riveraine de la mer ou d'un océan;;1675;0
+Bretagne;22;Côtes-d'Armor;22154;Morieux;Mer;Commune riveraine de la mer ou d'un océan;;987;22093
+Bretagne;22;Côtes-d'Armor;22162;Paimpol;Mer;Commune riveraine de la mer ou d'un océan;;7529;0
+Bretagne;22;Côtes-d'Armor;22166;Penvénan;Mer;Commune riveraine de la mer ou d'un océan;;2638;0
+Bretagne;22;Côtes-d'Armor;22168;Perros-Guirec;Mer;Commune riveraine de la mer ou d'un océan;;7413;0
+Bretagne;22;Côtes-d'Armor;22173;Planguenoual;Mer;Commune riveraine de la mer ou d'un océan;;2195;22093
+Bretagne;22;Côtes-d'Armor;22174;Pléboulle;Mer;Commune riveraine de la mer ou d'un océan;;872;0
+Bretagne;22;Côtes-d'Armor;22179;Fréhel;Mer;Commune riveraine de la mer ou d'un océan;;1584;0
+Bretagne;22;Côtes-d'Armor;22186;Pléneuf-Val-André;Mer;Commune riveraine de la mer ou d'un océan;;4201;0
+Bretagne;22;Côtes-d'Armor;22187;Plérin;Mer;Commune riveraine de la mer ou d'un océan;;14324;0
+Bretagne;22;Côtes-d'Armor;22194;Plestin-les-Grèves;Mer;Commune riveraine de la mer ou d'un océan;;3682;0
+Bretagne;22;Côtes-d'Armor;22195;Pleubian;Mer;Commune riveraine de la mer ou d'un océan;;2401;0
+Bretagne;22;Côtes-d'Armor;22196;Pleudaniel;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;949;0
+Bretagne;22;Côtes-d'Armor;22197;Pleudihen-sur-Rance;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;2954;0
+Bretagne;22;Côtes-d'Armor;22198;Pleumeur-Bodou;Mer;Commune riveraine de la mer ou d'un océan;;4135;0
+Bretagne;22;Côtes-d'Armor;22201;Plévenon;Mer;Commune riveraine de la mer ou d'un océan;;812;0
+Bretagne;22;Côtes-d'Armor;22209;Ploubalay;Mer;Commune riveraine de la mer ou d'un océan;;3077;22209
+Bretagne;22;Côtes-d'Armor;22210;Ploubazlanec;Mer;Commune riveraine de la mer ou d'un océan;;3122;0
+Bretagne;22;Côtes-d'Armor;22213;Plouër-sur-Rance;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;3626;0
+Bretagne;22;Côtes-d'Armor;22214;Plouézec;Mer;Commune riveraine de la mer ou d'un océan;;3270;0
+Bretagne;22;Côtes-d'Armor;22218;Plougrescant;Mer;Commune riveraine de la mer ou d'un océan;;1242;0
+Bretagne;22;Côtes-d'Armor;22221;Plouguiel;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;1812;0
+Bretagne;22;Côtes-d'Armor;22222;Plouha;Mer;Commune riveraine de la mer ou d'un océan;;4582;0
+Bretagne;22;Côtes-d'Armor;22224;Ploulec'h;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;1717;0
+Bretagne;22;Côtes-d'Armor;22226;Ploumilliau;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;2543;0
+Bretagne;22;Côtes-d'Armor;22233;Plourivo;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;2339;0
+Bretagne;22;Côtes-d'Armor;22242;Plurien;Mer;Commune riveraine de la mer ou d'un océan;;1535;0
+Bretagne;22;Côtes-d'Armor;22251;Pordic;Mer;Commune riveraine de la mer ou d'un océan;;7309;0
+Bretagne;22;Côtes-d'Armor;22278;Saint-Brieuc;Mer;Commune riveraine de la mer ou d'un océan;;47058;0
+Bretagne;22;Côtes-d'Armor;22282;Saint-Cast-le-Guildo;Mer;Commune riveraine de la mer ou d'un océan;;3428;0
+Bretagne;22;Côtes-d'Armor;22302;Saint-Jacut-de-la-Mer;Mer;Commune riveraine de la mer ou d'un océan;;924;0
+Bretagne;22;Côtes-d'Armor;22319;Saint-Michel-en-Grève;Mer;Commune riveraine de la mer ou d'un océan;;465;0
+Bretagne;22;Côtes-d'Armor;22325;Saint-Quay-Portrieux;Mer;Commune riveraine de la mer ou d'un océan;;3147;0
+Bretagne;22;Côtes-d'Armor;22327;Saint-Samson-sur-Rance;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;1613;0
+Bretagne;22;Côtes-d'Armor;22343;Trébeurden;Mer;Commune riveraine de la mer ou d'un océan;;3787;0
+Bretagne;22;Côtes-d'Armor;22349;Trédrez-Locquémeau;Mer;Commune riveraine de la mer ou d'un océan;;1484;0
+Bretagne;22;Côtes-d'Armor;22350;Tréduder;Mer;Commune riveraine de la mer ou d'un océan;;200;0
+Bretagne;22;Côtes-d'Armor;22353;Trégastel;Mer;Commune riveraine de la mer ou d'un océan;;2518;0
+Bretagne;22;Côtes-d'Armor;22357;Trégon;Mer;Commune riveraine de la mer ou d'un océan;;251;22209
+Bretagne;22;Côtes-d'Armor;22363;Trélévern;Mer;Commune riveraine de la mer ou d'un océan;;1289;0
+Bretagne;22;Côtes-d'Armor;22377;Tréveneuc;Mer;Commune riveraine de la mer ou d'un océan;;809;0
+Bretagne;22;Côtes-d'Armor;22379;Trévou-Tréguignec;Mer;Commune riveraine de la mer ou d'un océan;;1386;0
+Bretagne;22;Côtes-d'Armor;22385;La Vicomté-sur-Rance;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);;1084;0
+Bretagne;22;Côtes-d'Armor;22389;Yffiniac;Mer;Commune riveraine de la mer ou d'un océan;;5110;0
+Bretagne;22;Côtes-d'Armor;22055;Binic-Étables-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;7132;0
+Bretagne;22;Côtes-d'Armor;22093;Lamballe-Armor ;Mer;Commune riveraine de la mer ou d'un océan;;17196;0
+Bretagne;22;Côtes-d'Armor;22209;Beaussais-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;3594;0
+Bretagne;27;Eure;27233;Fatouville-Grestain;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Fleuve Seine;773;0
+Bretagne;27;Eure;27243;Fiquefleur-Equainville;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Fleuve Seine;723;0
+Bretagne;29;Finistère;29001;Argol;Mer;Commune riveraine de la mer ou d'un océan;;1036;0
+Bretagne;29;Finistère;29003;Audierne;Mer;Commune riveraine de la mer ou d'un océan;;3777;0
+Bretagne;29;Finistère;29006;Bénodet;Mer;Commune riveraine de la mer ou d'un océan;;3596;0
+Bretagne;29;Finistère;29008;Beuzec-Cap-Sizun;Mer;Commune riveraine de la mer ou d'un océan;;1023;0
+Bretagne;29;Finistère;29017;Brélès;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Aber Ildut;900;0
+Bretagne;29;Finistère;29019;Brest;Mer;Commune riveraine de la mer ou d'un océan;;142629;0
+Bretagne;29;Finistère;29021;Brignogan-Plage;Mer;Commune riveraine de la mer ou d'un océan;;764;29021
+Bretagne;29;Finistère;29022;Camaret-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2646;0
+Bretagne;29;Finistère;29023;Carantec;Mer;Commune riveraine de la mer ou d'un océan;;3256;0
+Bretagne;29;Finistère;29028;Cléden-Cap-Sizun;Mer;Commune riveraine de la mer ou d'un océan;;969;0
+Bretagne;29;Finistère;29030;Cléder;Mer;Commune riveraine de la mer ou d'un océan;;3882;0
+Bretagne;29;Finistère;29031;Clohars-Carnoët;Mer;Commune riveraine de la mer ou d'un océan;;4424;0
+Bretagne;29;Finistère;29037;Combrit;Mer;Commune riveraine de la mer ou d'un océan;Rivière de Pont-l'Abbé;4180;0
+Bretagne;29;Finistère;29039;Concarneau;Mer;Commune riveraine de la mer ou d'un océan;;19898;0
+Bretagne;29;Finistère;29040;Le Conquet;Mer;Commune riveraine de la mer ou d'un océan;;2737;0
+Bretagne;29;Finistère;29042;Crozon;Mer;Commune riveraine de la mer ou d'un océan;;7777;0
+Bretagne;29;Finistère;29043;Daoulas;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière de Daoulas;1842;0
+Bretagne;29;Finistère;29044;Dinéault;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Aulne;2236;0
+Bretagne;29;Finistère;29045;Dirinon;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Elorn;2372;0
+Bretagne;29;Finistère;29046;Douarnenez;Mer;Commune riveraine de la mer ou d'un océan;;14520;0
+Bretagne;29;Finistère;29052;Esquibien;Mer;Commune riveraine de la mer ou d'un océan;;1633;29003
+Bretagne;29;Finistère;29053;Le Faou;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière de Faou;1758;0
+Bretagne;29;Finistère;29056;La Forest-Landerneau;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Elorn;1879;0
+Bretagne;29;Finistère;29057;La Forêt-Fouesnant;Mer;Commune riveraine de la mer ou d'un océan;;3448;0
+Bretagne;29;Finistère;29058;Fouesnant;Mer;Commune riveraine de la mer ou d'un océan;;9957;0
+Bretagne;29;Finistère;29063;Goulien;Mer;Commune riveraine de la mer ou d'un océan;;441;0
+Bretagne;29;Finistère;29064;Goulven;Mer;Commune riveraine de la mer ou d'un océan;;452;0
+Bretagne;29;Finistère;29072;Guilvinec;Mer;Commune riveraine de la mer ou d'un océan;;2753;0
+Bretagne;29;Finistère;29073;Guimaëc;Mer;Commune riveraine de la mer ou d'un océan;;984;0
+Bretagne;29;Finistère;29075;Guipavas;Mer;Commune riveraine de la mer ou d'un océan;;14853;0
+Bretagne;29;Finistère;29077;Guissény;Mer;Commune riveraine de la mer ou d'un océan;;2044;0
+Bretagne;29;Finistère;29078;Hanvec;Mer;Commune riveraine de la mer ou d'un océan;;2073;0
+Bretagne;29;Finistère;29079;Henvic;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière la Penzé;1364;0
+Bretagne;29;Finistère;29080;Hôpital-Camfrout;Mer;Commune riveraine de la mer ou d'un océan;;2276;0
+Bretagne;29;Finistère;29082;Ile-de-Batz;Mer;Commune riveraine de la mer ou d'un océan;Ile de Batz;483;0
+Bretagne;29;Finistère;29083;Ile-de-Sein;Mer;Commune riveraine de la mer ou d'un océan;Ile de Sein;237;0
+Bretagne;29;Finistère;29084;Ile-Molène;Mer;Commune riveraine de la mer ou d'un océan;Ile Molène;135;0
+Bretagne;29;Finistère;29085;Ile-Tudy;Mer;Commune riveraine de la mer ou d'un océan;;765;0
+Bretagne;29;Finistère;29090;Kerlaz;Mer;Commune riveraine de la mer ou d'un océan;;843;0
+Bretagne;29;Finistère;29091;Kerlouan;Mer;Commune riveraine de la mer ou d'un océan;;2205;0
+Bretagne;29;Finistère;29098;Lampaul-Plouarzel;Mer;Commune riveraine de la mer ou d'un océan;;2140;0
+Bretagne;29;Finistère;29099;Lampaul-Ploudalmézeau;Mer;Commune riveraine de la mer ou d'un océan;;860;0
+Bretagne;29;Finistère;29101;Landéda;Mer;Commune riveraine de la mer ou d'un océan;;3669;0
+Bretagne;29;Finistère;29103;Landerneau;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Elorn;16468;0
+Bretagne;29;Finistère;29104;Landévennec;Mer;Commune riveraine de la mer ou d'un océan;;341;0
+Bretagne;29;Finistère;29109;Landunvez;Mer;Commune riveraine de la mer ou d'un océan;;1515;0
+Bretagne;29;Finistère;29112;Lanildut;Mer;Commune riveraine de la mer ou d'un océan;;968;0
+Bretagne;29;Finistère;29117;Lannilis;Mer;Commune riveraine de la mer ou d'un océan;;5647;0
+Bretagne;29;Finistère;29120;Lanvéoc;Mer;Commune riveraine de la mer ou d'un océan;;2208;0
+Bretagne;29;Finistère;29130;Locmaria-Plouzané;Mer;Commune riveraine de la mer ou d'un océan;;5180;0
+Bretagne;29;Finistère;29132;Locquénolé;Mer;Commune riveraine de la mer ou d'un océan;;817;0
+Bretagne;29;Finistère;29133;Locquirec;Mer;Commune riveraine de la mer ou d'un océan;;1435;0
+Bretagne;29;Finistère;29135;Loctudy;Mer;Commune riveraine de la mer ou d'un océan;;4159;0
+Bretagne;29;Finistère;29137;Logonna-Daoulas;Mer;Commune riveraine de la mer ou d'un océan;;2171;0
+Bretagne;29;Finistère;29140;Loperhet;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Elorn;3793;0
+Bretagne;29;Finistère;29150;Moëlan-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;6940;0
+Bretagne;29;Finistère;29151;Morlaix;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Dourduff et RivièreDossen;15446;0
+Bretagne;29;Finistère;29153;Névez;Mer;Commune riveraine de la mer ou d'un océan;;2726;0
+Bretagne;29;Finistère;29155;Ouessant;Mer;Commune riveraine de la mer ou d'un océan;Ile d'Ouessant;846;0
+Bretagne;29;Finistère;29158;Penmarch;Mer;Commune riveraine de la mer ou d'un océan;;5462;0
+Bretagne;29;Finistère;29165;Plobannalec-Lesconil;Mer;Commune riveraine de la mer ou d'un océan;;3548;0
+Bretagne;29;Finistère;29166;Ploéven;Mer;Commune riveraine de la mer ou d'un océan;;541;0
+Bretagne;29;Finistère;29168;Plogoff;Mer;Commune riveraine de la mer ou d'un océan;;1259;0
+Bretagne;29;Finistère;29171;Plomeur;Mer;Commune riveraine de la mer ou d'un océan;;3863;0
+Bretagne;29;Finistère;29172;Plomodiern;Mer;Commune riveraine de la mer ou d'un océan;;2161;0
+Bretagne;29;Finistère;29176;Plonévez-Porzay;Mer;Commune riveraine de la mer ou d'un océan;;1816;0
+Bretagne;29;Finistère;29177;Plouarzel;Mer;Commune riveraine de la mer ou d'un océan;;3776;0
+Bretagne;29;Finistère;29178;Ploudalmézeau;Mer;Commune riveraine de la mer ou d'un océan;;6431;0
+Bretagne;29;Finistère;29184;Plouénan;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière la Penzé;2564;0
+Bretagne;29;Finistère;29185;Plouescat;Mer;Commune riveraine de la mer ou d'un océan;;3541;0
+Bretagne;29;Finistère;29186;Plouezoc'h;Mer;Commune riveraine de la mer ou d'un océan;;1643;0
+Bretagne;29;Finistère;29188;Plougasnou;Mer;Commune riveraine de la mer ou d'un océan;;2966;0
+Bretagne;29;Finistère;29189;Plougastel-Daoulas;Mer;Commune riveraine de la mer ou d'un océan;;13711;0
+Bretagne;29;Finistère;29190;Plougonvelin;Mer;Commune riveraine de la mer ou d'un océan;;4251;0
+Bretagne;29;Finistère;29192;Plougoulm;Mer;Commune riveraine de la mer ou d'un océan;;1812;0
+Bretagne;29;Finistère;29195;Plouguerneau;Mer;Commune riveraine de la mer ou d'un océan;;6678;0
+Bretagne;29;Finistère;29196;Plouguin;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Aber Benoit;2183;0
+Bretagne;29;Finistère;29197;Plouhinec;Mer;Commune riveraine de la mer ou d'un océan;;4080;0
+Bretagne;29;Finistère;29198;Plouider;Mer;Commune riveraine de la mer ou d'un océan;;1904;0
+Bretagne;29;Finistère;29201;Ploumoguer;Mer;Commune riveraine de la mer ou d'un océan;;2065;0
+Bretagne;29;Finistère;29203;Plounéour-Trez;Mer;Commune riveraine de la mer ou d'un océan;;1272;29021
+Bretagne;29;Finistère;29206;Plounévez-Lochrist;Mer;Commune riveraine de la mer ou d'un océan;;2415;0
+Bretagne;29;Finistère;29209;Plouvien;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Aber Benoit et Aber Vrac'h;3844;0
+Bretagne;29;Finistère;29212;Plouzané;Mer;Commune riveraine de la mer ou d'un océan;;13010;0
+Bretagne;29;Finistère;29214;Plovan;Mer;Commune riveraine de la mer ou d'un océan;;707;0
+Bretagne;29;Finistère;29215;Plozévet;Mer;Commune riveraine de la mer ou d'un océan;;3060;0
+Bretagne;29;Finistère;29217;Pont-Aven;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Aven;2882;0
+Bretagne;29;Finistère;29218;Pont-Croix;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Goyen;1614;0
+Bretagne;29;Finistère;29220;Pont-l'Abbé;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière de Pont-l'Abbé;8633;0
+Bretagne;29;Finistère;29221;Porspoder;Mer;Commune riveraine de la mer ou d'un océan;;1855;0
+Bretagne;29;Finistère;29225;Pouldreuzic;Mer;Commune riveraine de la mer ou d'un océan;;2182;0
+Bretagne;29;Finistère;29226;Poullan-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;1610;0
+Bretagne;29;Finistère;29228;Primelin;Mer;Commune riveraine de la mer ou d'un océan;;743;0
+Bretagne;29;Finistère;29235;Le Relecq-Kerhuon;Mer;Commune riveraine de la mer ou d'un océan;;11704;0
+Bretagne;29;Finistère;29236;Riec-sur-Belon;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Aven et Rivière le Belon;4316;0
+Bretagne;29;Finistère;29238;Roscanvel;Mer;Commune riveraine de la mer ou d'un océan;;871;0
+Bretagne;29;Finistère;29239;Roscoff;Mer;Commune riveraine de la mer ou d'un océan;;3452;0
+Bretagne;29;Finistère;29240;Rosnoën;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière de Faou et Aulne;988;0
+Bretagne;29;Finistère;29251;Saint-Jean-du-Doigt;Mer;Commune riveraine de la mer ou d'un océan;;656;0
+Bretagne;29;Finistère;29252;Saint-Jean-Trolimon;Mer;Commune riveraine de la mer ou d'un océan;;1002;0
+Bretagne;29;Finistère;29256;Saint-Nic;Mer;Commune riveraine de la mer ou d'un océan;;805;0
+Bretagne;29;Finistère;29257;Saint-Pabu;Mer;Commune riveraine de la mer ou d'un océan;;2116;0
+Bretagne;29;Finistère;29259;Saint-Pol-de-Léon;Mer;Commune riveraine de la mer ou d'un océan;;6838;0
+Bretagne;29;Finistère;29273;Santec;Mer;Commune riveraine de la mer ou d'un océan;;2431;0
+Bretagne;29;Finistère;29276;Sibiril;Mer;Commune riveraine de la mer ou d'un océan;;1237;0
+Bretagne;29;Finistère;29279;Taulé;Mer;Commune riveraine de la mer ou d'un océan;;3040;0
+Bretagne;29;Finistère;29280;Telgruc-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2184;0
+Bretagne;29;Finistère;29282;Trébabu;Mer;Commune riveraine de la mer ou d'un océan;;354;0
+Bretagne;29;Finistère;29284;Treffiagat;Mer;Commune riveraine de la mer ou d'un océan;;2500;0
+Bretagne;29;Finistère;29287;Tréflez;Mer;Commune riveraine de la mer ou d'un océan;;963;0
+Bretagne;29;Finistère;29289;Trégarvan;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Aulne;133;0
+Bretagne;29;Finistère;29290;Tréglonou;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Aber Benoit;658;0
+Bretagne;29;Finistère;29292;Tréguennec;Mer;Commune riveraine de la mer ou d'un océan;;325;0
+Bretagne;29;Finistère;29293;Trégunc;Mer;Commune riveraine de la mer ou d'un océan;;7271;0
+Bretagne;29;Finistère;29298;Tréogat;Mer;Commune riveraine de la mer ou d'un océan;;595;0
+Bretagne;29;Finistère;29003;Audierne;Mer;Commune riveraine de la mer ou d'un océan;;3777;0
+Bretagne;29;Finistère;29021;Plounéour-Brignogan-Plages;Mer;Commune riveraine de la mer ou d'un océan;;1978;0
+Corse;2A;Corse-du-Sud;2A004;Ajaccio;Mer;Commune riveraine de la mer ou d'un océan;;70063;0
+Corse;2A;Corse-du-Sud;2A006;Alata;Mer;Commune riveraine de la mer ou d'un océan;;3266;0
+Corse;2A;Corse-du-Sud;2A008;Albitreccia;Mer;Commune riveraine de la mer ou d'un océan;;1706;0
+Corse;2A;Corse-du-Sud;2A017;Appietto;Mer;Commune riveraine de la mer ou d'un océan;;1859;0
+Corse;2A;Corse-du-Sud;2A035;Belvédère-Campomoro;Mer;Commune riveraine de la mer ou d'un océan;;166;0
+Corse;2A;Corse-du-Sud;2A041;Bonifacio;Mer;Commune riveraine de la mer ou d'un océan;;3101;0
+Corse;2A;Corse-du-Sud;2A048;Calcatoggio;Mer;Commune riveraine de la mer ou d'un océan;;540;0
+Corse;2A;Corse-du-Sud;2A065;Cargèse;Mer;Commune riveraine de la mer ou d'un océan;;1345;0
+Corse;2A;Corse-du-Sud;2A070;Casaglione;Mer;Commune riveraine de la mer ou d'un océan;;397;0
+Corse;2A;Corse-du-Sud;2A090;Coggia;Mer;Commune riveraine de la mer ou d'un océan;;720;0
+Corse;2A;Corse-du-Sud;2A092;Conca;Mer;Commune riveraine de la mer ou d'un océan;;1137;0
+Corse;2A;Corse-du-Sud;2A098;Coti-Chiavari;Mer;Commune riveraine de la mer ou d'un océan;;757;0
+Corse;2A;Corse-du-Sud;2A114;Figari;Mer;Commune riveraine de la mer ou d'un océan;;1468;0
+Corse;2A;Corse-du-Sud;2A130;Grosseto-Prugna;Mer;Commune riveraine de la mer ou d'un océan;;3039;0
+Corse;2A;Corse-du-Sud;2A139;Lecci;Mer;Commune riveraine de la mer ou d'un océan;;1737;0
+Corse;2A;Corse-du-Sud;2A163;Monacia-d'Aullène;Mer;Commune riveraine de la mer ou d'un océan;;529;0
+Corse;2A;Corse-du-Sud;2A189;Olmeto;Mer;Commune riveraine de la mer ou d'un océan;;1247;0
+Corse;2A;Corse-du-Sud;2A197;Osani;Mer;Commune riveraine de la mer ou d'un océan;;98;0
+Corse;2A;Corse-du-Sud;2A198;Ota;Mer;Commune riveraine de la mer ou d'un océan;Rivière de Porto;538;0
+Corse;2A;Corse-du-Sud;2A203;Partinello;Mer;Commune riveraine de la mer ou d'un océan;;103;0
+Corse;2A;Corse-du-Sud;2A212;Piana;Mer;Commune riveraine de la mer ou d'un océan;;486;0
+Corse;2A;Corse-du-Sud;2A215;Pianottoli-Caldarello;Mer;Commune riveraine de la mer ou d'un océan;;935;0
+Corse;2A;Corse-du-Sud;2A228;Pietrosella;Mer;Commune riveraine de la mer ou d'un océan;;1656;0
+Corse;2A;Corse-du-Sud;2A247;Porto-Vecchio;Mer;Commune riveraine de la mer ou d'un océan;;12060;0
+Corse;2A;Corse-du-Sud;2A249;Propriano;Mer;Commune riveraine de la mer ou d'un océan;;3830;0
+Corse;2A;Corse-du-Sud;2A269;Sari-Solenzara;Mer;Commune riveraine de la mer ou d'un océan;;1387;0
+Corse;2A;Corse-du-Sud;2A272;Sartène;Mer;Commune riveraine de la mer ou d'un océan;;3384;0
+Corse;2A;Corse-du-Sud;2A276;Serra-di-Ferro;Mer;Commune riveraine de la mer ou d'un océan;;487;0
+Corse;2A;Corse-du-Sud;2A279;Serriera;Mer;Commune riveraine de la mer ou d'un océan;;124;0
+Corse;2A;Corse-du-Sud;2A295;Sant'Andréa-d'Orcino;Mer;Commune riveraine de la mer ou d'un océan;;108;0
+Corse;2A;Corse-du-Sud;2A348;Vico;Mer;Commune riveraine de la mer ou d'un océan;;932;0
+Corse;2A;Corse-du-Sud;2A351;Villanova;Mer;Commune riveraine de la mer ou d'un océan;;367;0
+Corse;2A;Corse-du-Sud;2A362;Zonza;Mer;Commune riveraine de la mer ou d'un océan;;2732;0
+Corse;2B;Haute-Corse;2B009;Aléria;Mer;Commune riveraine de la mer ou d'un océan;;2233;0
+Corse;2B;Haute-Corse;2B010;Algajola;Mer;Commune riveraine de la mer ou d'un océan;;365;0
+Corse;2B;Haute-Corse;2B020;Aregno;Mer;Commune riveraine de la mer ou d'un océan;;616;0
+Corse;2B;Haute-Corse;2B030;Barrettali;Mer;Commune riveraine de la mer ou d'un océan;;137;0
+Corse;2B;Haute-Corse;2B033;Bastia;Mer;Commune riveraine de la mer ou d'un océan;;45596;0
+Corse;2B;Haute-Corse;2B034;Belgodère;Mer;Commune riveraine de la mer ou d'un océan;;595;0
+Corse;2B;Haute-Corse;2B037;Biguglia;Mer;Commune riveraine d'un étang salé;Etang de Biguglia;8077;0
+Corse;2B;Haute-Corse;2B042;Borgo;Mer;Commune riveraine d'un étang salé;Etang de Biguglia;8908;0
+Corse;2B;Haute-Corse;2B043;Brando;Mer;Commune riveraine de la mer ou d'un océan;;1653;0
+Corse;2B;Haute-Corse;2B046;Cagnano;Mer;Commune riveraine de la mer ou d'un océan;;172;0
+Corse;2B;Haute-Corse;2B049;Calenzana;Mer;Commune riveraine de la mer ou d'un océan;;2351;0
+Corse;2B;Haute-Corse;2B050;Calvi;Mer;Commune riveraine de la mer ou d'un océan;;5524;0
+Corse;2B;Haute-Corse;2B057;Canale-di-Verde;Mer;Commune riveraine de la mer ou d'un océan;Rivière d'Alist;338;0
+Corse;2B;Haute-Corse;2B058;Canari;Mer;Commune riveraine de la mer ou d'un océan;;307;0
+Corse;2B;Haute-Corse;2B077;Castellare-di-Casinca;Mer;Commune riveraine de la mer ou d'un océan;;660;0
+Corse;2B;Haute-Corse;2B086;Centuri;Mer;Commune riveraine de la mer ou d'un océan;;226;0
+Corse;2B;Haute-Corse;2B087;Cervione;Mer;Commune riveraine de la mer ou d'un océan;;2069;0
+Corse;2B;Haute-Corse;2B093;Corbara;Mer;Commune riveraine de la mer ou d'un océan;;965;0
+Corse;2B;Haute-Corse;2B107;Ersa;Mer;Commune riveraine de la mer ou d'un océan;;153;0
+Corse;2B;Haute-Corse;2B109;Farinole;Mer;Commune riveraine de la mer ou d'un océan;;218;0
+Corse;2B;Haute-Corse;2B120;Furiani;Mer;Commune riveraine d'un étang salé;Etang de Biguglia;5808;0
+Corse;2B;Haute-Corse;2B121;Galéria;Mer;Commune riveraine de la mer ou d'un océan;;350;0
+Corse;2B;Haute-Corse;2B123;Ghisonaccia;Mer;Commune riveraine de la mer ou d'un océan;;4262;0
+Corse;2B;Haute-Corse;2B134;L'Ile-Rousse;Mer;Commune riveraine de la mer ou d'un océan;;3181;0
+Corse;2B;Haute-Corse;2B143;Linguizzetta;Mer;Commune riveraine de la mer ou d'un océan;;1136;0
+Corse;2B;Haute-Corse;2B148;Lucciana;Mer;Commune riveraine de la mer ou d'un océan;;5721;0
+Corse;2B;Haute-Corse;2B150;Lumio;Mer;Commune riveraine de la mer ou d'un océan;;1166;0
+Corse;2B;Haute-Corse;2B152;Luri;Mer;Commune riveraine de la mer ou d'un océan;;844;0
+Corse;2B;Haute-Corse;2B159;Meria;Mer;Commune riveraine de la mer ou d'un océan;;109;0
+Corse;2B;Haute-Corse;2B168;Monticello;Mer;Commune riveraine de la mer ou d'un océan;;1981;0
+Corse;2B;Haute-Corse;2B170;Morsiglia;Mer;Commune riveraine de la mer ou d'un océan;;130;0
+Corse;2B;Haute-Corse;2B178;Nonza;Mer;Commune riveraine de la mer ou d'un océan;;74;0
+Corse;2B;Haute-Corse;2B182;Occhiatana;Mer;Commune riveraine de la mer ou d'un océan;;225;0
+Corse;2B;Haute-Corse;2B183;Ogliastro;Mer;Commune riveraine de la mer ou d'un océan;;102;0
+Corse;2B;Haute-Corse;2B187;Olmeta-di-Capocorso;Mer;Commune riveraine de la mer ou d'un océan;;149;0
+Corse;2B;Haute-Corse;2B199;Palasca;Mer;Commune riveraine de la mer ou d'un océan;;171;0
+Corse;2B;Haute-Corse;2B205;Patrimonio;Mer;Commune riveraine de la mer ou d'un océan;;794;0
+Corse;2B;Haute-Corse;2B207;Penta-di-Casinca;Mer;Commune riveraine de la mer ou d'un océan;;3442;0
+Corse;2B;Haute-Corse;2B224;Pietracorbara;Mer;Commune riveraine de la mer ou d'un océan;;670;0
+Corse;2B;Haute-Corse;2B233;Pino;Mer;Commune riveraine de la mer ou d'un océan;;160;0
+Corse;2B;Haute-Corse;2B242;Poggio-Mezzana;Mer;Commune riveraine de la mer ou d'un océan;;675;0
+Corse;2B;Haute-Corse;2B251;Prunelli-di-Fiumorbo;Mer;Commune riveraine de la mer ou d'un océan;;3711;0
+Corse;2B;Haute-Corse;2B261;Rogliano;Mer;Commune riveraine de la mer ou d'un océan;;580;0
+Corse;2B;Haute-Corse;2B277;Serra-di-Fiumorbo;Mer;Commune riveraine de la mer ou d'un océan;;333;0
+Corse;2B;Haute-Corse;2B281;Sisco;Mer;Commune riveraine de la mer ou d'un océan;;1154;0
+Corse;2B;Haute-Corse;2B283;Solaro;Mer;Commune riveraine de la mer ou d'un océan;;719;0
+Corse;2B;Haute-Corse;2B286;Sorbo-Ocagnano;Mer;Commune riveraine de la mer ou d'un océan;;836;0
+Corse;2B;Haute-Corse;2B298;Saint-Florent;Mer;Commune riveraine de la mer ou d'un océan;;1668;0
+Corse;2B;Haute-Corse;2B301;San-Gavino-di-Tenda;Mer;Commune riveraine de la mer ou d'un océan;;73;0
+Corse;2B;Haute-Corse;2B303;San-Giuliano;Mer;Commune riveraine de la mer ou d'un océan;;710;0
+Corse;2B;Haute-Corse;2B305;San-Martino-di-Lota;Mer;Commune riveraine de la mer ou d'un océan;;2945;0
+Corse;2B;Haute-Corse;2B307;Santa-Lucia-di-Moriani;Mer;Commune riveraine de la mer ou d'un océan;;1396;0
+Corse;2B;Haute-Corse;2B309;Santa-Maria-di-Lota;Mer;Commune riveraine de la mer ou d'un océan;;1770;0
+Corse;2B;Haute-Corse;2B311;Santa-Maria-Poggio;Mer;Commune riveraine de la mer ou d'un océan;;730;0
+Corse;2B;Haute-Corse;2B313;San-Nicolao;Mer;Commune riveraine de la mer ou d'un océan;;1965;0
+Corse;2B;Haute-Corse;2B314;Santo-Pietro-di-Tenda;Mer;Commune riveraine de la mer ou d'un océan;;364;0
+Corse;2B;Haute-Corse;2B318;Taglio-Isolaccio;Mer;Commune riveraine de la mer ou d'un océan;;582;0
+Corse;2B;Haute-Corse;2B319;Talasani;Mer;Commune riveraine de la mer ou d'un océan;;774;0
+Corse;2B;Haute-Corse;2B320;Tallone;Mer;Commune riveraine de la mer ou d'un océan;;335;0
+Corse;2B;Haute-Corse;2B327;Tomino;Mer;Commune riveraine de la mer ou d'un océan;;221;0
+Corse;2B;Haute-Corse;2B335;Valle-di-Campoloro;Mer;Commune riveraine de la mer ou d'un océan;;349;0
+Corse;2B;Haute-Corse;2B342;Ventiseri;Mer;Commune riveraine de la mer ou d'un océan;;2528;0
+Corse;2B;Haute-Corse;2B343;Venzolasca;Mer;Commune riveraine de la mer ou d'un océan;;1790;0
+Corse;2B;Haute-Corse;2B353;Ville-di-Pietrabugno;Mer;Commune riveraine de la mer ou d'un océan;;3375;0
+Occitanie;30;Gard;30003;Aigues-Mortes;Mer;Commune riveraine d'un étang salé;Etang de Mauguio;8403;0
+Occitanie;30;Gard;30133;Le Grau-du-Roi;Mer;Commune riveraine de la mer ou d'un océan;;8552;0
+Occitanie;30;Gard;30276;Saint-Laurent-d'Aigouze;Mer;Commune riveraine d'un étang salé;Etang des Caïtives;3511;0
+Nouvelle Aquitaine;33;Gironde;33005;Andernos-les-Bains;Mer;Commune riveraine de la mer ou d'un océan;Bassin d'Arcachon;12165;0
+Nouvelle Aquitaine;33;Gironde;33009;Arcachon;Mer;Commune riveraine de la mer ou d'un océan;Bassin d'Arcachon;11400;0
+Nouvelle Aquitaine;33;Gironde;33011;Arès;Mer;Commune riveraine de la mer ou d'un océan;Bassin d'Arcachon;6323;0
+Nouvelle Aquitaine;33;Gironde;33019;Audenge;Mer;Commune riveraine de la mer ou d'un océan;Bassin d'Arcachon;7761;0
+Nouvelle Aquitaine;33;Gironde;33051;Biganos;Mer;Commune riveraine de la mer ou d'un océan;Bassin d'Arcachon;10615;0
+Nouvelle Aquitaine;33;Gironde;33097;Carcans;Mer;Commune riveraine d'un étang salé;Etang de Carcans;2447;0
+Nouvelle Aquitaine;33;Gironde;33193;Grayan-et-l'Hôpital;Mer;Commune riveraine de la mer ou d'un océan;;1370;0
+Nouvelle Aquitaine;33;Gironde;33199;Gujan-Mestras;Mer;Commune riveraine de la mer ou d'un océan;Bassin d'Arcachon;21435;0
+Nouvelle Aquitaine;33;Gironde;33203;Hourtin;Mer;Commune riveraine d'un étang salé;Etang de Hourtin;3536;0
+Nouvelle Aquitaine;33;Gironde;33214;Lacanau;Mer;Commune riveraine d'un étang salé;Etang de Lacanau et Etang de Cousseau;4813;0
+Nouvelle Aquitaine;33;Gironde;33229;Lanton;Mer;Commune riveraine de la mer ou d'un océan;Bassin d'Arcachon;6832;0
+Nouvelle Aquitaine;33;Gironde;33236;Lège-Cap-Ferret;Mer;Commune riveraine de la mer ou d'un océan;Océan et Bassin;8475;0
+Nouvelle Aquitaine;33;Gironde;33300;Naujac-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;1087;0
+Nouvelle Aquitaine;33;Gironde;33333;Le Porge;Mer;Commune riveraine de la mer ou d'un océan;;3075;0
+Nouvelle Aquitaine;33;Gironde;33514;Soulac-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;Gironde RG;2744;0
+Nouvelle Aquitaine;33;Gironde;33527;Le Teich;Mer;Commune riveraine de la mer ou d'un océan;Bassin d'Arcachon;7884;0
+Nouvelle Aquitaine;33;Gironde;33529;La Teste-de-Buch;Mer;Commune riveraine d'un étang salé;Bassin d'Arcachon et Etang de Cazaux;26525;0
+Nouvelle Aquitaine;33;Gironde;33540;Vendays-Montalivet;Mer;Commune riveraine de la mer ou d'un océan;;2505;0
+Nouvelle Aquitaine;33;Gironde;33541;Vensac;Mer;Commune riveraine de la mer ou d'un océan;;991;0
+Nouvelle Aquitaine;33;Gironde;33544;Le Verdon-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;Gironde RG;1354;0
+Occitanie;34;Hérault;34003;Agde;Mer;Commune riveraine de la mer ou d'un océan;;28120;0
+Occitanie;34;Hérault;34023;Balaruc-les-Bains;Mer;Commune riveraine d'un étang salé;Etang de Thau;6916;0
+Occitanie;34;Hérault;34024;Balaruc-le-Vieux;Mer;Commune riveraine d'un étang salé;Etang de Thau;2682;0
+Occitanie;34;Hérault;34039;Bouzigues;Mer;Commune riveraine d'un étang salé;Etang de Thau;1714;0
+Occitanie;34;Hérault;34050;Candillargues;Mer;Commune riveraine d'un étang salé;Etang de Mauguio;1712;0
+Occitanie;34;Hérault;34108;Frontignan;Mer;Commune riveraine de la mer ou d'un océan;;22730;0
+Occitanie;34;Hérault;34127;Lansargues;Mer;Commune riveraine d'un étang salé;Etang de Mauguio;3176;0
+Occitanie;34;Hérault;34129;Lattes;Mer;Commune riveraine d'un étang salé;Etang de Mejean;16955;0
+Occitanie;34;Hérault;34143;Loupian;Mer;Commune riveraine d'un étang salé;Etang de Thau;2175;0
+Occitanie;34;Hérault;34150;Marseillan;Mer;Commune riveraine de la mer ou d'un océan;;7894;0
+Occitanie;34;Hérault;34151;Marsillargues;Mer;Commune riveraine d'un étang salé;Etang de Mauguio;6303;0
+Occitanie;34;Hérault;34154;Mauguio;Mer;Commune riveraine d'un étang salé;Etang de Mauguio;17302;0
+Occitanie;34;Hérault;34157;Mèze;Mer;Commune riveraine d'un étang salé;Etang de Thau;11679;0
+Occitanie;34;Hérault;34159;Mireval;Mer;Commune riveraine d'un étang salé;Etang de Vic;3368;0
+Occitanie;34;Hérault;34192;Palavas-les-Flots;Mer;Commune riveraine de la mer ou d'un océan;;6122;0
+Occitanie;34;Hérault;34198;Pérols;Mer;Commune riveraine d'un étang salé;Etang de Mejean et Etang de Mauguio;9202;0
+Occitanie;34;Hérault;34209;Portiragnes;Mer;Commune riveraine de la mer ou d'un océan;;3221;0
+Occitanie;34;Hérault;34213;Poussan;Mer;Commune riveraine d'un étang salé;Etang de Thau;6082;0
+Occitanie;34;Hérault;34299;Sérignan;Mer;Commune riveraine de la mer ou d'un océan;;7083;0
+Occitanie;34;Hérault;34301;Sète;Mer;Commune riveraine de la mer ou d'un océan;;44271;0
+Occitanie;34;Hérault;34324;Valras-Plage;Mer;Commune riveraine de la mer ou d'un océan;;4253;0
+Occitanie;34;Hérault;34329;Vendres;Mer;Commune riveraine de la mer ou d'un océan;;2775;0
+Occitanie;34;Hérault;34332;Vias;Mer;Commune riveraine de la mer ou d'un océan;;5678;0
+Occitanie;34;Hérault;34333;Vic-la-Gardiole;Mer;Commune riveraine d'un étang salé;Etang de Vic;3303;0
+Occitanie;34;Hérault;34337;Villeneuve-lès-Maguelone;Mer;Commune riveraine de la mer ou d'un océan;;9969;0
+Occitanie;34;Hérault;34344;La Grande-Motte;Mer;Commune riveraine d'un étang salé;Etang de Mauguio;9047;0
+Bretagne;35;Ille-et-Vilaine;35049;Cancale;Mer;Commune riveraine de la mer ou d'un océan;;5233;0
+Bretagne;35;Ille-et-Vilaine;35078;Cherrueix;Mer;Commune riveraine de la mer ou d'un océan;;1142;0
+Bretagne;35;Ille-et-Vilaine;35093;Dinard;Mer;Commune riveraine de la mer ou d'un océan;;10711;0
+Bretagne;35;Ille-et-Vilaine;35132;Hirel;Mer;Commune riveraine de la mer ou d'un océan;;1416;0
+Bretagne;35;Ille-et-Vilaine;35181;Le Minihic-sur-Rance;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Rance;1487;0
+Bretagne;35;Ille-et-Vilaine;35186;Mont-Dol;Mer;Commune riveraine de la mer ou d'un océan;;1153;0
+Bretagne;35;Ille-et-Vilaine;35228;Pleurtuit;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Rance;6823;0
+Bretagne;35;Ille-et-Vilaine;35241;La Richardais;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Rance;2332;0
+Bretagne;35;Ille-et-Vilaine;35247;Roz-sur-Couesnon;Mer;Commune riveraine de la mer ou d'un océan;;1025;0
+Bretagne;35;Ille-et-Vilaine;35255;Saint-Benoît-des-Ondes;Mer;Commune riveraine de la mer ou d'un océan;;1034;0
+Bretagne;35;Ille-et-Vilaine;35256;Saint-Briac-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2081;0
+Bretagne;35;Ille-et-Vilaine;35259;Saint-Broladre;Mer;Commune riveraine de la mer ou d'un océan;;1155;0
+Bretagne;35;Ille-et-Vilaine;35263;Saint-Coulomb;Mer;Commune riveraine de la mer ou d'un océan;;2758;0
+Bretagne;35;Ille-et-Vilaine;35284;Saint-Jouan-des-Guérets;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Rance;2694;0
+Bretagne;35;Ille-et-Vilaine;35287;Saint-Lunaire;Mer;Commune riveraine de la mer ou d'un océan;;2397;0
+Bretagne;35;Ille-et-Vilaine;35288;Saint-Malo;Mer;Commune riveraine de la mer ou d'un océan;;47528;0
+Bretagne;35;Ille-et-Vilaine;35299;Saint-Méloir-des-Ondes;Mer;Commune riveraine de la mer ou d'un océan;;4130;0
+Bretagne;35;Ille-et-Vilaine;35306;Saint-Père;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Rance;2426;0
+Bretagne;35;Ille-et-Vilaine;35314;Saint-Suliac;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Rance;947;0
+Bretagne;35;Ille-et-Vilaine;35358;La Ville-ès-Nonais;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Rance;1216;0
+Bretagne;35;Ille-et-Vilaine;35361;Le Vivier-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;1055;0
+Nouvelle Aquitaine;40;Landes;40046;Biscarrosse;Mer;Commune riveraine d'un étang salé;Etang de Biscarrosse, de Parentis, de Cazaux et de Sanguinet;14594;0
+Nouvelle Aquitaine;40;Landes;40065;Capbreton;Mer;Commune riveraine de la mer ou d'un océan;;9057;0
+Nouvelle Aquitaine;40;Landes;40108;Gastes;Mer;Commune riveraine d'un étang salé;Etang de Biscarrosse et Etang de Parentis;799;0
+Nouvelle Aquitaine;40;Landes;40133;Labenne;Mer;Commune riveraine de la mer ou d'un océan;;6483;0
+Nouvelle Aquitaine;40;Landes;40157;Lit-et-Mixe;Mer;Commune riveraine de la mer ou d'un océan;;1641;0
+Nouvelle Aquitaine;40;Landes;40181;Messanges;Mer;Commune riveraine de la mer ou d'un océan;;997;0
+Nouvelle Aquitaine;40;Landes;40184;Mimizan;Mer;Commune riveraine de la mer ou d'un océan;;7100;0
+Nouvelle Aquitaine;40;Landes;40187;Moliets-et-Maa;Mer;Commune riveraine de la mer ou d'un océan;;1179;0
+Nouvelle Aquitaine;40;Landes;40209;Ondres;Mer;Commune riveraine de la mer ou d'un océan;;5337;0
+Nouvelle Aquitaine;40;Landes;40217;Parentis-en-Born;Mer;Commune riveraine d'un étang salé;Etang de Biscarrosse et Etang de Parentis;6300;0
+Nouvelle Aquitaine;40;Landes;40257;Sainte-Eulalie-en-Born;Mer;Commune riveraine d'un étang salé;Etang de Biscarrosse et Etang de Parentis;1275;0
+Nouvelle Aquitaine;40;Landes;40266;Saint-Julien-en-Born;Mer;Commune riveraine de la mer ou d'un océan;;1663;0
+Nouvelle Aquitaine;40;Landes;40287;Sanguinet;Mer;Commune riveraine d'un étang salé;Etang de Cazaux et Etang de Sanguinet;4074;0
+Nouvelle Aquitaine;40;Landes;40296;Seignosse;Mer;Commune riveraine de la mer ou d'un océan;;3955;0
+Nouvelle Aquitaine;40;Landes;40304;Soorts-Hossegor;Mer;Commune riveraine de la mer ou d'un océan;;3792;0
+Nouvelle Aquitaine;40;Landes;40310;Soustons;Mer;Commune riveraine de la mer ou d'un océan;;7883;0
+Nouvelle Aquitaine;40;Landes;40312;Tarnos;Mer;Commune riveraine de la mer ou d'un océan;;12673;0
+Nouvelle Aquitaine;40;Landes;40326;Vielle-Saint-Girons;Mer;Commune riveraine de la mer ou d'un océan;;1267;0
+Nouvelle Aquitaine;40;Landes;40328;Vieux-Boucau-les-Bains;Mer;Commune riveraine de la mer ou d'un océan;;1626;0
+Pays-de-la-Loire;44;Loire-Atlantique;44006;Assérac;Mer;Commune riveraine de la mer ou d'un océan;;1828;0
+Pays-de-la-Loire;44;Loire-Atlantique;44010;Batz-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;3037;0
+Pays-de-la-Loire;44;Loire-Atlantique;44012;La Bernerie-en-Retz;Mer;Commune riveraine de la mer ou d'un océan;;2993;0
+Pays-de-la-Loire;44;Loire-Atlantique;44049;Le Croisic;Mer;Commune riveraine de la mer ou d'un océan;;4121;0
+Pays-de-la-Loire;44;Loire-Atlantique;44055;La Baule-Escoublac;Mer;Commune riveraine de la mer ou d'un océan;;16014;0
+Pays-de-la-Loire;44;Loire-Atlantique;44069;Guérande;Mer;Commune riveraine de la mer ou d'un océan;;16779;0
+Pays-de-la-Loire;44;Loire-Atlantique;44097;Mesquer;Mer;Commune riveraine de la mer ou d'un océan;;1981;0
+Pays-de-la-Loire;44;Loire-Atlantique;44106;Les Moutiers-en-Retz;Mer;Commune riveraine de la mer ou d'un océan;;1617;0
+Pays-de-la-Loire;44;Loire-Atlantique;44125;Piriac-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2315;0
+Pays-de-la-Loire;44;Loire-Atlantique;44126;La Plaine-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;4248;0
+Pays-de-la-Loire;44;Loire-Atlantique;44131;Pornic;Mer;Commune riveraine de la mer ou d'un océan;;15091;0
+Pays-de-la-Loire;44;Loire-Atlantique;44132;Pornichet;Mer;Commune riveraine de la mer ou d'un océan;;11037;0
+Pays-de-la-Loire;44;Loire-Atlantique;44135;Le Pouliguen;Mer;Commune riveraine de la mer ou d'un océan;;4531;0
+Pays-de-la-Loire;44;Loire-Atlantique;44136;Préfailles;Mer;Commune riveraine de la mer ou d'un océan;;1252;0
+Pays-de-la-Loire;44;Loire-Atlantique;44154;Saint-Brevin-les-Pins;Mer;Commune riveraine de la mer ou d'un océan;;14099;0
+Pays-de-la-Loire;44;Loire-Atlantique;44182;Saint-Michel-Chef-Chef;Mer;Commune riveraine de la mer ou d'un océan;;4897;0
+Pays-de-la-Loire;44;Loire-Atlantique;44184;Saint-Nazaire;Mer;Commune riveraine de la mer ou d'un océan;;72295;0
+Pays-de-la-Loire;44;Loire-Atlantique;44211;La Turballe;Mer;Commune riveraine de la mer ou d'un océan;;4599;0
+Normandie;50;Manche;50003;Agon-Coutainville;Mer;Commune riveraine de la mer ou d'un océan;;2929;0
+Normandie;50;Manche;50014;Anneville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;241;50215
+Normandie;50;Manche;50015;Annoville;Mer;Commune riveraine de la mer ou d'un océan;;678;0
+Normandie;50;Manche;50020;Auderville;Mer;Commune riveraine de la mer ou d'un océan;;257;50041
+Normandie;50;Manche;50021;Audouville-la-Hubert;Mer;Commune riveraine de la mer ou d'un océan;;83;0
+Normandie;50;Manche;50022;Aumeville-Lestre;Mer;Commune riveraine de la mer ou d'un océan;;123;0
+Normandie;50;Manche;50025;Avranches;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Sée;7766;50025
+Normandie;50;Manche;50030;Barfleur;Mer;Commune riveraine de la mer ou d'un océan;;590;0
+Normandie;50;Manche;50031;Barneville-Carteret;Mer;Commune riveraine de la mer ou d'un océan;;2291;0
+Normandie;50;Manche;50033;Baubigny;Mer;Commune riveraine de la mer ou d'un océan;;149;0
+Normandie;50;Manche;50041;Beaumont-Hague;Mer;Commune riveraine de la mer ou d'un océan;;1514;50041
+Normandie;50;Manche;50042;Beauvoir;Mer;Commune riveraine de la mer ou d'un océan;;423;0
+Normandie;50;Manche;50057;Biville;Mer;Commune riveraine de la mer ou d'un océan;;587;50041
+Normandie;50;Manche;50058;Blainville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;1696;0
+Normandie;50;Manche;50066;Jullouville;Mer;Commune riveraine de la mer ou d'un océan;;2371;0
+Normandie;50;Manche;50076;Bréhal;Mer;Commune riveraine de la mer ou d'un océan;;3457;0
+Normandie;50;Manche;50077;Bretteville;Mer;Commune riveraine de la mer ou d'un océan;;1124;0
+Normandie;50;Manche;50078;Bretteville-sur-Ay;Mer;Commune riveraine de la mer ou d'un océan;;393;0
+Normandie;50;Manche;50080;Brévands;Mer;Commune riveraine de la mer ou d'un océan;;311;50099
+Normandie;50;Manche;50081;Bréville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;821;0
+Normandie;50;Manche;50085;Bricqueville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;1243;0
+Normandie;50;Manche;50089;Brucheville;Mer;Commune riveraine de la mer ou d'un océan;;145;50099
+Normandie;50;Manche;50102;Carolles;Mer;Commune riveraine de la mer ou d'un océan;;766;0
+Normandie;50;Manche;50108;Céaux;Mer;Commune riveraine de la mer ou d'un océan;;444;0
+Normandie;50;Manche;50117;Champeaux;Mer;Commune riveraine de la mer ou d'un océan;;370;0
+Normandie;50;Manche;50129;Cherbourg-Octeville;Mer;Commune riveraine de la mer ou d'un océan;;83785;50129
+Normandie;50;Manche;50142;Cosqueville;Mer;Commune riveraine de la mer ou d'un océan;;1025;50142
+Normandie;50;Manche;50143;Coudeville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;883;0
+Normandie;50;Manche;50146;Courtils;Mer;Commune riveraine de la mer ou d'un océan;;227;0
+Normandie;50;Manche;50150;Crasville;Mer;Commune riveraine de la mer ou d'un océan;;256;0
+Normandie;50;Manche;50151;Créances;Mer;Commune riveraine de la mer ou d'un océan;;2207;0
+Normandie;50;Manche;50160;Denneville;Mer;Commune riveraine de la mer ou d'un océan;;586;50412
+Normandie;50;Manche;50162;Digosville;Mer;Commune riveraine de la mer ou d'un océan;;1570;0
+Normandie;50;Manche;50163;Digulleville;Mer;Commune riveraine de la mer ou d'un océan;;296;50041
+Normandie;50;Manche;50165;Donville-les-Bains;Mer;Commune riveraine de la mer ou d'un océan;;3293;0
+Normandie;50;Manche;50167;Dragey-Ronthon;Mer;Commune riveraine de la mer ou d'un océan;;835;0
+Normandie;50;Manche;50171;Eculleville;Mer;Commune riveraine de la mer ou d'un océan;;31;50041
+Normandie;50;Manche;50173;Equeurdreville-Hainneville;Mer;Commune riveraine de la mer ou d'un océan;;18016;50129
+Normandie;50;Manche;50178;Fermanville;Mer;Commune riveraine de la mer ou d'un océan;;1310;0
+Normandie;50;Manche;50184;Flamanville;Mer;Commune riveraine de la mer ou d'un océan;;1765;0
+Normandie;50;Manche;50190;Fontenay-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;184;0
+Normandie;50;Manche;50191;Foucarville;Mer;Commune riveraine de la mer ou d'un océan;;135;50523
+Normandie;50;Manche;50196;Gatteville-le-Phare;Mer;Commune riveraine de la mer ou d'un océan;;508;0
+Normandie;50;Manche;50198;Geffosses;Mer;Commune riveraine de la mer ou d'un océan;;439;0
+Normandie;50;Manche;50199;Genêts;Mer;Commune riveraine de la mer ou d'un océan;;440;0
+Normandie;50;Manche;50204;Glatigny;Mer;Commune riveraine de la mer ou d'un océan;;147;50236
+Normandie;50;Manche;50211;Gouberville;Mer;Commune riveraine de la mer ou d'un océan;;119;50142
+Normandie;50;Manche;50215;Gouville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2258;50215
+Normandie;50;Manche;50218;Granville;Mer;Commune riveraine de la mer ou d'un océan;;13643;0
+Normandie;50;Manche;50220;Gréville-Hague;Mer;Commune riveraine de la mer ou d'un océan;;774;50041
+Normandie;50;Manche;50231;Hauteville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;726;0
+Normandie;50;Manche;50238;Héauville;Mer;Commune riveraine de la mer ou d'un océan;;483;0
+Normandie;50;Manche;50242;Herqueville;Mer;Commune riveraine de la mer ou d'un océan;;160;50041
+Normandie;50;Manche;50243;Heugueville-sur-Sienne;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Sienne;553;0
+Normandie;50;Manche;50253;Huisnes-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;194;0
+Normandie;50;Manche;50257;Jobourg;Mer;Commune riveraine de la mer ou d'un océan;;490;50041
+Normandie;50;Manche;50267;Lessay;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Havre de Lessay;2297;0
+Normandie;50;Manche;50268;Lestre;Mer;Commune riveraine de la mer ou d'un océan;;252;0
+Normandie;50;Manche;50272;Lingreville;Mer;Commune riveraine de la mer ou d'un océan;;1020;0
+Normandie;50;Manche;50288;Marcey-les-Grèves;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Sée;1308;0
+Normandie;50;Manche;50296;Maupertus-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;229;0
+Normandie;50;Manche;50332;Les Moitiers-d'Allonne;Mer;Commune riveraine de la mer ou d'un océan;;690;0
+Normandie;50;Manche;50339;Montchaton;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Sienne;346;50388
+Normandie;50;Manche;50342;Montfarville;Mer;Commune riveraine de la mer ou d'un océan;;828;0
+Normandie;50;Manche;50349;Montmartin-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;1391;0
+Normandie;50;Manche;50353;Le Mont-Saint-Michel;Mer;Commune riveraine de la mer ou d'un océan;;30;0
+Normandie;50;Manche;50358;Morsalines;Mer;Commune riveraine de la mer ou d'un océan;;201;50417
+Normandie;50;Manche;50375;Néville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;188;50142
+Normandie;50;Manche;50385;Omonville-la-Petite;Mer;Commune riveraine de la mer ou d'un océan;;154;50041
+Normandie;50;Manche;50386;Omonville-la-Rogue;Mer;Commune riveraine de la mer ou d'un océan;;506;50041
+Normandie;50;Manche;50402;Les Pieux;Mer;Commune riveraine de la mer ou d'un océan;;3323;0
+Normandie;50;Manche;50403;Pirou;Mer;Commune riveraine de la mer ou d'un océan;;1513;0
+Normandie;50;Manche;50408;Pontaubault;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Sélune;550;0
+Normandie;50;Manche;50410;Pontorson;Mer;Commune riveraine de la mer ou d'un océan;;4430;0
+Normandie;50;Manche;50412;Portbail;Mer;Commune riveraine de la mer ou d'un océan;;1586;50412
+Normandie;50;Manche;50416;Querqueville;Mer;Commune riveraine de la mer ou d'un océan;;5271;50129
+Normandie;50;Manche;50417;Quettehou;Mer;Commune riveraine de la mer ou d'un océan;;1584;50417
+Normandie;50;Manche;50421;Quinéville;Mer;Commune riveraine de la mer ou d'un océan;;285;0
+Normandie;50;Manche;50427;Ravenoville;Mer;Commune riveraine de la mer ou d'un océan;;256;50523
+Normandie;50;Manche;50429;Regnéville-sur-Mer;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Sienne;770;0
+Normandie;50;Manche;50432;Réthoville;Mer;Commune riveraine de la mer ou d'un océan;;133;50142
+Normandie;50;Manche;50433;Réville;Mer;Commune riveraine de la mer ou d'un océan;;1067;0
+Normandie;50;Manche;50442;Le Rozel;Mer;Commune riveraine de la mer ou d'un océan;;267;0
+Normandie;50;Manche;50471;Saint-Georges-de-la-Rivière;Mer;Commune riveraine de la mer ou d'un océan;;284;0
+Normandie;50;Manche;50477;Saint-Germain-des-Vaux;Mer;Commune riveraine de la mer ou d'un océan;;375;50041
+Normandie;50;Manche;50479;Saint-Germain-de-Varreville;Mer;Commune riveraine de la mer ou d'un océan;;119;0
+Normandie;50;Manche;50481;Saint-Germain-sur-Ay;Mer;Commune riveraine de la mer ou d'un océan;;926;0
+Normandie;50;Manche;50490;Saint-Jean-de-la-Rivière;Mer;Commune riveraine de la mer ou d'un océan;;358;0
+Normandie;50;Manche;50496;Saint-Jean-le-Thomas;Mer;Commune riveraine de la mer ou d'un océan;;417;0
+Normandie;50;Manche;50503;Saint-Lô-d'Ourville;Mer;Commune riveraine de la mer ou d'un océan;;517;50412
+Normandie;50;Manche;50507;Saint-Marcouf;Mer;Commune riveraine de la mer ou d'un océan;;348;0
+Normandie;50;Manche;50509;Sainte-Marie-du-Mont;Mer;Commune riveraine de la mer ou d'un océan;;743;0
+Normandie;50;Manche;50517;Saint-Martin-de-Varreville;Mer;Commune riveraine de la mer ou d'un océan;;193;0
+Normandie;50;Manche;50532;Saint-Pair-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;4194;0
+Normandie;50;Manche;50544;Saint-Rémy-des-Landes;Mer;Commune riveraine de la mer ou d'un océan;;215;50236
+Normandie;50;Manche;50562;Saint-Vaast-la-Hougue;Mer;Commune riveraine de la mer ou d'un océan;;1819;0
+Normandie;50;Manche;50576;Siouville-Hague;Mer;Commune riveraine de la mer ou d'un océan;;1104;0
+Normandie;50;Manche;50585;Surtainville;Mer;Commune riveraine de la mer ou d'un océan;;1220;0
+Normandie;50;Manche;50586;Surville;Mer;Commune riveraine de la mer ou d'un océan;;200;50236
+Normandie;50;Manche;50602;Tourlaville;Mer;Commune riveraine de la mer ou d'un océan;;16314;50129
+Normandie;50;Manche;50603;Tourville-sur-Sienne;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Sienne;822;0
+Normandie;50;Manche;50604;Tréauville;Mer;Commune riveraine de la mer ou d'un océan;;738;0
+Normandie;50;Manche;50611;Urville-Nacqueville;Mer;Commune riveraine de la mer ou d'un océan;;2264;50041
+Normandie;50;Manche;50612;Vains;Mer;Commune riveraine de la mer ou d'un océan;;772;0
+Normandie;50;Manche;50616;Le Val-Saint-Père;Mer;Commune riveraine de la mer ou d'un océan;;2108;0
+Normandie;50;Manche;50620;Vasteville;Mer;Commune riveraine de la mer ou d'un océan;;1169;50041
+Normandie;50;Manche;50623;Vauville;Mer;Commune riveraine de la mer ou d'un océan;;387;50041
+Normandie;50;Manche;50631;Les Veys;Mer;Commune riveraine de la mer ou d'un océan;;387;50099
+Normandie;50;Manche;50025;Avranches ;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Sée;10813;0
+Normandie;50;Manche;50041;La Hague;Mer;Commune riveraine de la mer ou d'un océan;;12145;0
+Normandie;50;Manche;50129;Cherbourg-en-Cotentin;Mer;Commune riveraine de la mer ou d'un océan;;82578;0
+Normandie;50;Manche;50142;Vicq-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;1040;0
+Normandie;50;Manche;50215;Gouville-sur-Mer ;Mer;Commune riveraine de la mer ou d'un océan;;3248;0
+Normandie;50;Manche;50236;la Haye;Mer;Commune riveraine de la mer ou d'un océan;;4187;0
+Normandie;50;Manche;50388;Orval-sur-Sienne;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Sienne;1211;0
+Normandie;50;Manche;50412;Port-Bail-sur-Mer ;Mer;Commune riveraine de la mer ou d'un océan;;2722;0
+Normandie;50;Manche;50417;Quettehou ;Mer;Commune riveraine de la mer ou d'un océan;;1812;0
+Normandie;50;Manche;50523;Sainte-Mère-Église ;Mer;Commune riveraine de la mer ou d'un océan;;3159;0
+Bretagne;56;Morbihan;56002;Ambon;Mer;Commune riveraine de la mer ou d'un océan;;1870;0
+Bretagne;56;Morbihan;56003;Arradon;Mer;Commune riveraine de la mer ou d'un océan;Golfe du Morbihan;5543;0
+Bretagne;56;Morbihan;56005;Arzon;Mer;Commune riveraine de la mer ou d'un océan;;2130;0
+Bretagne;56;Morbihan;56007;Auray;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière d'Auray;14100;0
+Bretagne;56;Morbihan;56008;Baden;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière d'Auray;4501;0
+Bretagne;56;Morbihan;56009;Bangor;Mer;Commune riveraine de la mer ou d'un océan;Belle Ile;1014;0
+Bretagne;56;Morbihan;56013;Belz;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière d'Etel RG;3782;0
+Bretagne;56;Morbihan;56018;Billiers;Mer;Commune riveraine de la mer ou d'un océan;;975;0
+Bretagne;56;Morbihan;56023;Brech;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière d'Auray;6911;0
+Bretagne;56;Morbihan;56034;Carnac;Mer;Commune riveraine de la mer ou d'un océan;;4381;0
+Bretagne;56;Morbihan;56036;Caudan;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Scorff RG;6983;0
+Bretagne;56;Morbihan;56046;Crach;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière d'Auray;3408;0
+Bretagne;56;Morbihan;56052;Damgan;Mer;Commune riveraine de la mer ou d'un océan;;1726;0
+Bretagne;56;Morbihan;56054;Erdeven;Mer;Commune riveraine de la mer ou d'un océan;;3691;0
+Bretagne;56;Morbihan;56055;Etel;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière d'Etel RG;2115;0
+Bretagne;56;Morbihan;56062;Gâvres;Mer;Commune riveraine de la mer ou d'un océan;;688;0
+Bretagne;56;Morbihan;56069;Groix;Mer;Commune riveraine de la mer ou d'un océan;Ile de Groix;2334;0
+Bretagne;56;Morbihan;56078;Guidel;Mer;Commune riveraine de la mer ou d'un océan;;11750;0
+Bretagne;56;Morbihan;56084;Le Hézo;Mer;Commune riveraine de la mer ou d'un océan;Golfe du Morbihan;811;0
+Bretagne;56;Morbihan;56085;Hoedic;Mer;Commune riveraine de la mer ou d'un océan;Ile d'Hoedic;107;0
+Bretagne;56;Morbihan;56086;Ile-d'Houat;Mer;Commune riveraine de la mer ou d'un océan;Ile d'Houat;251;0
+Bretagne;56;Morbihan;56087;Ile-aux-Moines;Mer;Commune riveraine de la mer ou d'un océan;Ile aux Moines;619;0
+Bretagne;56;Morbihan;56088;Ile-d'Arz;Mer;Commune riveraine de la mer ou d'un océan;Ile d'Arz;234;0
+Bretagne;56;Morbihan;56094;Kervignac;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Blavet RG;6773;0
+Bretagne;56;Morbihan;56096;Landaul;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière d'Etel RG;2328;0
+Bretagne;56;Morbihan;56097;Landévant;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière d'Etel;3778;0
+Bretagne;56;Morbihan;56098;Lanester;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Blavet RD;22920;0
+Bretagne;56;Morbihan;56106;Larmor-Baden;Mer;Commune riveraine de la mer ou d'un océan;Golfe du Morbihan;915;0
+Bretagne;56;Morbihan;56107;Larmor-Plage;Mer;Commune riveraine de la mer ou d'un océan;;8479;0
+Bretagne;56;Morbihan;56114;Locmaria;Mer;Commune riveraine de la mer ou d'un océan;Belle Ile;897;0
+Bretagne;56;Morbihan;56116;Locmariaquer;Mer;Commune riveraine de la mer ou d'un océan;;1613;0
+Bretagne;56;Morbihan;56118;Locmiquélic;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Blavet RG;4181;0
+Bretagne;56;Morbihan;56119;Locoal-Mendon;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière d'Etel RG;3468;0
+Bretagne;56;Morbihan;56121;Lorient;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Scorff RD;58789;0
+Bretagne;56;Morbihan;56130;Merlevenez;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière d'Etel;3278;0
+Bretagne;56;Morbihan;56143;Muzillac;Mer;Commune riveraine de la mer ou d'un océan;;5135;0
+Bretagne;56;Morbihan;56148;Nostang;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière d'Etel;1567;0
+Bretagne;56;Morbihan;56150;Noyalo;Mer;Commune riveraine d'un étang salé;Etang de Noyalo;812;56251
+Bretagne;56;Morbihan;56152;Le Palais;Mer;Commune riveraine de la mer ou d'un océan;Belle Ile;2612;0
+Bretagne;56;Morbihan;56155;Pénestin;Mer;Commune riveraine de la mer ou d'un océan;;1904;0
+Bretagne;56;Morbihan;56162;Ploemeur;Mer;Commune riveraine de la mer ou d'un océan;;18602;0
+Bretagne;56;Morbihan;56167;Plougoumelen;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière du Bono;2525;0
+Bretagne;56;Morbihan;56168;Plouharnel;Mer;Commune riveraine de la mer ou d'un océan;;2196;0
+Bretagne;56;Morbihan;56169;Plouhinec;Mer;Commune riveraine de la mer ou d'un océan;;5435;0
+Bretagne;56;Morbihan;56176;Pluneret;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière d'Auray;5712;0
+Bretagne;56;Morbihan;56181;Port-Louis;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Blavet RG;2695;0
+Bretagne;56;Morbihan;56185;Quéven;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Scorff RD;8792;0
+Bretagne;56;Morbihan;56186;Quiberon;Mer;Commune riveraine de la mer ou d'un océan;;4937;0
+Bretagne;56;Morbihan;56193;Riantec;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Baie de Locmalo;5669;0
+Bretagne;56;Morbihan;56205;Saint-Armel;Mer;Commune riveraine de la mer ou d'un océan;Golfe du Morbihan;921;0
+Bretagne;56;Morbihan;56214;Saint-Gildas-de-Rhuys;Mer;Commune riveraine de la mer ou d'un océan;;1660;0
+Bretagne;56;Morbihan;56220;Sainte-Hélène;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière d'Etel RD;1285;0
+Bretagne;56;Morbihan;56233;Saint-Philibert;Mer;Commune riveraine de la mer ou d'un océan;;1539;0
+Bretagne;56;Morbihan;56234;Saint-Pierre-Quiberon;Mer;Commune riveraine de la mer ou d'un océan;;2107;0
+Bretagne;56;Morbihan;56240;Sarzeau;Mer;Commune riveraine de la mer ou d'un océan;;8041;0
+Bretagne;56;Morbihan;56241;Sauzon;Mer;Commune riveraine de la mer ou d'un océan;Belle Ile;1009;0
+Bretagne;56;Morbihan;56243;Séné;Mer;Commune riveraine de la mer ou d'un océan;Golfe du Morbihan;9205;0
+Bretagne;56;Morbihan;56248;Surzur;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière de Penerf et Etang de Noyalo?;4418;0
+Bretagne;56;Morbihan;56251;Theix;Mer;Commune riveraine d'un étang salé;Etang de Noyalo;7928;56251
+Bretagne;56;Morbihan;56252;Le Tour-du-Parc;Mer;Commune riveraine de la mer ou d'un océan;;1267;0
+Bretagne;56;Morbihan;56258;La Trinité-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;1659;0
+Bretagne;56;Morbihan;56260;Vannes;Mer;Commune riveraine de la mer ou d'un océan;Golfe du Morbihan;55573;0
+Bretagne;56;Morbihan;56262;Bono;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière d'Auray;2388;0
+Bretagne;56;Morbihan;56251;Theix-Noyalo;Mer;Commune riveraine d'un étang salé;Etang de Noyalo;8007;0
+Hauts de France;59;Nord;59107;Bray-Dunes;Mer;Commune riveraine de la mer ou d'un océan;;4595;0
+Hauts de France;59;Nord;59183;Dunkerque;Mer;Commune riveraine de la mer ou d'un océan;;89485;0
+Hauts de France;59;Nord;59260;Ghyvelde;Mer;Commune riveraine de la mer ou d'un océan;;4256;0
+Hauts de France;59;Nord;59271;Grande-Synthe;Mer;Commune riveraine de la mer ou d'un océan;;23494;0
+Hauts de France;59;Nord;59272;Grand-Fort-Philippe;Mer;Commune riveraine de la mer ou d'un océan;;5130;0
+Hauts de France;59;Nord;59273;Gravelines;Mer;Commune riveraine de la mer ou d'un océan;;11675;0
+Hauts de France;59;Nord;59340;Leffrinckoucke;Mer;Commune riveraine de la mer ou d'un océan;;4376;0
+Hauts de France;59;Nord;59359;Loon-Plage;Mer;Commune riveraine de la mer ou d'un océan;;6287;0
+Hauts de France;59;Nord;59668;Zuydcoote;Mer;Commune riveraine de la mer ou d'un océan;;1795;0
+Hauts de France;62;Pas-de-Calais;62025;Ambleteuse;Mer;Commune riveraine de la mer ou d'un océan;;1848;0
+Hauts de France;62;Pas-de-Calais;62054;Audinghen;Mer;Commune riveraine de la mer ou d'un océan;;583;0
+Hauts de France;62;Pas-de-Calais;62056;Audresselles;Mer;Commune riveraine de la mer ou d'un océan;;668;0
+Hauts de France;62;Pas-de-Calais;62108;Berck;Mer;Commune riveraine de la mer ou d'un océan;;14680;0
+Hauts de France;62;Pas-de-Calais;62160;Boulogne-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;42293;0
+Hauts de France;62;Pas-de-Calais;62193;Calais;Mer;Commune riveraine de la mer ou d'un océan;;75719;0
+Hauts de France;62;Pas-de-Calais;62201;Camiers;Mer;Commune riveraine de la mer ou d'un océan;;2733;0
+Hauts de France;62;Pas-de-Calais;62233;Conchil-le-Temple;Mer;Commune riveraine de la mer ou d'un océan;Rivière l'Authie;1147;0
+Hauts de France;62;Pas-de-Calais;62261;Cucq;Mer;Commune riveraine de la mer ou d'un océan;;5229;0
+Hauts de France;62;Pas-de-Calais;62264;Dannes;Mer;Commune riveraine de la mer ou d'un océan;;1335;0
+Hauts de France;62;Pas-de-Calais;62300;Equihen-Plage;Mer;Commune riveraine de la mer ou d'un océan;;2801;0
+Hauts de France;62;Pas-de-Calais;62307;Escalles;Mer;Commune riveraine de la mer ou d'un océan;;241;0
+Hauts de France;62;Pas-de-Calais;62318;Etaples;Mer;Commune riveraine de la mer ou d'un océan;Rivière La Canche;11134;0
+Hauts de France;62;Pas-de-Calais;62390;Groffliers;Mer;Commune riveraine de la mer ou d'un océan;;1539;0
+Hauts de France;62;Pas-de-Calais;62548;Marck;Mer;Commune riveraine de la mer ou d'un océan;;10889;0
+Hauts de France;62;Pas-de-Calais;62571;Merlimont;Mer;Commune riveraine de la mer ou d'un océan;;3368;0
+Hauts de France;62;Pas-de-Calais;62604;Neufchâtel-Hardelot;Mer;Commune riveraine de la mer ou d'un océan;;3822;0
+Hauts de France;62;Pas-de-Calais;62645;Oye-Plage;Mer;Commune riveraine de la mer ou d'un océan;;5347;0
+Hauts de France;62;Pas-de-Calais;62667;Le Portel;Mer;Commune riveraine de la mer ou d'un océan;;9367;0
+Hauts de France;62;Pas-de-Calais;62746;Saint-Etienne-au-Mont;Mer;Commune riveraine de la mer ou d'un océan;;5150;0
+Hauts de France;62;Pas-de-Calais;62752;Saint-Josse;Mer;Commune riveraine de la mer ou d'un océan;Rivière La Canche;1173;0
+Hauts de France;62;Pas-de-Calais;62774;Sangatte;Mer;Commune riveraine de la mer ou d'un océan;;4914;0
+Hauts de France;62;Pas-de-Calais;62806;Tardinghen;Mer;Commune riveraine de la mer ou d'un océan;;154;0
+Hauts de France;62;Pas-de-Calais;62826;Le Touquet-Paris-Plage;Mer;Commune riveraine de la mer ou d'un océan;;4487;0
+Hauts de France;62;Pas-de-Calais;62866;Waben;Mer;Commune riveraine de la mer ou d'un océan;Rivière l'Authie;445;0
+Hauts de France;62;Pas-de-Calais;62893;Wimereux;Mer;Commune riveraine de la mer ou d'un océan;;6973;0
+Hauts de France;62;Pas-de-Calais;62899;Wissant;Mer;Commune riveraine de la mer ou d'un océan;;1003;0
+Nouvelle Aquitaine;64;Pyrénées-Atlantiques;64024;Anglet;Mer;Commune riveraine de la mer ou d'un océan;;39995;0
+Nouvelle Aquitaine;64;Pyrénées-Atlantiques;64122;Biarritz;Mer;Commune riveraine de la mer ou d'un océan;;25518;0
+Nouvelle Aquitaine;64;Pyrénées-Atlantiques;64125;Bidart;Mer;Commune riveraine de la mer ou d'un océan;;6729;0
+Nouvelle Aquitaine;64;Pyrénées-Atlantiques;64189;Ciboure;Mer;Commune riveraine de la mer ou d'un océan;;6477;0
+Nouvelle Aquitaine;64;Pyrénées-Atlantiques;64249;Guéthary;Mer;Commune riveraine de la mer ou d'un océan;;1347;0
+Nouvelle Aquitaine;64;Pyrénées-Atlantiques;64260;Hendaye;Mer;Commune riveraine de la mer ou d'un océan;;17006;0
+Nouvelle Aquitaine;64;Pyrénées-Atlantiques;64483;Saint-Jean-de-Luz;Mer;Commune riveraine de la mer ou d'un océan;;14561;0
+Nouvelle Aquitaine;64;Pyrénées-Atlantiques;64545;Urrugne;Mer;Commune riveraine de la mer ou d'un océan;;10189;0
+Occitanie;66;Pyrénées-Orientales;66008;Argelès-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;10543;0
+Occitanie;66;Pyrénées-Orientales;66016;Banyuls-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;4843;0
+Occitanie;66;Pyrénées-Orientales;66017;Le Barcarès;Mer;Commune riveraine de la mer ou d'un océan;;5957;0
+Occitanie;66;Pyrénées-Orientales;66037;Canet-en-Roussillon;Mer;Commune riveraine de la mer ou d'un océan;;12320;0
+Occitanie;66;Pyrénées-Orientales;66048;Cerbère;Mer;Commune riveraine de la mer ou d'un océan;;1352;0
+Occitanie;66;Pyrénées-Orientales;66053;Collioure;Mer;Commune riveraine de la mer ou d'un océan;;2666;0
+Occitanie;66;Pyrénées-Orientales;66065;Elne;Mer;Commune riveraine de la mer ou d'un océan;;8885;0
+Occitanie;66;Pyrénées-Orientales;66148;Port-Vendres;Mer;Commune riveraine de la mer ou d'un océan;;4261;0
+Occitanie;66;Pyrénées-Orientales;66171;Saint-Cyprien;Mer;Commune riveraine de la mer ou d'un océan;;10781;0
+Occitanie;66;Pyrénées-Orientales;66176;Saint-Hippolyte;Mer;Commune riveraine d'un étang salé;Etang de Salses-Leucate;3005;0
+Occitanie;66;Pyrénées-Orientales;66180;Saint-Laurent-de-la-Salanque;Mer;Commune riveraine d'un étang salé;Etang de Salses-Leucate;10422;0
+Occitanie;66;Pyrénées-Orientales;66182;Sainte-Marie;Mer;Commune riveraine de la mer ou d'un océan;;4807;0
+Occitanie;66;Pyrénées-Orientales;66186;Saint-Nazaire;Mer;Commune riveraine d'un étang salé;Etang de Canet;2633;0
+Occitanie;66;Pyrénées-Orientales;66190;Salses-le-Château;Mer;Commune riveraine d'un étang salé;Etang de Salses-Leucate;3517;0
+Occitanie;66;Pyrénées-Orientales;66212;Torreilles;Mer;Commune riveraine de la mer ou d'un océan;;3869;0
+Normandie;76;Seine-Maritime;76073;Belleville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;795;76618
+Normandie;76;Seine-Maritime;76079;Bénouville;Mer;Commune riveraine de la mer ou d'un océan;;175;0
+Normandie;76;Seine-Maritime;76081;Berneval-le-Grand;Mer;Commune riveraine de la mer ou d'un océan;;1418;76618
+Normandie;76;Seine-Maritime;76098;Biville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;743;76618
+Normandie;76;Seine-Maritime;76137;Bracquemont;Mer;Commune riveraine de la mer ou d'un océan;;890;76618
+Normandie;76;Seine-Maritime;76167;Cauville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;1564;0
+Normandie;76;Seine-Maritime;76192;Criel-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2763;0
+Normandie;76;Seine-Maritime;76194;Criquebeuf-en-Caux;Mer;Commune riveraine de la mer ou d'un océan;;390;0
+Normandie;76;Seine-Maritime;76217;Dieppe;Mer;Commune riveraine de la mer ou d'un océan;;30588;0
+Normandie;76;Seine-Maritime;76232;Eletot;Mer;Commune riveraine de la mer ou d'un océan;;639;0
+Normandie;76;Seine-Maritime;76254;Etretat;Mer;Commune riveraine de la mer ou d'un océan;;1346;0
+Normandie;76;Seine-Maritime;76259;Fécamp;Mer;Commune riveraine de la mer ou d'un océan;;19303;0
+Normandie;76;Seine-Maritime;76266;Flocques;Mer;Commune riveraine de la mer ou d'un océan;;724;0
+Normandie;76;Seine-Maritime;76305;Gonfreville-l'Orcher;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Fleuve Seine;9212;0
+Normandie;76;Seine-Maritime;76349;Hautot-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2001;0
+Normandie;76;Seine-Maritime;76351;Le Havre;Mer;Commune riveraine de la mer ou d'un océan;Fleuve Seine;172769;0
+Normandie;76;Seine-Maritime;76361;Heuqueville;Mer;Commune riveraine de la mer ou d'un océan;;720;0
+Normandie;76;Seine-Maritime;76375;Ingouville;Mer;Commune riveraine de la mer ou d'un océan;;282;0
+Normandie;76;Seine-Maritime;76390;Les Loges;Mer;Commune riveraine de la mer ou d'un océan;;1211;0
+Normandie;76;Seine-Maritime;76407;Manneville-ès-Plains;Mer;Commune riveraine de la mer ou d'un océan;;285;0
+Normandie;76;Seine-Maritime;76481;Octeville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;5966;0
+Normandie;76;Seine-Maritime;76489;Oudalle;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Fleuve Seine;457;0
+Normandie;76;Seine-Maritime;76493;Paluel;Mer;Commune riveraine de la mer ou d'un océan;;452;0
+Normandie;76;Seine-Maritime;76496;Penly;Mer;Commune riveraine de la mer ou d'un océan;;334;76618
+Normandie;76;Seine-Maritime;76508;La Poterie-Cap-d'Antifer;Mer;Commune riveraine de la mer ou d'un océan;;456;0
+Normandie;76;Seine-Maritime;76515;Quiberville;Mer;Commune riveraine de la mer ou d'un océan;;558;0
+Normandie;76;Seine-Maritime;76533;Rogerville;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Fleuve Seine;1346;0
+Normandie;76;Seine-Maritime;76552;Sainte-Adresse;Mer;Commune riveraine de la mer ou d'un océan;;7673;0
+Normandie;76;Seine-Maritime;76564;Saint-Aubin-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;188;0
+Normandie;76;Seine-Maritime;76595;Saint-Jouin-Bruneval;Mer;Commune riveraine de la mer ou d'un océan;;1910;0
+Normandie;76;Seine-Maritime;76600;Saint-Léonard;Mer;Commune riveraine de la mer ou d'un océan;;1775;0
+Normandie;76;Seine-Maritime;76605;Sainte-Marguerite-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;494;0
+Normandie;76;Seine-Maritime;76613;Saint-Martin-aux-Buneaux;Mer;Commune riveraine de la mer ou d'un océan;;681;0
+Normandie;76;Seine-Maritime;76618;Saint-Martin-en-Campagne;Mer;Commune riveraine de la mer ou d'un océan;;9353;76618
+Normandie;76;Seine-Maritime;76637;Saint-Pierre-en-Port;Mer;Commune riveraine de la mer ou d'un océan;;841;0
+Normandie;76;Seine-Maritime;76651;Saint-Sylvain;Mer;Commune riveraine de la mer ou d'un océan;;183;0
+Normandie;76;Seine-Maritime;76655;Saint-Valery-en-Caux;Mer;Commune riveraine de la mer ou d'un océan;;4261;0
+Normandie;76;Seine-Maritime;76657;Saint-Vigor-d'Ymonville;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Fleuve Seine;1139;0
+Normandie;76;Seine-Maritime;76660;Sandouville;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Fleuve Seine;805;0
+Normandie;76;Seine-Maritime;76663;Sassetot-le-Mauconduit;Mer;Commune riveraine de la mer ou d'un océan;;1115;0
+Normandie;76;Seine-Maritime;76670;Senneville-sur-Fécamp;Mer;Commune riveraine de la mer ou d'un océan;;876;0
+Normandie;76;Seine-Maritime;76683;Sotteville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;391;0
+Normandie;76;Seine-Maritime;76693;Le Tilleul;Mer;Commune riveraine de la mer ou d'un océan;;704;0
+Normandie;76;Seine-Maritime;76696;Tocqueville-sur-Eu;Mer;Commune riveraine de la mer ou d'un océan;;222;76618
+Normandie;76;Seine-Maritime;76711;Le Tréport;Mer;Commune riveraine de la mer ou d'un océan;;4994;0
+Normandie;76;Seine-Maritime;76720;Varengeville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;1006;0
+Normandie;76;Seine-Maritime;76726;Vattetot-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;331;0
+Normandie;76;Seine-Maritime;76735;Veules-les-Roses;Mer;Commune riveraine de la mer ou d'un océan;;612;0
+Normandie;76;Seine-Maritime;76736;Veulettes-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;285;0
+Normandie;76;Seine-Maritime;76754;Yport;Mer;Commune riveraine de la mer ou d'un océan;;858;0
+Normandie;76;Seine-Maritime;76618;Petit-Caux;Mer;Commune riveraine de la mer ou d'un océan;;9680;0
+Hauts de France;80;Somme;80039;Ault;Mer;Commune riveraine de la mer ou d'un océan;;1524;0
+Hauts de France;80;Somme;80110;Boismont;Mer;Commune riveraine de la mer ou d'un océan;;496;0
+Hauts de France;80;Somme;80182;Cayeux-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2523;0
+Hauts de France;80;Somme;80228;Le Crotoy;Mer;Commune riveraine de la mer ou d'un océan;;2080;0
+Hauts de France;80;Somme;80303;Favières;Mer;Commune riveraine de la mer ou d'un océan;;470;0
+Hauts de France;80;Somme;80333;Fort-Mahon-Plage;Mer;Commune riveraine de la mer ou d'un océan;;1233;0
+Hauts de France;80;Somme;80464;Lanchères;Mer;Commune riveraine de la mer ou d'un océan;;924;0
+Hauts de France;80;Somme;80533;Mers-les-Bains;Mer;Commune riveraine de la mer ou d'un océan;;2856;0
+Hauts de France;80;Somme;80600;Noyelles-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;740;0
+Hauts de France;80;Somme;80618;Pendé;Mer;Commune riveraine de la mer ou d'un océan;;1097;0
+Hauts de France;80;Somme;80633;Ponthoile;Mer;Commune riveraine de la mer ou d'un océan;;629;0
+Hauts de France;80;Somme;80649;Quend;Mer;Commune riveraine de la mer ou d'un océan;;1412;0
+Hauts de France;80;Somme;80713;Saint-Quentin-en-Tourmont;Mer;Commune riveraine de la mer ou d'un océan;;294;0
+Hauts de France;80;Somme;80714;Saint-Quentin-la-Motte-Croix-au-Bailly;Mer;Commune riveraine de la mer ou d'un océan;;1312;0
+Hauts de France;80;Somme;80721;Saint-Valery-sur-Somme;Mer;Commune riveraine de la mer ou d'un océan;;2612;0
+Hauts de France;80;Somme;80826;Woignarue;Mer;Commune riveraine de la mer ou d'un océan;;855;0
+Provence-Alpes-Côte d'Azur;83;Var;83009;Bandol;Mer;Commune riveraine de la mer ou d'un océan;;8517;0
+Provence-Alpes-Côte d'Azur;83;Var;83019;Bormes-les-Mimosas;Mer;Commune riveraine de la mer ou d'un océan;;8097;0
+Provence-Alpes-Côte d'Azur;83;Var;83034;Carqueiranne;Mer;Commune riveraine de la mer ou d'un océan;;10014;0
+Provence-Alpes-Côte d'Azur;83;Var;83036;Cavalaire-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;7352;0
+Provence-Alpes-Côte d'Azur;83;Var;83042;Cogolin;Mer;Commune riveraine de la mer ou d'un océan;;12232;0
+Provence-Alpes-Côte d'Azur;83;Var;83048;La Croix-Valmer;Mer;Commune riveraine de la mer ou d'un océan;;3921;0
+Provence-Alpes-Côte d'Azur;83;Var;83061;Fréjus;Mer;Commune riveraine de la mer ou d'un océan;;54023;0
+Provence-Alpes-Côte d'Azur;83;Var;83062;La Garde;Mer;Commune riveraine de la mer ou d'un océan;;25645;0
+Provence-Alpes-Côte d'Azur;83;Var;83065;Gassin;Mer;Commune riveraine de la mer ou d'un océan;;2620;0
+Provence-Alpes-Côte d'Azur;83;Var;83068;Grimaud;Mer;Commune riveraine de la mer ou d'un océan;;4479;0
+Provence-Alpes-Côte d'Azur;83;Var;83069;Hyères;Mer;Commune riveraine de la mer ou d'un océan;;56799;0
+Provence-Alpes-Côte d'Azur;83;Var;83070;Le Lavandou;Mer;Commune riveraine de la mer ou d'un océan;;5822;0
+Provence-Alpes-Côte d'Azur;83;Var;83071;La Londe-les-Maures;Mer;Commune riveraine de la mer ou d'un océan;;10364;0
+Provence-Alpes-Côte d'Azur;83;Var;83090;Ollioules;Mer;Commune riveraine de la mer ou d'un océan;;13813;0
+Provence-Alpes-Côte d'Azur;83;Var;83098;Le Pradet;Mer;Commune riveraine de la mer ou d'un océan;;10233;0
+Provence-Alpes-Côte d'Azur;83;Var;83101;Ramatuelle;Mer;Commune riveraine de la mer ou d'un océan;;2123;0
+Provence-Alpes-Côte d'Azur;83;Var;83107;Roquebrune-sur-Argens;Mer;Commune riveraine de la mer ou d'un océan;;14259;0
+Provence-Alpes-Côte d'Azur;83;Var;83112;Saint-Cyr-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;11925;0
+Provence-Alpes-Côte d'Azur;83;Var;83115;Sainte-Maxime;Mer;Commune riveraine de la mer ou d'un océan;;14496;0
+Provence-Alpes-Côte d'Azur;83;Var;83118;Saint-Raphaël;Mer;Commune riveraine de la mer ou d'un océan;;35826;0
+Provence-Alpes-Côte d'Azur;83;Var;83119;Saint-Tropez;Mer;Commune riveraine de la mer ou d'un océan;;4385;0
+Provence-Alpes-Côte d'Azur;83;Var;83123;Sanary-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;16995;0
+Provence-Alpes-Côte d'Azur;83;Var;83126;La Seyne-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;65386;0
+Provence-Alpes-Côte d'Azur;83;Var;83129;Six-Fours-les-Plages;Mer;Commune riveraine de la mer ou d'un océan;;33904;0
+Provence-Alpes-Côte d'Azur;83;Var;83137;Toulon;Mer;Commune riveraine de la mer ou d'un océan;;171643;0
+Provence-Alpes-Côte d'Azur;83;Var;83152;Rayol-Canadel-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;729;0
+Provence-Alpes-Côte d'Azur;83;Var;83153;Saint-Mandrier-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;5860;0
+Pays-de-la-Loire;85;Vendée;85001;L'Aiguillon-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2134;0
+Pays-de-la-Loire;85;Vendée;85011;Barbâtre;Mer;Commune riveraine de la mer ou d'un océan;Ile de Noirmoutier;1801;0
+Pays-de-la-Loire;85;Vendée;85012;La Barre-de-Monts;Mer;Commune riveraine de la mer ou d'un océan;;2240;0
+Pays-de-la-Loire;85;Vendée;85018;Beauvoir-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;3985;0
+Pays-de-la-Loire;85;Vendée;85029;Bouin;Mer;Commune riveraine de la mer ou d'un océan;;2189;0
+Pays-de-la-Loire;85;Vendée;85035;Bretignolles-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;4560;0
+Pays-de-la-Loire;85;Vendée;85049;Champagné-les-Marais;Mer;Commune riveraine de la mer ou d'un océan;;1773;0
+Pays-de-la-Loire;85;Vendée;85060;Château-d'Olonne;Mer;Commune riveraine de la mer ou d'un océan;;13834;85194
+Pays-de-la-Loire;85;Vendée;85083;L'Epine;Mer;Commune riveraine de la mer ou d'un océan;Ile de Noirmoutier;1681;0
+Pays-de-la-Loire;85;Vendée;85088;Le Fenouiller;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière La Vie;4781;0
+Pays-de-la-Loire;85;Vendée;85104;Grues;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Rivière Le Lay;855;0
+Pays-de-la-Loire;85;Vendée;85106;La Guérinière;Mer;Commune riveraine de la mer ou d'un océan;Ile de Noirmoutier;1394;0
+Pays-de-la-Loire;85;Vendée;85113;L'Ile-d'Yeu;Mer;Commune riveraine de la mer ou d'un océan;Ile d'Yeu;4771;0
+Pays-de-la-Loire;85;Vendée;85114;Jard-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2679;0
+Pays-de-la-Loire;85;Vendée;85127;Longeville-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2543;0
+Pays-de-la-Loire;85;Vendée;85163;Noirmoutier-en-l'Ile;Mer;Commune riveraine de la mer ou d'un océan;Ile de Noirmoutier;4766;0
+Pays-de-la-Loire;85;Vendée;85164;Notre-Dame-de-Monts;Mer;Commune riveraine de la mer ou d'un océan;;2113;0
+Pays-de-la-Loire;85;Vendée;85166;Olonne-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;14875;85194
+Pays-de-la-Loire;85;Vendée;85185;Puyravault;Mer;Commune riveraine de la mer ou d'un océan;;678;0
+Pays-de-la-Loire;85;Vendée;85194;Les Sables-d'Olonne;Mer;Commune riveraine de la mer ou d'un océan;;13940;85194
+Pays-de-la-Loire;85;Vendée;85222;Saint-Gilles-Croix-de-Vie;Mer;Commune riveraine de la mer ou d'un océan;;7784;0
+Pays-de-la-Loire;85;Vendée;85226;Saint-Hilaire-de-Riez;Mer;Commune riveraine de la mer ou d'un océan;;11226;0
+Pays-de-la-Loire;85;Vendée;85234;Saint-Jean-de-Monts;Mer;Commune riveraine de la mer ou d'un océan;;8847;0
+Pays-de-la-Loire;85;Vendée;85255;Saint-Michel-en-l'Herm;Mer;Commune riveraine de la mer ou d'un océan;;2432;0
+Pays-de-la-Loire;85;Vendée;85267;Sainte-Radégonde-des-Noyers;Mer;Commune sur un estuaire en aval de la limite transversale de la mer (LTM);Sèvre Niortaise;924;0
+Pays-de-la-Loire;85;Vendée;85278;Saint-Vincent-sur-Jard;Mer;Commune riveraine de la mer ou d'un océan;;1324;0
+Pays-de-la-Loire;85;Vendée;85288;Talmont-Saint-Hilaire;Mer;Commune riveraine de la mer ou d'un océan;;7700;0
+Pays-de-la-Loire;85;Vendée;85294;La Tranche-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;2972;0
+Pays-de-la-Loire;85;Vendée;85297;Triaize;Mer;Commune riveraine de la mer ou d'un océan;;1034;0
+Pays-de-la-Loire;85;Vendée;85307;La Faute-sur-Mer;Mer;Commune riveraine de la mer ou d'un océan;;668;0
+Pays-de-la-Loire;85;Vendée;85194;Les Sables-d'Olonne ;Mer;Commune riveraine de la mer ou d'un océan;;44736;0
+Départements d'Outre-Mer;971;Guadeloupe;97101;Les Abymes;Mer;Commune riveraine de la mer ou d'un océan;;54818;0
+Départements d'Outre-Mer;971;Guadeloupe;97102;Anse-Bertrand;Mer;Commune riveraine de la mer ou d'un océan;;4650;0
+Départements d'Outre-Mer;971;Guadeloupe;97103;Baie-Mahault;Mer;Commune riveraine de la mer ou d'un océan;;31338;0
+Départements d'Outre-Mer;971;Guadeloupe;97104;Baillif;Mer;Commune riveraine de la mer ou d'un océan;;5944;0
+Départements d'Outre-Mer;971;Guadeloupe;97105;Basse-Terre;Mer;Commune riveraine de la mer ou d'un océan;;10493;0
+Départements d'Outre-Mer;971;Guadeloupe;97106;Bouillante;Mer;Commune riveraine de la mer ou d'un océan;;7262;0
+Départements d'Outre-Mer;971;Guadeloupe;97107;Capesterre-Belle-Eau;Mer;Commune riveraine de la mer ou d'un océan;;19081;0
+Départements d'Outre-Mer;971;Guadeloupe;97108;Capesterre-de-Marie-Galante;Mer;Commune riveraine de la mer ou d'un océan;Ile de Marie-Galante;3354;0
+Départements d'Outre-Mer;971;Guadeloupe;97109;Gourbeyre;Mer;Commune riveraine de la mer ou d'un océan;;7996;0
+Départements d'Outre-Mer;971;Guadeloupe;97110;La Désirade;Mer;Commune riveraine de la mer ou d'un océan;Ile de la Désirade;1499;0
+Départements d'Outre-Mer;971;Guadeloupe;97111;Deshaies;Mer;Commune riveraine de la mer ou d'un océan;;4189;0
+Départements d'Outre-Mer;971;Guadeloupe;97112;Grand-Bourg;Mer;Commune riveraine de la mer ou d'un océan;Ile de Marie-Galante;5221;0
+Départements d'Outre-Mer;971;Guadeloupe;97113;Le Gosier;Mer;Commune riveraine de la mer ou d'un océan;;27023;0
+Départements d'Outre-Mer;971;Guadeloupe;97114;Goyave;Mer;Commune riveraine de la mer ou d'un océan;;7675;0
+Départements d'Outre-Mer;971;Guadeloupe;97115;Lamentin;Mer;Commune riveraine de la mer ou d'un océan;;17005;0
+Départements d'Outre-Mer;971;Guadeloupe;97116;Morne-à-l'Eau;Mer;Commune riveraine de la mer ou d'un océan;;17499;0
+Départements d'Outre-Mer;971;Guadeloupe;97117;Le Moule;Mer;Commune riveraine de la mer ou d'un océan;;22672;0
+Départements d'Outre-Mer;971;Guadeloupe;97118;Petit-Bourg;Mer;Commune riveraine de la mer ou d'un océan;;24731;0
+Départements d'Outre-Mer;971;Guadeloupe;97119;Petit-Canal;Mer;Commune riveraine de la mer ou d'un océan;;8344;0
+Départements d'Outre-Mer;971;Guadeloupe;97120;Pointe-à-Pitre;Mer;Commune riveraine de la mer ou d'un océan;;16198;0
+Départements d'Outre-Mer;971;Guadeloupe;97121;Pointe-Noire;Mer;Commune riveraine de la mer ou d'un océan;;6272;0
+Départements d'Outre-Mer;971;Guadeloupe;97122;Port-Louis;Mer;Commune riveraine de la mer ou d'un océan;;5823;0
+Départements d'Outre-Mer;971;Guadeloupe;97125;Saint-François;Mer;Commune riveraine de la mer ou d'un océan;;13262;0
+Départements d'Outre-Mer;971;Guadeloupe;97126;Saint-Louis;Mer;Commune riveraine de la mer ou d'un océan;Ile de Marie-Galante;2527;0
+Départements d'Outre-Mer;971;Guadeloupe;97128;Sainte-Anne;Mer;Commune riveraine de la mer ou d'un océan;;24553;0
+Départements d'Outre-Mer;971;Guadeloupe;97129;Sainte-Rose;Mer;Commune riveraine de la mer ou d'un océan;;19785;0
+Départements d'Outre-Mer;971;Guadeloupe;97130;Terre-de-Bas;Mer;Commune riveraine de la mer ou d'un océan;Ile des Saintes;1074;0
+Départements d'Outre-Mer;971;Guadeloupe;97131;Terre-de-Haut;Mer;Commune riveraine de la mer ou d'un océan;Ile des Saintes;1606;0
+Départements d'Outre-Mer;971;Guadeloupe;97132;Trois-Rivières;Mer;Commune riveraine de la mer ou d'un océan;;8394;0
+Départements d'Outre-Mer;971;Guadeloupe;97133;Vieux-Fort;Mer;Commune riveraine de la mer ou d'un océan;;1885;0
+Départements d'Outre-Mer;971;Guadeloupe;97134;Vieux-Habitants;Mer;Commune riveraine de la mer ou d'un océan;;7450;0
+Départements d'Outre-Mer;972;Martinique;97202;Les Anses-d'Arlet;Mer;Commune riveraine de la mer ou d'un océan;;3686;0
+Départements d'Outre-Mer;972;Martinique;97203;Basse-Pointe;Mer;Commune riveraine de la mer ou d'un océan;;3238;0
+Départements d'Outre-Mer;972;Martinique;97204;Le Carbet;Mer;Commune riveraine de la mer ou d'un océan;;3655;0
+Départements d'Outre-Mer;972;Martinique;97205;Case-Pilote;Mer;Commune riveraine de la mer ou d'un océan;;4522;0
+Départements d'Outre-Mer;972;Martinique;97206;Le Diamant;Mer;Commune riveraine de la mer ou d'un océan;;5886;0
+Départements d'Outre-Mer;972;Martinique;97207;Ducos;Mer;Commune riveraine de la mer ou d'un océan;;17713;0
+Départements d'Outre-Mer;972;Martinique;97209;Fort-de-France;Mer;Commune riveraine de la mer ou d'un océan;;82030;0
+Départements d'Outre-Mer;972;Martinique;97210;Le François;Mer;Commune riveraine de la mer ou d'un océan;;17524;0
+Départements d'Outre-Mer;972;Martinique;97211;Grand'Rivière;Mer;Commune riveraine de la mer ou d'un océan;;712;0
+Départements d'Outre-Mer;972;Martinique;97213;Le Lamentin;Mer;Commune riveraine de la mer ou d'un océan;;40920;0
+Départements d'Outre-Mer;972;Martinique;97214;Le Lorrain;Mer;Commune riveraine de la mer ou d'un océan;;7006;0
+Départements d'Outre-Mer;972;Martinique;97215;Macouba;Mer;Commune riveraine de la mer ou d'un océan;;1095;0
+Départements d'Outre-Mer;972;Martinique;97216;Le Marigot;Mer;Commune riveraine de la mer ou d'un océan;;3285;0
+Départements d'Outre-Mer;972;Martinique;97217;Le Marin;Mer;Commune riveraine de la mer ou d'un océan;;9262;0
+Départements d'Outre-Mer;972;Martinique;97219;Le Prêcheur;Mer;Commune riveraine de la mer ou d'un océan;;1382;0
+Départements d'Outre-Mer;972;Martinique;97220;Rivière-Pilote;Mer;Commune riveraine de la mer ou d'un océan;;12278;0
+Départements d'Outre-Mer;972;Martinique;97221;Rivière-Salée;Mer;Commune riveraine de la mer ou d'un océan;;12313;0
+Départements d'Outre-Mer;972;Martinique;97222;Le Robert;Mer;Commune riveraine de la mer ou d'un océan;;23475;0
+Départements d'Outre-Mer;972;Martinique;97225;Saint-Pierre;Mer;Commune riveraine de la mer ou d'un océan;;4176;0
+Départements d'Outre-Mer;972;Martinique;97226;Sainte-Anne;Mer;Commune riveraine de la mer ou d'un océan;;4280;0
+Départements d'Outre-Mer;972;Martinique;97227;Sainte-Luce;Mer;Commune riveraine de la mer ou d'un océan;;10283;0
+Départements d'Outre-Mer;972;Martinique;97228;Sainte-Marie;Mer;Commune riveraine de la mer ou d'un océan;;16375;0
+Départements d'Outre-Mer;972;Martinique;97229;Schoelcher;Mer;Commune riveraine de la mer ou d'un océan;;20159;0
+Départements d'Outre-Mer;972;Martinique;97230;La Trinité;Mer;Commune riveraine de la mer ou d'un océan;;12701;0
+Départements d'Outre-Mer;972;Martinique;97231;Les Trois-Ilets;Mer;Commune riveraine de la mer ou d'un océan;;7621;0
+Départements d'Outre-Mer;972;Martinique;97232;Le Vauclin;Mer;Commune riveraine de la mer ou d'un océan;;9098;0
+Départements d'Outre-Mer;972;Martinique;97234;Bellefontaine;Mer;Commune riveraine de la mer ou d'un océan;;1760;0
+Départements d'Outre-Mer;973;Guyane;97301;Régina;Mer;Commune riveraine de la mer ou d'un océan;;939;0
+Départements d'Outre-Mer;973;Guyane;97302;Cayenne;Mer;Commune riveraine de la mer ou d'un océan;;60947;0
+Départements d'Outre-Mer;973;Guyane;97303;Iracoubo;Mer;Commune riveraine de la mer ou d'un océan;;1846;0
+Départements d'Outre-Mer;973;Guyane;97304;Kourou;Mer;Commune riveraine de la mer ou d'un océan;;26726;0
+Départements d'Outre-Mer;973;Guyane;97305;Macouria;Mer;Commune riveraine de la mer ou d'un océan;;12991;0
+Départements d'Outre-Mer;973;Guyane;97306;Mana;Mer;Commune riveraine de la mer ou d'un océan;;10729;0
+Départements d'Outre-Mer;973;Guyane;97307;Matoury;Mer;Commune riveraine de la mer ou d'un océan;;32768;0
+Départements d'Outre-Mer;973;Guyane;97308;Saint-Georges;Mer;Commune riveraine de la mer ou d'un océan;;4168;0
+Départements d'Outre-Mer;973;Guyane;97309;Remire-Montjoly;Mer;Commune riveraine de la mer ou d'un océan;;26170;0
+Départements d'Outre-Mer;973;Guyane;97310;Roura;Mer;Commune riveraine de la mer ou d'un océan;;3924;0
+Départements d'Outre-Mer;973;Guyane;97312;Sinnamary;Mer;Commune riveraine de la mer ou d'un océan;Barrage du Petit Saut;2987;0
+Départements d'Outre-Mer;973;Guyane;97314;Ouanary;Mer;Commune riveraine de la mer ou d'un océan;;183;0
+Départements d'Outre-Mer;973;Guyane;97361;Awala-Yalimapo;Mer;Commune riveraine de la mer ou d'un océan;;1405;0
+Départements d'Outre-Mer;974;La Réunion;97401;Les Avirons;Mer;Commune riveraine de la mer ou d'un océan;;11684;0
+Départements d'Outre-Mer;974;La Réunion;97402;Bras-Panon;Mer;Commune riveraine de la mer ou d'un océan;;12899;0
+Départements d'Outre-Mer;974;La Réunion;97404;Etang-Salé;Mer;Commune riveraine de la mer ou d'un océan;;14447;0
+Départements d'Outre-Mer;974;La Réunion;97405;Petite-Ile;Mer;Commune riveraine de la mer ou d'un océan;;12357;0
+Départements d'Outre-Mer;974;La Réunion;97407;Le Port;Mer;Commune riveraine de la mer ou d'un océan;;35141;0
+Départements d'Outre-Mer;974;La Réunion;97408;La Possession;Mer;Commune riveraine de la mer ou d'un océan;;33337;0
+Départements d'Outre-Mer;974;La Réunion;97409;Saint-André;Mer;Commune riveraine de la mer ou d'un océan;;56088;0
+Départements d'Outre-Mer;974;La Réunion;97410;Saint-Benoît;Mer;Commune riveraine de la mer ou d'un océan;;38466;0
+Départements d'Outre-Mer;974;La Réunion;97411;Saint-Denis;Mer;Commune riveraine de la mer ou d'un océan;;149337;0
+Départements d'Outre-Mer;974;La Réunion;97412;Saint-Joseph;Mer;Commune riveraine de la mer ou d'un océan;;38167;0
+Départements d'Outre-Mer;974;La Réunion;97413;Saint-Leu;Mer;Commune riveraine de la mer ou d'un océan;;34160;0
+Départements d'Outre-Mer;974;La Réunion;97414;Saint-Louis;Mer;Commune riveraine de la mer ou d'un océan;;53832;0
+Départements d'Outre-Mer;974;La Réunion;97415;Saint-Paul;Mer;Commune riveraine de la mer ou d'un océan;;106920;0
+Départements d'Outre-Mer;974;La Réunion;97416;Saint-Pierre;Mer;Commune riveraine de la mer ou d'un océan;;85059;0
+Départements d'Outre-Mer;974;La Réunion;97417;Saint-Philippe;Mer;Commune riveraine de la mer ou d'un océan;;5288;0
+Départements d'Outre-Mer;974;La Réunion;97418;Sainte-Marie;Mer;Commune riveraine de la mer ou d'un océan;;33587;0
+Départements d'Outre-Mer;974;La Réunion;97419;Sainte-Rose;Mer;Commune riveraine de la mer ou d'un océan;;6600;0
+Départements d'Outre-Mer;974;La Réunion;97420;Sainte-Suzanne;Mer;Commune riveraine de la mer ou d'un océan;;23457;0
+Départements d'Outre-Mer;974;La Réunion;97423;Les Trois-Bassins;Mer;Commune riveraine de la mer ou d'un océan;;7207;0
