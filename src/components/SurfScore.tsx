@@ -156,6 +156,58 @@ const Popup = ({ message, onClose }: { message: string; onClose: () => void }) =
   );
 };
 
+// Créer un nouveau composant cercle sans le texte "Score de surf" en dessous
+const MainScoreCircle = ({ score }: { score: number }) => {
+  // Déterminer la couleur en fonction du score
+  let color = 'text-red-500';
+  if (score >= 70) color = 'text-green-500';
+  else if (score >= 50) color = 'text-yellow-500';
+  else if (score >= 30) color = 'text-orange-500';
+  
+  // Calculer le pourcentage pour le cercle
+  const percentage = score;
+  const radius = 45;
+  const dashArray = 2 * Math.PI * radius;
+  const dashOffset = dashArray - (dashArray * percentage) / 100;
+  
+  return (
+    <div className="flex items-center justify-center">
+      <svg width="120" height="120" viewBox="0 0 120 120">
+        <circle
+          cx="60"
+          cy="60"
+          r={radius}
+          fill="none"
+          stroke="#e5e7eb"
+          strokeWidth="10"
+        />
+        <circle
+          cx="60"
+          cy="60"
+          r={radius}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="10"
+          strokeLinecap="round"
+          strokeDasharray={dashArray}
+          strokeDashoffset={dashOffset}
+          transform="rotate(-90 60 60)"
+          className={color}
+        />
+        <text
+          x="60"
+          y="65"
+          textAnchor="middle"
+          dominantBaseline="middle"
+          className="text-3xl font-bold"
+        >
+          {score}
+        </text>
+      </svg>
+    </div>
+  );
+};
+
 const SurfScore = () => {
   const { location } = useStore()
   const [weatherData, setWeatherData] = useState<{
@@ -165,13 +217,15 @@ const SurfScore = () => {
     windSpeed: number | null;
     airTemp: number | null;
     waterTemp: number | null;
+    weatherCode: number | null;
   }>({
     waveHeight: null,
     wavePeriod: null,
     wavePower: null,
     windSpeed: null,
     airTemp: null,
-    waterTemp: null
+    waterTemp: null,
+    weatherCode: null
   })
   const [scores, setScores] = useState<{
     heightScore: number;
@@ -203,7 +257,8 @@ const SurfScore = () => {
           wavePower: null,
           windSpeed: null,
           airTemp: null,
-          waterTemp: null
+          waterTemp: null,
+          weatherCode: null
         })
         setScores({
           heightScore: 0,
@@ -244,6 +299,7 @@ const SurfScore = () => {
           const windSpeed = data.hourly.wind_speed_10m?.[0] ?? null
           const airTemp = data.hourly.temperature_2m?.[0] ?? null
           const waterTemp = data.hourly.sea_surface_temperature?.[0] ?? null
+          const weatherCode = data.hourly.weathercode?.[0] ?? null
           
           setWeatherData({
             waveHeight,
@@ -251,7 +307,8 @@ const SurfScore = () => {
             wavePower,
             windSpeed,
             airTemp,
-            waterTemp
+            waterTemp,
+            weatherCode
           })
           
           // Calculer tous les scores individuels
@@ -316,9 +373,30 @@ const SurfScore = () => {
       {hasValidData && !showPopup && (
         <>
           <div className="text-center p-4 bg-white rounded-xl mb-6">
-            <ScoreCircle score={scores.totalScore} />
+            {/* Nouvel agencement du score du jour même */}
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex-shrink-0">
+                <MainScoreCircle score={scores.totalScore} />
+              </div>
+              
+              <div className="flex-grow ml-4 text-left">
+                <div className="flex items-center mb-2">
+                  <span className="text-3xl mr-2">
+                    {weatherData.airTemp !== null ? 
+                     getWeatherIcon(weatherData.weatherCode || 0) : '🌡️'}
+                  </span>
+                  <span className="text-2xl font-bold text-sky-700">
+                    {weatherData.airTemp !== null ? `${weatherData.airTemp.toFixed(1)} °C` : 'N/A'}
+                  </span>
+                </div>
+                
+                <div className="text-xl font-medium text-sky-600">
+                  Vagues: <span className="font-bold">{weatherData.waveHeight !== null ? `${weatherData.waveHeight.toFixed(1)} m` : 'N/A'}</span>
+                </div>
+              </div>
+            </div>
             
-            {/* Bloc de prévisions placé avant le bouton pour afficher les détails */}
+            {/* Prévisions des jours suivants */}
             <ForecastDisplay />
             
             <button 
@@ -397,5 +475,16 @@ const SurfScore = () => {
     </>
   )
 }
+
+// Fonction pour obtenir une icône basée sur le code météo
+const getWeatherIcon = (weatherCode: number) => {
+  // Codes basés sur la documentation Open-Meteo
+  if (weatherCode <= 3) return '☀️'; // Ciel dégagé à partiellement nuageux
+  if (weatherCode <= 49) return '☁️'; // Nuageux ou brumeux
+  if (weatherCode <= 69) return '🌧️'; // Pluie
+  if (weatherCode <= 79) return '❄️'; // Neige
+  if (weatherCode <= 99) return '⛈️'; // Orage
+  return '🌡️'; // Par défaut
+};
 
 export default SurfScore 
