@@ -34,6 +34,8 @@ const isRaining = (code: number): boolean => {
 
 // Fonction pour calculer le score en fonction de la hauteur des vagues (max 80 points)
 const calculateWaveHeightScore = (height: number): number => {
+  if (height === null || height === undefined || isNaN(height)) return 0;
+  
   // +4 points pour chaque 0,10m de hauteur
   const score = height * 10 * 4; 
   // Limiter à 80 points maximum
@@ -42,6 +44,8 @@ const calculateWaveHeightScore = (height: number): number => {
 
 // Fonction pour calculer le score du vent (max 5 points)
 const calculateWindScore = (windSpeed: number): number => {
+  if (windSpeed === null || windSpeed === undefined || isNaN(windSpeed)) return 0;
+  
   // Moins de vent est mieux
   if (windSpeed <= 5) return 5; // Idéal: vent très faible
   if (windSpeed >= 30) return 0; // Très mauvais: vent fort
@@ -52,6 +56,8 @@ const calculateWindScore = (windSpeed: number): number => {
 
 // Fonction pour calculer le score de la période des vagues (max 5 points)
 const calculateWavePeriodScore = (period: number): number => {
+  if (period === null || period === undefined || isNaN(period)) return 0;
+  
   if (period < 4) return 0; // Trop court
   if (period > 18) return 0; // Trop long
   
@@ -67,7 +73,7 @@ const calculateWavePeriodScore = (period: number): number => {
 
 // Fonction pour calculer le score des températures (max 5 points)
 const calculateTemperatureScore = (airTemp: number, waterTemp: number): number => {
-  if (airTemp === null || waterTemp === null) return 0;
+  // La vérification des valeurs nulles est déjà faite avant l'appel de cette fonction
   
   // Différence entre températures (plus c'est proche, mieux c'est)
   const tempDifference = Math.abs(airTemp - waterTemp);
@@ -93,7 +99,7 @@ const calculateTemperatureScore = (airTemp: number, waterTemp: number): number =
 
 // Fonction pour calculer le score de la puissance des vagues (max 5 points)
 const calculateWavePowerScore = (power: number): number => {
-  if (power === null) return 0;
+  if (power === null || power === undefined || isNaN(power)) return 0;
   
   // La puissance idéale est entre 30 et 100
   if (power < 5) return 0; // Trop faible
@@ -292,13 +298,16 @@ const SurfScore = () => {
           const totalScore = Math.round(heightScore + windScore + periodScore + 
                                       temperatureScore + powerScore)
           
+          // S'assurer que le score total n'est pas NaN
+          const finalScore = isNaN(totalScore) ? 0 : totalScore
+          
           setScores({
-            heightScore,
-            windScore,
-            periodScore,
-            temperatureScore,
-            powerScore,
-            totalScore
+            heightScore: isNaN(heightScore) ? 0 : heightScore,
+            windScore: isNaN(windScore) ? 0 : windScore,
+            periodScore: isNaN(periodScore) ? 0 : periodScore,
+            temperatureScore: isNaN(temperatureScore) ? 0 : temperatureScore,
+            powerScore: isNaN(powerScore) ? 0 : powerScore,
+            totalScore: finalScore
           })
           
           setHasValidData(true)
