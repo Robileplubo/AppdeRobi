@@ -168,7 +168,7 @@ const LocationSearch = () => {
       <div className="flex justify-center">
         <button
           onClick={handleGeolocation}
-          className="bg-sky-400 text-white px-6 py-2 rounded-full hover:bg-sky-500 transition-colors flex items-center space-x-2 shadow-sm text-sm font-medium"
+          className="bg-sky-400 text-white px-6 py-3 rounded-full hover:bg-sky-500 transition-colors flex items-center space-x-2 shadow-sm text-sm font-medium touch-manipulation active:bg-sky-600"
         >
           <MapPinIcon className="h-5 w-5" />
           <span>Me localiser</span>
@@ -190,7 +190,7 @@ const LocationSearch = () => {
       )}
 
       {/* Carte carrée */}
-      <div className="aspect-square w-full rounded-xl overflow-hidden shadow-sm border border-sky-50">
+      <div className="aspect-square w-full rounded-xl overflow-hidden shadow-sm border border-sky-50 touch-manipulation">
         <MapContainer
           center={[46.603354, 1.888334]}
           zoom={6}

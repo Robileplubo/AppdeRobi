@@ -342,7 +342,7 @@ const SurfScore = () => {
           
           <button 
             onClick={() => setShowDetails(!showDetails)}
-            className="mt-4 px-6 py-2 bg-sky-400 text-white rounded-full hover:bg-sky-500 transition-colors shadow-sm text-sm font-medium"
+            className="mt-4 px-6 py-3 bg-sky-400 text-white rounded-full hover:bg-sky-500 transition-colors shadow-sm text-sm font-medium touch-manipulation active:bg-sky-600"
           >
             {showDetails ? 'Masquer les détails' : 'Afficher les détails'}
           </button>
@@ -350,7 +350,7 @@ const SurfScore = () => {
           {showDetails && (
             <>
               <h2 className="text-xl font-semibold mt-6 mb-4 text-sky-800">Conditions météorologiques</h2>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
                   <h3 className="text-base font-medium mb-2 text-sky-700">Hauteur des vagues</h3>
                   <div className="text-3xl font-bold text-sky-800">
@@ -387,16 +387,16 @@ const SurfScore = () => {
                     Score: {scores.windScore.toFixed(1)}/5
                   </div>
                 </div>
-                <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50 col-span-2">
+                <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50 col-span-1 sm:col-span-2">
                   <h3 className="text-base font-medium mb-2 text-sky-700">Températures</h3>
-                  <div className="flex justify-center space-x-8">
-                    <div>
+                  <div className="flex justify-center space-x-6 sm:space-x-8">
+                    <div className="text-center">
                       <span className="text-xs text-sky-600">Air</span>
                       <div className="text-2xl font-bold text-sky-800">
                         {weatherData.airTemp !== null ? `${weatherData.airTemp.toFixed(1)} °C` : 'N/A'}
                       </div>
                     </div>
-                    <div>
+                    <div className="text-center">
                       <span className="text-xs text-sky-600">Eau</span>
                       <div className="text-2xl font-bold text-sky-800">
                         {weatherData.waterTemp !== null ? `${weatherData.waterTemp.toFixed(1)} °C` : 'N/A'}

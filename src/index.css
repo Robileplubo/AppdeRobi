@@ -19,7 +19,21 @@
 
 @layer base {
   body {
-    @apply antialiased;
+    @apply antialiased text-base;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior-y: none;
+  }
+  
+  /* Optimisations pour les interactions tactiles */
+  button, a, input, select, textarea {
+    touch-action: manipulation;
+  }
+  
+  /* Amélioration de la lisibilité sur mobiles */
+  @media (max-width: 640px) {
+    html {
+      font-size: 15px;
+    }
   }
 }
 
@@ -37,9 +51,21 @@
   }
 }
 
+/* Styles pour Leaflet adaptés aux mobiles */
 .leaflet-container {
   width: 100%;
   height: 100%;
+  touch-action: pan-x pan-y;
+}
+
+.leaflet-control-zoom {
+  display: none; /* Masquer les contrôles de zoom sur mobile pour plus de clarté */
+}
+
+.leaflet-touch .leaflet-bar a {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
 }
 
 .leaflet-popup-content-wrapper {
@@ -70,4 +96,13 @@
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   z-index: 1000;
+  max-width: 90%;
+  text-align: center;
+}
+
+/* Assurer que les touches pressées ont un retour visuel */
+@media (max-width: 640px) {
+  button:active, a:active {
+    opacity: 0.8;
+  }
 }
