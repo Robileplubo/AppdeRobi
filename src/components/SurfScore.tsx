@@ -264,12 +264,12 @@ const SurfScore = () => {
         }
         
         if (data.hourly) {
-          const waveHeight = data.hourly.wave_height?.[0] || null
-          const wavePeriod = data.hourly.wave_period?.[0] || null
-          const wavePower = data.hourly.wave_power?.[0] || null
-          const windSpeed = data.hourly.wind_speed_10m?.[0] || null
-          const airTemp = data.hourly.temperature_2m?.[0] || null
-          const waterTemp = data.hourly.sea_surface_temperature?.[0] || null
+          const waveHeight = data.hourly.wave_height?.[0] ?? null
+          const wavePeriod = data.hourly.wave_period?.[0] ?? null
+          const wavePower = data.hourly.wave_power?.[0] ?? null
+          const windSpeed = data.hourly.wind_speed_10m?.[0] ?? null
+          const airTemp = data.hourly.temperature_2m?.[0] ?? null
+          const waterTemp = data.hourly.sea_surface_temperature?.[0] ?? null
           
           setWeatherData({
             waveHeight,

@@ -6,6 +6,7 @@ import ScoreCircle from './components/ScoreCircle'
 import WeatherDetails from './components/WeatherDetails'
 import SpotList from './components/SpotList'
 import SurfScore from './components/SurfScore'
+import { WeatherData } from './types/weather'
 
 function App() {
   const { location, setWeatherData, setLoading, setError } = useStore()
@@ -17,7 +18,7 @@ function App() {
       try {
         setLoading(true)
         const data = await fetchWeatherData(location.lat, location.lon)
-        setWeatherData(data)
+        setWeatherData(data as WeatherData)
       } catch (error) {
         setError('Erreur lors de la récupération des données météo')
       } finally {
