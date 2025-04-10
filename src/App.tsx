@@ -29,12 +29,18 @@ function App() {
   }, [location, setWeatherData, setLoading, setError])
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
-      <div className="max-w-4xl mx-auto space-y-8">
-        <h1 className="text-3xl font-bold text-center text-gray-800">
-          SurfScore
-        </h1>
-        <div className="bg-white rounded-lg shadow-lg p-6 space-y-8">
+    <div className="min-h-screen bg-gradient-to-b from-sky-200 to-white p-0">
+      <div className="w-full py-6 mb-4" style={{ backgroundColor: "#FDFCFA" }}>
+        <div className="max-w-sm mx-auto">
+          <img 
+            src="/graphic/surfscore_logo.png" 
+            alt="SurfScore Logo" 
+            className="h-20 mx-auto"
+          />
+        </div>
+      </div>
+      <div className="max-w-sm mx-auto px-4 space-y-6">
+        <div className="bg-white rounded-xl shadow-sm p-5 space-y-6 border border-sky-50">
           <LocationSearch />
           <SurfScore />
         </div>

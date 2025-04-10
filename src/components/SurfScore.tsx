@@ -218,6 +218,7 @@ const SurfScore = () => {
   const [showPopup, setShowPopup] = useState(false)
   const [popupMessage, setPopupMessage] = useState("")
   const [hasValidData, setHasValidData] = useState(false)
+  const [showDetails, setShowDetails] = useState(false)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -336,68 +337,79 @@ const SurfScore = () => {
       )}
       
       {hasValidData && !showPopup && (
-        <div className="text-center p-4 bg-white rounded-lg shadow-lg">
+        <div className="text-center p-4 bg-white rounded-xl">
           <ScoreCircle score={scores.totalScore} />
           
-          <h2 className="text-2xl font-bold mb-4">Conditions météorologiques</h2>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="p-4 bg-blue-50 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">Hauteur des vagues</h3>
-              <div className="text-3xl font-bold">
-                {weatherData.waveHeight !== null ? `${weatherData.waveHeight.toFixed(1)} m` : 'N/A'}
-              </div>
-              <div className="text-sm mt-1 text-gray-500">
-                Score: {scores.heightScore.toFixed(1)}/80
-              </div>
-            </div>
-            <div className="p-4 bg-blue-50 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">Période des vagues</h3>
-              <div className="text-3xl font-bold">
-                {weatherData.wavePeriod !== null ? `${weatherData.wavePeriod.toFixed(1)} s` : 'N/A'}
-              </div>
-              <div className="text-sm mt-1 text-gray-500">
-                Score: {scores.periodScore.toFixed(1)}/5
-              </div>
-            </div>
-            <div className="p-4 bg-blue-50 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">Puissance des vagues</h3>
-              <div className="text-3xl font-bold">
-                {weatherData.wavePower !== null ? Math.round(weatherData.wavePower) : 'N/A'}
-              </div>
-              <div className="text-sm mt-1 text-gray-500">
-                Score: {scores.powerScore.toFixed(1)}/5
-              </div>
-            </div>
-            <div className="p-4 bg-blue-50 rounded-lg">
-              <h3 className="text-lg font-semibold mb-2">Vitesse du vent</h3>
-              <div className="text-3xl font-bold">
-                {weatherData.windSpeed !== null ? `${weatherData.windSpeed.toFixed(1)} km/h` : 'N/A'}
-              </div>
-              <div className="text-sm mt-1 text-gray-500">
-                Score: {scores.windScore.toFixed(1)}/5
-              </div>
-            </div>
-            <div className="p-4 bg-blue-50 rounded-lg col-span-2">
-              <h3 className="text-lg font-semibold mb-2">Températures</h3>
-              <div className="flex justify-center space-x-8">
-                <div>
-                  <span className="text-sm text-gray-600">Air</span>
-                  <div className="text-2xl font-bold">
-                    {weatherData.airTemp !== null ? `${weatherData.airTemp.toFixed(1)} °C` : 'N/A'}
+          <button 
+            onClick={() => setShowDetails(!showDetails)}
+            className="mt-4 px-6 py-2 bg-sky-400 text-white rounded-full hover:bg-sky-500 transition-colors shadow-sm text-sm font-medium"
+          >
+            {showDetails ? 'Masquer les détails' : 'Afficher les détails'}
+          </button>
+          
+          {showDetails && (
+            <>
+              <h2 className="text-xl font-semibold mt-6 mb-4 text-sky-800">Conditions météorologiques</h2>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
+                  <h3 className="text-base font-medium mb-2 text-sky-700">Hauteur des vagues</h3>
+                  <div className="text-3xl font-bold text-sky-800">
+                    {weatherData.waveHeight !== null ? `${weatherData.waveHeight.toFixed(1)} m` : 'N/A'}
+                  </div>
+                  <div className="text-xs mt-1 text-sky-600">
+                    Score: {scores.heightScore.toFixed(1)}/80
                   </div>
                 </div>
-                <div>
-                  <span className="text-sm text-gray-600">Eau</span>
-                  <div className="text-2xl font-bold">
-                    {weatherData.waterTemp !== null ? `${weatherData.waterTemp.toFixed(1)} °C` : 'N/A'}
+                <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
+                  <h3 className="text-base font-medium mb-2 text-sky-700">Période des vagues</h3>
+                  <div className="text-3xl font-bold text-sky-800">
+                    {weatherData.wavePeriod !== null ? `${weatherData.wavePeriod.toFixed(1)} s` : 'N/A'}
+                  </div>
+                  <div className="text-xs mt-1 text-sky-600">
+                    Score: {scores.periodScore.toFixed(1)}/5
+                  </div>
+                </div>
+                <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
+                  <h3 className="text-base font-medium mb-2 text-sky-700">Puissance des vagues</h3>
+                  <div className="text-3xl font-bold text-sky-800">
+                    {weatherData.wavePower !== null ? Math.round(weatherData.wavePower) : 'N/A'}
+                  </div>
+                  <div className="text-xs mt-1 text-sky-600">
+                    Score: {scores.powerScore.toFixed(1)}/5
+                  </div>
+                </div>
+                <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
+                  <h3 className="text-base font-medium mb-2 text-sky-700">Vitesse du vent</h3>
+                  <div className="text-3xl font-bold text-sky-800">
+                    {weatherData.windSpeed !== null ? `${weatherData.windSpeed.toFixed(1)} km/h` : 'N/A'}
+                  </div>
+                  <div className="text-xs mt-1 text-sky-600">
+                    Score: {scores.windScore.toFixed(1)}/5
+                  </div>
+                </div>
+                <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50 col-span-2">
+                  <h3 className="text-base font-medium mb-2 text-sky-700">Températures</h3>
+                  <div className="flex justify-center space-x-8">
+                    <div>
+                      <span className="text-xs text-sky-600">Air</span>
+                      <div className="text-2xl font-bold text-sky-800">
+                        {weatherData.airTemp !== null ? `${weatherData.airTemp.toFixed(1)} °C` : 'N/A'}
+                      </div>
+                    </div>
+                    <div>
+                      <span className="text-xs text-sky-600">Eau</span>
+                      <div className="text-2xl font-bold text-sky-800">
+                        {weatherData.waterTemp !== null ? `${weatherData.waterTemp.toFixed(1)} °C` : 'N/A'}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-xs mt-1 text-sky-600">
+                    Score: {scores.temperatureScore.toFixed(1)}/5
                   </div>
                 </div>
               </div>
-              <div className="text-sm mt-1 text-gray-500">
-                Score: {scores.temperatureScore.toFixed(1)}/5
-              </div>
-            </div>
-          </div>
+            </>
+          )}
         </div>
       )}
     </>

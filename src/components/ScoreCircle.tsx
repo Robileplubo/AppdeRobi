@@ -18,7 +18,7 @@ const ScoreCircle = () => {
           stroke="currentColor"
           strokeWidth="8"
           fill="none"
-          className="text-gray-200 dark:text-gray-700"
+          className="text-sky-100"
         />
         {/* Cercle de progression */}
         <motion.circle
@@ -28,7 +28,7 @@ const ScoreCircle = () => {
           stroke="currentColor"
           strokeWidth="8"
           fill="none"
-          className="text-primary-500"
+          className="text-sky-400"
           strokeDasharray={circumference}
           strokeDashoffset={circumference}
           initial={{ strokeDashoffset: circumference }}
@@ -44,11 +44,11 @@ const ScoreCircle = () => {
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl font-bold text-gray-900 dark:text-white"
+            className="text-4xl font-bold text-sky-800"
           >
             {isLoading ? '...' : Math.round(surfScore)}
           </motion.div>
-          <div className="text-sm text-gray-600 dark:text-gray-300">
+          <div className="text-sm font-medium text-sky-600">
             Score de surf
           </div>
         </div>
