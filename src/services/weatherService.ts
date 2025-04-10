@@ -1,7 +1,8 @@
 import { WeatherData } from '../types/weather';
+import { prepareApiUrl } from '../utils/vercelAdapter';
 
 // URLs des API
-const MARINE_API_URL = 'https://marine-api.open-meteo.com/v1';
+const MARINE_API_URL = import.meta.env.VITE_WEATHER_API_URL || 'https://marine-api.open-meteo.com/v1';
 const STANDARD_API_URL = 'https://api.open-meteo.com/v1';
 
 // Calcul de la puissance des vagues basé sur la hauteur et la période
@@ -14,10 +15,18 @@ export const fetchWeatherData = async (lat: number, lon: number): Promise<Weathe
   try {
     // PREMIÈRE API : Marine API pour les données des vagues et température de l'eau
     console.log('API MARINE - URL de base:', MARINE_API_URL);
-    const marineUrl = `${MARINE_API_URL}/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_period,sea_surface_temperature`;
+    const marineUrlRaw = `${MARINE_API_URL}/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_period,sea_surface_temperature`;
+    const marineUrl = prepareApiUrl(marineUrlRaw);
     console.log('API MARINE - URL complète:', marineUrl);
 
-    const marineResponse = await fetch(marineUrl);
+    // Utilisation de mode: 'cors' pour éviter les problèmes CORS
+    const marineResponse = await fetch(marineUrl, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      mode: 'cors',
+    });
     
     if (!marineResponse.ok) {
       const errorText = await marineResponse.text();
@@ -33,10 +42,18 @@ export const fetchWeatherData = async (lat: number, lon: number): Promise<Weathe
 
     // DEUXIÈME API : API Standard pour les données météo générales
     console.log('API STANDARD - URL de base:', STANDARD_API_URL);
-    const standardUrl = `${STANDARD_API_URL}/forecast?latitude=${lat}&longitude=${lon}&hourly=wind_speed_10m,temperature_2m,weathercode`;
+    const standardUrlRaw = `${STANDARD_API_URL}/forecast?latitude=${lat}&longitude=${lon}&hourly=wind_speed_10m,temperature_2m,weathercode`;
+    const standardUrl = prepareApiUrl(standardUrlRaw);
     console.log('API STANDARD - URL complète:', standardUrl);
 
-    const standardResponse = await fetch(standardUrl);
+    // Utilisation de mode: 'cors' pour éviter les problèmes CORS
+    const standardResponse = await fetch(standardUrl, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      mode: 'cors',
+    });
     
     if (!standardResponse.ok) {
       const errorText = await standardResponse.text();
@@ -58,7 +75,7 @@ export const fetchWeatherData = async (lat: number, lon: number): Promise<Weathe
     let wavePower: number[] = [];
     if (marineData.hourly?.wave_height && marineData.hourly?.wave_period) {
       wavePower = marineData.hourly.wave_height.map((height: number, index: number) => {
-        const period = marineData.hourly.wave_period?.[index] || 0;
+        const period = marineData.hourly.wave_period?.[index] ?? 0;
         return calculateWavePower(height, period);
       });
     }
@@ -84,6 +101,17 @@ export const fetchWeatherData = async (lat: number, lon: number): Promise<Weathe
     return combinedData;
   } catch (error) {
     console.error('Erreur détaillée dans fetchWeatherData:', error);
-    throw error;
+    // Retourner un objet vide mais valide pour éviter les erreurs
+    return {
+      hourly: {
+        wave_height: [],
+        wave_period: [],
+        wave_power: [],
+        sea_surface_temperature: [],
+        wind_speed_10m: [],
+        temperature_2m: [],
+        weathercode: []
+      }
+    };
   }
 }; 

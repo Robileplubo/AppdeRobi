@@ -3,6 +3,7 @@ import { useStore } from './store/useStore'
 import { fetchWeatherData } from './services/weatherService'
 import LocationSearch from './components/LocationSearch'
 import SurfScore from './components/SurfScore'
+import { getAssetUrl } from './utils/vercelAdapter'
 
 function App() {
   const { location, setWeatherData, setLoading, setError } = useStore()
@@ -42,12 +43,15 @@ function App() {
     fetchData()
   }, [location, setWeatherData, setLoading, setError])
 
+  // URL de l'image avec l'adaptateur Vercel
+  const logoUrl = getAssetUrl('/graphic/surfscore_logo.png');
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-200 to-white p-0">
       <div className="w-full py-6 mb-4" style={{ backgroundColor: "#FDFCFA" }}>
         <div className="max-w-sm mx-auto">
           <img 
-            src="/graphic/surfscore_logo.png" 
+            src={logoUrl}
             alt="SurfScore Logo" 
             className="h-20 mx-auto"
           />

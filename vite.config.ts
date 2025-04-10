@@ -40,12 +40,25 @@ export default defineConfig({
   ],
   server: {
     port: 5173,
-    open: true
+    open: true,
+    proxy: {
+      '/api': {
+        target: 'https://marine-api.open-meteo.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  },
+  resolve: {
+    alias: {
+      '@': '/src'
+    }
   },
   build: {
     target: 'esnext', // Optimisation pour les navigateurs modernes
     minify: 'terser',
     cssMinify: true,
+    sourcemap: process.env.NODE_ENV === 'development',
     rollupOptions: {
       output: {
         manualChunks: {
@@ -53,6 +66,12 @@ export default defineConfig({
           ui: ['framer-motion', '@heroicons/react']
         }
       }
+    }
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-leaflet', 'leaflet'],
+    esbuildOptions: {
+      target: 'esnext'
     }
   }
 }) 
