@@ -10,5 +10,6 @@ export interface WeatherData {
     wind_speed_10m?: number[];
     temperature_2m?: number[];
     weathercode?: number[];
+    time?: string[];
   };
 } 

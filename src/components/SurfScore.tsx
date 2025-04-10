@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useStore } from '../store/useStore'
 import { fetchWeatherData } from '../services/weatherService'
+import ForecastDisplay from './ForecastDisplay'
 
-// Fonction pour calculer le score en fonction de la hauteur des vagues (max 80 points)
-const calculateWaveHeightScore = (height: number): number => {
+// Export des fonctions de calcul pour les réutiliser dans ForecastDisplay
+export const calculateWaveHeightScore = (height: number): number => {
   if (height === null || height === undefined || isNaN(height)) return 0;
   
   // +4 points pour chaque 0,10m de hauteur
@@ -12,8 +13,7 @@ const calculateWaveHeightScore = (height: number): number => {
   return Math.min(score, 80);
 };
 
-// Fonction pour calculer le score du vent (max 5 points)
-const calculateWindScore = (windSpeed: number): number => {
+export const calculateWindScore = (windSpeed: number): number => {
   if (windSpeed === null || windSpeed === undefined || isNaN(windSpeed)) return 0;
   
   // Moins de vent est mieux
@@ -24,8 +24,7 @@ const calculateWindScore = (windSpeed: number): number => {
   return 5 * (1 - (windSpeed - 5) / 25);
 };
 
-// Fonction pour calculer le score de la période des vagues (max 5 points)
-const calculateWavePeriodScore = (period: number): number => {
+export const calculateWavePeriodScore = (period: number): number => {
   if (period === null || period === undefined || isNaN(period)) return 0;
   
   if (period < 4) return 0; // Trop court
@@ -41,8 +40,7 @@ const calculateWavePeriodScore = (period: number): number => {
   return 5 * (1 - (period - 14) / 4);
 };
 
-// Fonction pour calculer le score des températures (max 5 points)
-const calculateTemperatureScore = (airTemp: number, waterTemp: number): number => {
+export const calculateTemperatureScore = (airTemp: number, waterTemp: number): number => {
   // La vérification des valeurs nulles est déjà faite avant l'appel de cette fonction
   
   // Différence entre températures (plus c'est proche, mieux c'est)
@@ -67,8 +65,7 @@ const calculateTemperatureScore = (airTemp: number, waterTemp: number): number =
   return diffScore + tempLevelScore;
 };
 
-// Fonction pour calculer le score de la puissance des vagues (max 5 points)
-const calculateWavePowerScore = (power: number): number => {
+export const calculateWavePowerScore = (power: number): number => {
   if (power === null || power === undefined || isNaN(power)) return 0;
   
   // La puissance idéale est entre 30 et 100
@@ -84,6 +81,59 @@ const calculateWavePowerScore = (power: number): number => {
     // Décroissance linéaire entre 100 et 200
     return 5 * (1 - (power - 100) / 100);
   }
+};
+
+// Exporter le composant ScoreCircle pour réutilisation dans ForecastDisplay
+export const ScoreCircle = ({ score, size = 120, fontSize = '3xl' }: { score: number, size?: number, fontSize?: string }) => {
+  // Déterminer la couleur en fonction du score
+  let color = 'text-red-500';
+  if (score >= 70) color = 'text-green-500';
+  else if (score >= 50) color = 'text-yellow-500';
+  else if (score >= 30) color = 'text-orange-500';
+  
+  // Calculer le pourcentage pour le cercle
+  const percentage = score;
+  const radius = size / 2 - 15;
+  const dashArray = 2 * Math.PI * radius;
+  const dashOffset = dashArray - (dashArray * percentage) / 100;
+  
+  return (
+    <div className="flex flex-col items-center justify-center mb-2">
+      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+        <circle
+          cx={size/2}
+          cy={size/2}
+          r={radius}
+          fill="none"
+          stroke="#e5e7eb"
+          strokeWidth="10"
+        />
+        <circle
+          cx={size/2}
+          cy={size/2}
+          r={radius}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="10"
+          strokeLinecap="round"
+          strokeDasharray={dashArray}
+          strokeDashoffset={dashOffset}
+          transform={`rotate(-90 ${size/2} ${size/2})`}
+          className={color}
+        />
+        <text
+          x={size/2}
+          y={size/2 + 5}
+          textAnchor="middle"
+          dominantBaseline="middle"
+          className={`text-${fontSize} font-bold`}
+        >
+          {score}
+        </text>
+      </svg>
+      <div className="mt-2 text-xl font-bold">Score de surf</div>
+    </div>
+  );
 };
 
 // Composant pour la pop-up
@@ -102,58 +152,6 @@ const Popup = ({ message, onClose }: { message: string; onClose: () => void }) =
           </button>
         </div>
       </div>
-    </div>
-  );
-};
-
-// Composant pour afficher le score dans un cercle
-const ScoreCircle = ({ score }: { score: number }) => {
-  // Déterminer la couleur en fonction du score
-  let color = 'text-red-500';
-  if (score >= 70) color = 'text-green-500';
-  else if (score >= 50) color = 'text-yellow-500';
-  else if (score >= 30) color = 'text-orange-500';
-  
-  // Calculer le pourcentage pour le cercle
-  const percentage = score;
-  const dashArray = 283; // 2 * PI * 45 (rayon)
-  const dashOffset = dashArray - (dashArray * percentage) / 100;
-  
-  return (
-    <div className="flex flex-col items-center justify-center mb-6">
-      <svg width="120" height="120" viewBox="0 0 120 120">
-        <circle
-          cx="60"
-          cy="60"
-          r="45"
-          fill="none"
-          stroke="#e5e7eb"
-          strokeWidth="10"
-        />
-        <circle
-          cx="60"
-          cy="60"
-          r="45"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="10"
-          strokeLinecap="round"
-          strokeDasharray={dashArray}
-          strokeDashoffset={dashOffset}
-          transform="rotate(-90 60 60)"
-          className={color}
-        />
-        <text
-          x="60"
-          y="65"
-          textAnchor="middle"
-          dominantBaseline="middle"
-          className="text-3xl font-bold"
-        >
-          {score}
-        </text>
-      </svg>
-      <div className="mt-2 text-xl font-bold">Score de surf</div>
     </div>
   );
 };
@@ -316,80 +314,85 @@ const SurfScore = () => {
       )}
       
       {hasValidData && !showPopup && (
-        <div className="text-center p-4 bg-white rounded-xl">
-          <ScoreCircle score={scores.totalScore} />
-          
-          <button 
-            onClick={() => setShowDetails(!showDetails)}
-            className="mt-4 px-6 py-3 bg-sky-400 text-white rounded-full hover:bg-sky-500 transition-colors shadow-sm text-sm font-medium touch-manipulation active:bg-sky-600"
-          >
-            {showDetails ? 'Masquer les détails' : 'Afficher les détails'}
-          </button>
-          
-          {showDetails && (
-            <>
-              <h2 className="text-xl font-semibold mt-6 mb-4 text-sky-800">Conditions météorologiques</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
-                  <h3 className="text-base font-medium mb-2 text-sky-700">Hauteur des vagues</h3>
-                  <div className="text-3xl font-bold text-sky-800">
-                    {weatherData.waveHeight !== null ? `${weatherData.waveHeight.toFixed(1)} m` : 'N/A'}
-                  </div>
-                  <div className="text-xs mt-1 text-sky-600">
-                    Score: {scores.heightScore.toFixed(1)}/80
-                  </div>
-                </div>
-                <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
-                  <h3 className="text-base font-medium mb-2 text-sky-700">Période des vagues</h3>
-                  <div className="text-3xl font-bold text-sky-800">
-                    {weatherData.wavePeriod !== null ? `${weatherData.wavePeriod.toFixed(1)} s` : 'N/A'}
-                  </div>
-                  <div className="text-xs mt-1 text-sky-600">
-                    Score: {scores.periodScore.toFixed(1)}/5
-                  </div>
-                </div>
-                <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
-                  <h3 className="text-base font-medium mb-2 text-sky-700">Puissance des vagues</h3>
-                  <div className="text-3xl font-bold text-sky-800">
-                    {weatherData.wavePower !== null ? Math.round(weatherData.wavePower) : 'N/A'}
-                  </div>
-                  <div className="text-xs mt-1 text-sky-600">
-                    Score: {scores.powerScore.toFixed(1)}/5
-                  </div>
-                </div>
-                <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
-                  <h3 className="text-base font-medium mb-2 text-sky-700">Vitesse du vent</h3>
-                  <div className="text-3xl font-bold text-sky-800">
-                    {weatherData.windSpeed !== null ? `${weatherData.windSpeed.toFixed(1)} km/h` : 'N/A'}
-                  </div>
-                  <div className="text-xs mt-1 text-sky-600">
-                    Score: {scores.windScore.toFixed(1)}/5
-                  </div>
-                </div>
-                <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50 col-span-1 sm:col-span-2">
-                  <h3 className="text-base font-medium mb-2 text-sky-700">Températures</h3>
-                  <div className="flex justify-center space-x-6 sm:space-x-8">
-                    <div className="text-center">
-                      <span className="text-xs text-sky-600">Air</span>
-                      <div className="text-2xl font-bold text-sky-800">
-                        {weatherData.airTemp !== null ? `${weatherData.airTemp.toFixed(1)} °C` : 'N/A'}
-                      </div>
+        <>
+          <div className="text-center p-4 bg-white rounded-xl mb-6">
+            <ScoreCircle score={scores.totalScore} />
+            
+            {/* Bloc de prévisions placé avant le bouton pour afficher les détails */}
+            <ForecastDisplay />
+            
+            <button 
+              onClick={() => setShowDetails(!showDetails)}
+              className="mt-4 px-6 py-3 bg-sky-400 text-white rounded-full hover:bg-sky-500 transition-colors shadow-sm text-sm font-medium touch-manipulation active:bg-sky-600"
+            >
+              {showDetails ? 'Masquer les détails' : 'Afficher les détails'}
+            </button>
+            
+            {showDetails && (
+              <>
+                <h2 className="text-xl font-semibold mt-6 mb-4 text-sky-800">Conditions météorologiques actuelles</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
+                    <h3 className="text-base font-medium mb-2 text-sky-700">Hauteur des vagues</h3>
+                    <div className="text-3xl font-bold text-sky-800">
+                      {weatherData.waveHeight !== null ? `${weatherData.waveHeight.toFixed(1)} m` : 'N/A'}
                     </div>
-                    <div className="text-center">
-                      <span className="text-xs text-sky-600">Eau</span>
-                      <div className="text-2xl font-bold text-sky-800">
-                        {weatherData.waterTemp !== null ? `${weatherData.waterTemp.toFixed(1)} °C` : 'N/A'}
-                      </div>
+                    <div className="text-xs mt-1 text-sky-600">
+                      Score: {scores.heightScore.toFixed(1)}/80
                     </div>
                   </div>
-                  <div className="text-xs mt-1 text-sky-600">
-                    Score: {scores.temperatureScore.toFixed(1)}/5
+                  <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
+                    <h3 className="text-base font-medium mb-2 text-sky-700">Période des vagues</h3>
+                    <div className="text-3xl font-bold text-sky-800">
+                      {weatherData.wavePeriod !== null ? `${weatherData.wavePeriod.toFixed(1)} s` : 'N/A'}
+                    </div>
+                    <div className="text-xs mt-1 text-sky-600">
+                      Score: {scores.periodScore.toFixed(1)}/5
+                    </div>
+                  </div>
+                  <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
+                    <h3 className="text-base font-medium mb-2 text-sky-700">Puissance des vagues</h3>
+                    <div className="text-3xl font-bold text-sky-800">
+                      {weatherData.wavePower !== null ? Math.round(weatherData.wavePower) : 'N/A'}
+                    </div>
+                    <div className="text-xs mt-1 text-sky-600">
+                      Score: {scores.powerScore.toFixed(1)}/5
+                    </div>
+                  </div>
+                  <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
+                    <h3 className="text-base font-medium mb-2 text-sky-700">Vitesse du vent</h3>
+                    <div className="text-3xl font-bold text-sky-800">
+                      {weatherData.windSpeed !== null ? `${weatherData.windSpeed.toFixed(1)} km/h` : 'N/A'}
+                    </div>
+                    <div className="text-xs mt-1 text-sky-600">
+                      Score: {scores.windScore.toFixed(1)}/5
+                    </div>
+                  </div>
+                  <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50 col-span-1 sm:col-span-2">
+                    <h3 className="text-base font-medium mb-2 text-sky-700">Températures</h3>
+                    <div className="flex justify-center space-x-6 sm:space-x-8">
+                      <div className="text-center">
+                        <span className="text-xs text-sky-600">Air</span>
+                        <div className="text-2xl font-bold text-sky-800">
+                          {weatherData.airTemp !== null ? `${weatherData.airTemp.toFixed(1)} °C` : 'N/A'}
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <span className="text-xs text-sky-600">Eau</span>
+                        <div className="text-2xl font-bold text-sky-800">
+                          {weatherData.waterTemp !== null ? `${weatherData.waterTemp.toFixed(1)} °C` : 'N/A'}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-xs mt-1 text-sky-600">
+                      Score: {scores.temperatureScore.toFixed(1)}/5
+                    </div>
                   </div>
                 </div>
-              </div>
-            </>
-          )}
-        </div>
+              </>
+            )}
+          </div>
+        </>
       )}
     </>
   )
