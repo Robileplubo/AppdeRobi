@@ -9,6 +9,7 @@ import {
   calculateWavePowerScore,
   ScoreCircle
 } from './SurfScore';
+import CalendarPopup from './CalendarPopup';
 
 // Fonction utilitaire pour formater la date
 const formatDate = (dateString: string) => {
@@ -120,6 +121,19 @@ const ForecastDisplay = () => {
   } | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [calendarPopup, setCalendarPopup] = useState<{
+    show: boolean;
+    date: string;
+    forecasts: {
+      temperature: number;
+      waveHeight: number;
+      score: number;
+    };
+  }>({
+    show: false,
+    date: '',
+    forecasts: { temperature: 0, waveHeight: 0, score: 0 }
+  });
 
   useEffect(() => {
     const fetchForecast = async () => {
@@ -214,6 +228,26 @@ const ForecastDisplay = () => {
     fetchForecast();
   }, [location]);
 
+  // Fonction pour ouvrir la popup de confirmation
+  const handleAddToCalendar = (date: string, index: number) => {
+    if (!forecastData) return;
+    
+    setCalendarPopup({
+      show: true,
+      date: date,
+      forecasts: {
+        temperature: forecastData.temperatures[index],
+        waveHeight: forecastData.waveHeights[index],
+        score: forecastData.scores[index]
+      }
+    });
+  };
+
+  // Fonction pour fermer la popup
+  const handleClosePopup = () => {
+    setCalendarPopup(prev => ({ ...prev, show: false }));
+  };
+
   if (!location) {
     return null;
   }
@@ -231,31 +265,66 @@ const ForecastDisplay = () => {
   }
 
   return (
-    <div className="mt-8 bg-white rounded-xl p-4 shadow-sm">
-      <h2 className="text-xl font-semibold mb-4 text-sky-800 text-center">Prévisions sur 7 jours</h2>
-      
-      <div className="overflow-x-auto">
-        <div className="flex space-x-2 min-w-max">
-          {forecastData.dates.map((date, index) => (
-            <div key={date} className="flex-shrink-0 w-24 p-2 bg-gradient-to-br from-white to-sky-50 rounded-lg border border-sky-100 text-center">
-              <div className="font-medium text-sky-700 text-sm mb-2">{formatDate(date)}</div>
-              
-              <ForecastScoreCircle score={forecastData.scores[index]} />
-              
-              <div className="flex items-center justify-center mt-2 space-x-1">
-                <span className="text-xl">{getWeatherIcon(forecastData.weatherCodes[index])}</span>
-                <span className="font-bold text-sky-700">{forecastData.temperatures[index].toFixed(1)}°C</span>
+    <>
+      <div className="mt-8 bg-white rounded-xl p-4 shadow-sm">
+        <h2 className="text-xl font-semibold mb-4 text-sky-800 text-center">Prévisions sur 7 jours</h2>
+        
+        <div className="overflow-x-auto">
+          <div className="flex space-x-2 min-w-max">
+            {forecastData.dates.map((date, index) => (
+              <div key={date} className="flex-shrink-0 w-24 p-2 bg-gradient-to-br from-white to-sky-50 rounded-lg border border-sky-100 text-center">
+                <div className="font-medium text-sky-700 text-sm mb-1">{formatDate(date)}</div>
+                
+                <ForecastScoreCircle score={forecastData.scores[index]} />
+                
+                <div className="flex items-center justify-center mt-2 space-x-1">
+                  <span className="text-xl">{getWeatherIcon(forecastData.weatherCodes[index])}</span>
+                  <span className="font-bold text-sky-700">{forecastData.temperatures[index].toFixed(1)}°C</span>
+                </div>
+                
+                <div className="mt-2 text-sm font-medium text-sky-600">
+                  {forecastData.waveHeights[index].toFixed(1)}m
+                </div>
+                
+                {/* Bouton pour ajouter au calendrier */}
+                <button 
+                  onClick={() => handleAddToCalendar(date, index)}
+                  className="mt-2 w-6 h-6 rounded-full bg-sky-500 text-white flex items-center justify-center hover:bg-sky-600 mx-auto text-sm"
+                  title="Ajouter à l'agenda"
+                >
+                  +
+                </button>
               </div>
-              
-              <div className="mt-2 text-sm font-medium text-sky-600">
-                {forecastData.waveHeights[index].toFixed(1)}m
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* Popup de confirmation pour l'ajout au calendrier */}
+      {calendarPopup.show && forecastData && (
+        <CalendarPopup
+          onClose={handleClosePopup}
+          forecast={{ date: calendarPopup.date }}
+          waveHeight={calendarPopup.forecasts.waveHeight}
+          wavePeriod={forecastData.wavePeriods[forecastData.dates.findIndex(d => d === calendarPopup.date)]}
+          waveDirection={0} // À remplacer par la vraie valeur si disponible
+          windSpeed={forecastData.windSpeeds[forecastData.dates.findIndex(d => d === calendarPopup.date)]}
+          windDirection={0} // À remplacer par la vraie valeur si disponible
+          airTemp={calendarPopup.forecasts.temperature}
+          waterTemp={forecastData.waterTemps[forecastData.dates.findIndex(d => d === calendarPopup.date)]}
+          totalScore={calendarPopup.forecasts.score}
+          city={location ? getNearestCityName(location.lat, location.lon) : "Spot de surf"}
+        />
+      )}
+    </>
   );
+};
+
+// Fonction pour obtenir le nom de la ville la plus proche (simplifiée)
+const getNearestCityName = (lat: number, lon: number): string => {
+  // Cette fonction pourrait être améliorée avec une API de géocodage inversé
+  // Mais pour l'instant, nous retournons juste une valeur par défaut
+  return "Spot de surf";
 };
 
 export default ForecastDisplay; 

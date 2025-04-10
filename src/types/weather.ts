@@ -12,4 +12,9 @@ export interface WeatherData {
     weathercode?: number[];
     time?: string[];
   };
+}
+
+export interface Forecast {
+  date: string | Date;
+  score?: number;
 } 
