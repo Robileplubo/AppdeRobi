@@ -154,7 +154,7 @@ const LocationSearch = () => {
         setSelectedLocation({ lat: latitude, lon: longitude });
         setLocation({ lat: latitude, lon: longitude });
       },
-      (error) => {
+      (_error) => {
         setError("Impossible d'obtenir votre position");
         setTimeout(() => setError(null), 5000);
       },
