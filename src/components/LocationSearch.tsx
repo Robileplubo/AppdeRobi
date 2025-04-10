@@ -5,12 +5,12 @@ import "leaflet/dist/leaflet.css";
 import { useStore } from "../store/useStore";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 
-// Configuration de l'icône par défaut de Leaflet
-delete (L.Icon.Default.prototype as any)._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
-  iconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
-  shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
+// Créer une icône personnalisée pour le marqueur
+const customIcon = new L.Icon({
+  iconUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzM4YmRmOCIgc3Ryb2tlPSJub25lIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLW1hcC1waW4iPjxwYXRoIGQ9Ik0yMSAxMGMwIDctOSAxMy05IDEzcy05LTYtOS0xM2E5IDkgMCAwIDEgMTggMHoiPjwvcGF0aD48Y2lyY2xlIGN4PSIxMiIgY3k9IjEwIiByPSIzIiBmaWxsPSJ3aGl0ZSI+PC9jaXJjbGU+PC9zdmc+',
+  iconSize: [38, 45],
+  iconAnchor: [19, 45],
+  popupAnchor: [0, -45]
 });
 
 // Fonction pour calculer la distance entre deux points en km (formule de Haversine)
@@ -204,7 +204,7 @@ const LocationSearch = () => {
           />
           <MapClickHandler onMapClick={handleMapClick} />
           {selectedLocation && (
-            <Marker position={[selectedLocation.lat, selectedLocation.lon]}>
+            <Marker position={[selectedLocation.lat, selectedLocation.lon]} icon={customIcon}>
               <Popup>Position sélectionnée</Popup>
             </Marker>
           )}
