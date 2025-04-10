@@ -12,9 +12,9 @@ const calculateWavePower = (height: number, period: number): number => {
 
 export const fetchWeatherData = async (lat: number, lon: number): Promise<WeatherData> => {
   try {
-    // PREMIÈRE API : Marine API pour les données des vagues
+    // PREMIÈRE API : Marine API pour les données des vagues et température de l'eau
     console.log('API MARINE - URL de base:', MARINE_API_URL);
-    const marineUrl = `${MARINE_API_URL}/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_period`;
+    const marineUrl = `${MARINE_API_URL}/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_period,sea_surface_temperature`;
     console.log('API MARINE - URL complète:', marineUrl);
 
     const marineResponse = await fetch(marineUrl);
@@ -27,10 +27,13 @@ export const fetchWeatherData = async (lat: number, lon: number): Promise<Weathe
 
     const marineData = await marineResponse.json();
     console.log('API MARINE - Données reçues:', marineData);
+    
+    // Log des propriétés disponibles dans l'API marine
+    console.log('API MARINE - Propriétés de hourly:', Object.keys(marineData.hourly || {}));
 
     // DEUXIÈME API : API Standard pour les données météo générales
     console.log('API STANDARD - URL de base:', STANDARD_API_URL);
-    const standardUrl = `${STANDARD_API_URL}/forecast?latitude=${lat}&longitude=${lon}&hourly=wind_speed_10m,temperature_2m`;
+    const standardUrl = `${STANDARD_API_URL}/forecast?latitude=${lat}&longitude=${lon}&hourly=wind_speed_10m,temperature_2m,weathercode`;
     console.log('API STANDARD - URL complète:', standardUrl);
 
     const standardResponse = await fetch(standardUrl);
@@ -43,6 +46,13 @@ export const fetchWeatherData = async (lat: number, lon: number): Promise<Weathe
 
     const standardData = await standardResponse.json();
     console.log('API STANDARD - Données reçues:', standardData);
+    
+    // Log des propriétés disponibles dans l'API standard
+    console.log('API STANDARD - Propriétés de hourly:', Object.keys(standardData.hourly || {}));
+    console.log('API STANDARD - weathercode disponible?', Array.isArray(standardData.hourly?.weathercode));
+    if (standardData.hourly?.weathercode) {
+      console.log('API STANDARD - Premier code météo:', standardData.hourly.weathercode[0]);
+    }
 
     // Calculer la puissance des vagues à partir des données marines
     let wavePower: number[] = [];
@@ -60,10 +70,12 @@ export const fetchWeatherData = async (lat: number, lon: number): Promise<Weathe
         wave_height: marineData.hourly?.wave_height,
         wave_period: marineData.hourly?.wave_period,
         wave_power: wavePower,
+        sea_surface_temperature: marineData.hourly?.sea_surface_temperature,
         
         // Données de l'API Standard
         wind_speed_10m: standardData.hourly?.wind_speed_10m,
-        temperature_2m: standardData.hourly?.temperature_2m
+        temperature_2m: standardData.hourly?.temperature_2m,
+        weathercode: standardData.hourly?.weathercode
       }
     };
 
