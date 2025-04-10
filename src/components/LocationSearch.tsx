@@ -7,10 +7,10 @@ import { MapPinIcon } from "@heroicons/react/24/outline";
 
 // Créer une icône personnalisée pour le marqueur
 const customIcon = new L.Icon({
-  iconUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzM4YmRmOCIgc3Ryb2tlPSJub25lIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLW1hcC1waW4iPjxwYXRoIGQ9Ik0yMSAxMWMwIDctOSAxMy05IDEzcy05LTYtOS0xM2E5IDkgMCAwIDEgMTggMHoiPjwvcGF0aD48Y2lyY2xlIGN4PSIxMiIgY3k9IjEwIiByPSIzIiBmaWxsPSJ3aGl0ZSI+PC9jaXJjbGU+PC9zdmc+',
-  iconSize: [38, 45],
-  iconAnchor: [19, 45],
-  popupAnchor: [0, -45]
+  iconUrl: '/graphic/beacon.png',
+  iconSize: [40, 40],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
 });
 
 // Composant pour gérer les clics sur la carte
@@ -98,7 +98,7 @@ const LocationSearch = () => {
         className="mobile-geolocation-button"
         aria-label="Me localiser"
       >
-        <MapPinIcon className="h-6 w-6" />
+        <img src="/graphic/compass.png" alt="Localiser" className="w-9 h-9" />
       </button>
     </>
   );
