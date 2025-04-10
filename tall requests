@@ -1,0 +1,5 @@
+[33mcommit e1d850399a5f1cfce65e0841b2a784252a6d8100[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmobile[m[33m)[m
+Author: Robileplubo <robdesjars@gmail.com>
+Date:   Thu Apr 10 12:32:26 2025 +0200
+
+    Modifications pour le déploiement avec Ngrok : configuration vite.config.js, icône de marqueur personnalisée et adaptation pour l'API marine

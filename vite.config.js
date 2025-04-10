@@ -8,7 +8,8 @@ export default defineConfig({
     allowedHosts: [
       'localhost',
       '*.ngrok-free.app',
-      'bc5d-185-226-32-80.ngrok-free.app'
+      '*.ngrok.io',
+      '*.ngrok.app'
     ],
     host: '0.0.0.0',
     cors: true

@@ -7,25 +7,11 @@ import { MapPinIcon } from "@heroicons/react/24/outline";
 
 // Créer une icône personnalisée pour le marqueur
 const customIcon = new L.Icon({
-  iconUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzM4YmRmOCIgc3Ryb2tlPSJub25lIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLW1hcC1waW4iPjxwYXRoIGQ9Ik0yMSAxMGMwIDctOSAxMy05IDEzcy05LTYtOS0xM2E5IDkgMCAwIDEgMTggMHoiPjwvcGF0aD48Y2lyY2xlIGN4PSIxMiIgY3k9IjEwIiByPSIzIiBmaWxsPSJ3aGl0ZSI+PC9jaXJjbGU+PC9zdmc+',
+  iconUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzM4YmRmOCIgc3Ryb2tlPSJub25lIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLW1hcC1waW4iPjxwYXRoIGQ9Ik0yMSAxMWMwIDctOSAxMy05IDEzcy05LTYtOS0xM2E5IDkgMCAwIDEgMTggMHoiPjwvcGF0aD48Y2lyY2xlIGN4PSIxMiIgY3k9IjEwIiByPSIzIiBmaWxsPSJ3aGl0ZSI+PC9jaXJjbGU+PC9zdmc+',
   iconSize: [38, 45],
   iconAnchor: [19, 45],
   popupAnchor: [0, -45]
 });
-
-// Fonction pour calculer la distance entre deux points en km (formule de Haversine)
-const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number): number => {
-  const R = 6371; // Rayon de la Terre en km
-  const dLat = (lat2 - lat1) * Math.PI / 180;
-  const dLon = (lon2 - lon1) * Math.PI / 180;
-  const a = 
-    Math.sin(dLat/2) * Math.sin(dLat/2) +
-    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
-    Math.sin(dLon/2) * Math.sin(dLon/2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-  const distance = R * c;
-  return distance;
-};
 
 // Composant pour gérer les clics sur la carte
 const MapClickHandler = ({ onMapClick }: { onMapClick: (e: L.LeafletMouseEvent) => void }) => {
@@ -38,94 +24,12 @@ const MapClickHandler = ({ onMapClick }: { onMapClick: (e: L.LeafletMouseEvent) 
 const LocationSearch = () => {
   const [error, setError] = useState<string | null>(null);
   const [selectedLocation, setSelectedLocation] = useState<{ lat: number; lon: number } | null>(null);
-  const [nearestCity, setNearestCity] = useState<string | null>(null);
   const setLocation = useStore((state) => state.setLocation);
-
-  // Fonction pour trouver la commune la plus proche
-  const findNearestCity = async (lat: number, lon: number): Promise<{name: string, distance: number}> => {
-    try {
-      // Utiliser l'API Nominatim pour trouver les communes à proximité
-      const response = await fetch(
-        `https://nominatim.openstreetmap.org/search?format=json&q=city&limit=10&addressdetails=1&viewbox=${lon-0.5},${lat-0.5},${lon+0.5},${lat+0.5}`
-      );
-      const data = await response.json();
-      
-      if (!data || data.length === 0) {
-        return { name: "En mer", distance: Infinity };
-      }
-      
-      // Calculer la distance pour chaque commune et trouver la plus proche
-      let nearestCity = { name: "En mer", distance: Infinity };
-      
-      for (const place of data) {
-        if (place.type === "city" || place.type === "town" || place.type === "village") {
-          const distance = calculateDistance(lat, lon, parseFloat(place.lat), parseFloat(place.lon));
-          if (distance < nearestCity.distance) {
-            nearestCity = {
-              name: place.display_name.split(",")[0],
-              distance: distance
-            };
-          }
-        }
-      }
-      
-      return nearestCity;
-    } catch (error) {
-      console.error("Erreur lors de la recherche de la commune la plus proche:", error);
-      return { name: "En mer", distance: Infinity };
-    }
-  };
-
-  const getNearestCity = async (lat: number, lon: number) => {
-    try {
-      const response = await fetch(
-        `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&zoom=10&addressdetails=1`
-      );
-      const data = await response.json();
-      
-      // Tenter d'obtenir le nom de la ville/village/etc.
-      const locationName = data.address?.city || data.address?.town || data.address?.village;
-      
-      // Si un nom d'océan ou de mer est disponible, l'utiliser
-      const oceanName = data.address?.ocean || data.address?.sea;
-      
-      if (locationName) {
-        return locationName;
-      } else if (oceanName) {
-        // Si on est en mer, chercher la commune la plus proche
-        const nearestCity = await findNearestCity(lat, lon);
-        
-        // Si la commune la plus proche est à moins de 20 km, l'afficher
-        if (nearestCity.distance <= 20) {
-          return `${nearestCity.name} (à ${nearestCity.distance.toFixed(1)} km)`;
-        }
-        
-        return oceanName;
-      } else {
-        // Si aucun nom n'est trouvé, c'est probablement en mer
-        // Chercher la commune la plus proche
-        const nearestCity = await findNearestCity(lat, lon);
-        
-        // Si la commune la plus proche est à moins de 20 km, l'afficher
-        if (nearestCity.distance <= 20) {
-          return `${nearestCity.name} (à ${nearestCity.distance.toFixed(1)} km)`;
-        }
-        
-        return "En mer";
-      }
-    } catch (error) {
-      return "En mer";
-    }
-  };
 
   const handleMapClick = async (e: L.LeafletMouseEvent) => {
     try {
       const { lat, lng } = e.latlng;
       
-      // Récupérer le nom de la commune
-      const cityName = await getNearestCity(lat, lng);
-      setNearestCity(cityName);
-
       // Définir la position et l'envoyer au store
       setSelectedLocation({ lat, lon: lng });
       setLocation({ lat, lon: lng });
@@ -146,10 +50,6 @@ const LocationSearch = () => {
       async (position) => {
         const { latitude, longitude } = position.coords;
         
-        // Récupérer le nom de la commune
-        const cityName = await getNearestCity(latitude, longitude);
-        setNearestCity(cityName);
-
         // Définir la position et l'envoyer au store
         setSelectedLocation({ lat: latitude, lon: longitude });
         setLocation({ lat: latitude, lon: longitude });
@@ -178,14 +78,6 @@ const LocationSearch = () => {
       {error && (
         <div className="error-popup animate-fade-out bg-red-400 text-white px-4 py-2 rounded-lg shadow-sm text-sm">
           {error}
-        </div>
-      )}
-
-      {nearestCity && (
-        <div className="text-center">
-          <span className="text-sky-700 font-medium bg-white px-4 py-2 rounded-full shadow-sm inline-block">
-            {nearestCity}
-          </span>
         </div>
       )}
 
