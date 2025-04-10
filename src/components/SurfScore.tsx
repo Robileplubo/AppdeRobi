@@ -2,36 +2,6 @@ import { useEffect, useState } from 'react'
 import { useStore } from '../store/useStore'
 import { fetchWeatherData } from '../services/weatherService'
 
-// Fonction pour traduire le code météo en description
-const getWeatherDescription = (code: number): string => {
-  // Codes basés sur la documentation Open-Meteo
-  if (code === 0) return "Ciel dégagé";
-  if (code === 1) return "Principalement dégagé";
-  if (code === 2) return "Partiellement nuageux";
-  if (code === 3) return "Couvert";
-  if (code >= 45 && code <= 48) return "Brouillard";
-  if (code >= 51 && code <= 55) return "Bruine légère";
-  if (code >= 56 && code <= 57) return "Bruine verglaçante";
-  if (code >= 61 && code <= 65) return "Pluie";
-  if (code >= 66 && code <= 67) return "Pluie verglaçante";
-  if (code >= 71 && code <= 77) return "Neige";
-  if (code >= 80 && code <= 82) return "Averses";
-  if (code >= 85 && code <= 86) return "Averses de neige";
-  if (code >= 95 && code <= 99) return "Orage";
-  return "Inconnu";
-};
-
-// Fonction pour savoir s'il pleut
-const isRaining = (code: number): boolean => {
-  // Codes correspondant à la pluie
-  return (
-    (code >= 51 && code <= 57) || // Bruine
-    (code >= 61 && code <= 67) || // Pluie
-    (code >= 80 && code <= 82) || // Averses
-    (code >= 95 && code <= 99)    // Orage
-  );
-};
-
 // Fonction pour calculer le score en fonction de la hauteur des vagues (max 80 points)
 const calculateWaveHeightScore = (height: number): number => {
   if (height === null || height === undefined || isNaN(height)) return 0;

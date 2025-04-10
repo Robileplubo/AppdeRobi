@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { VitePWA } from 'vite-plugin-pwa'
+// import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
   plugins: [
     react(),
-    VitePWA({
+    /* VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['graphic/surfscore_logo.png'],
       manifest: {
@@ -36,7 +36,7 @@ export default defineConfig({
           }
         ]
       }
-    })
+    }) */
   ],
   server: {
     port: 5173,

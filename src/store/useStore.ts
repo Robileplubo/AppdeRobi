@@ -90,7 +90,6 @@ export const useStore = create<SurfScoreState>((set, get) => ({
     // Score pour la direction des vagues (0-100)
     const waveDirectionScore = (() => {
       const direction = weatherData.waveDirection
-      const optimalDirection = 180 // Direction optimale (offshore)
       const angleDiff = Math.abs((direction + 180) % 360 - 180)
       return Math.max(0, 100 - (angleDiff * 0.9))
     })()
