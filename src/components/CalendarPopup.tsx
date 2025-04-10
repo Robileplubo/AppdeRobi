@@ -1,21 +1,16 @@
 import React from 'react';
-import { atcb_action } from 'add-to-calendar-button';
 import { Forecast } from '../types/weather';
-import { formatDate, formatDateForDisplay } from '../utils/dateUtils';
-import './CalendarPopup.css';
 
 interface CalendarPopupProps {
   onClose: () => void;
   forecast: Forecast;
   waveHeight: number;
   wavePeriod: number;
-  waveDirection: number;
   windSpeed: number;
-  windDirection: number;
-  airTemp: number;
+  temperature: number;
   waterTemp: number;
-  totalScore: number;
-  city: string;
+  score: number;
+  location: string;
 }
 
 const CalendarPopup: React.FC<CalendarPopupProps> = ({
@@ -23,69 +18,139 @@ const CalendarPopup: React.FC<CalendarPopupProps> = ({
   forecast,
   waveHeight,
   wavePeriod,
-  waveDirection,
   windSpeed,
-  windDirection,
-  airTemp,
+  temperature,
   waterTemp,
-  totalScore,
-  city
+  score,
+  location
 }) => {
-  const handleAddToCalendar = () => {
-    const forecastDate = new Date(forecast.date);
-    const endDate = new Date(forecastDate);
+  // Formater la date pour l'affichage
+  const formatDisplayDate = (dateString: string | Date): string => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('fr-FR', { 
+      weekday: 'long', 
+      day: 'numeric', 
+      month: 'long', 
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  };
+  
+  // Formater la date pour l'utilisation dans le calendrier
+  const formatCalendarDate = (date: Date): string => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}${month}${day}`;
+  };
+  
+  // Formater l'heure pour l'utilisation dans le calendrier
+  const formatCalendarTime = (date: Date): string => {
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    return `${hours}${minutes}00`;
+  };
+
+  // Gérer l'ajout au calendrier
+  const handleAddToCalendar = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const startDate = new Date(forecast.date);
+    const endDate = new Date(startDate);
     endDate.setHours(endDate.getHours() + 3); // Session de surf de 3 heures
     
-    const formattedDate = formatDate(forecastDate);
-    const formattedEndDate = formatDate(endDate);
+    // Créer les données d'événement au format iCalendar
+    const title = `Session de surf à ${location}`;
+    const description = `Conditions de surf à ${location}:\n\nScore: ${score}/100\nHauteur des vagues: ${waveHeight.toFixed(1)}m\nPériode: ${wavePeriod.toFixed(1)}s\nVent: ${windSpeed.toFixed(1)}km/h\nTempérature: ${temperature.toFixed(1)}°C\nTempérature de l'eau: ${waterTemp.toFixed(1)}°C`;
     
-    const startTime = `${forecastDate.getHours().toString().padStart(2, '0')}:${forecastDate.getMinutes().toString().padStart(2, '0')}`;
-    const endTime = `${endDate.getHours().toString().padStart(2, '0')}:${endDate.getMinutes().toString().padStart(2, '0')}`;
+    // Formater les dates pour l'URL
+    const formattedStartDate = formatCalendarDate(startDate);
+    const formattedEndDate = formatCalendarDate(endDate);
+    const formattedStartTime = formatCalendarTime(startDate);
+    const formattedEndTime = formatCalendarTime(endDate);
     
-    const description = `
-      Conditions de surf à ${city}:
-      
-      Score total: ${totalScore}/100
-      Hauteur des vagues: ${waveHeight.toFixed(1)}m
-      Période des vagues: ${wavePeriod.toFixed(1)}s
-      Direction des vagues: ${waveDirection}°
-      Vitesse du vent: ${windSpeed.toFixed(1)}km/h
-      Direction du vent: ${windDirection}°
-      Température de l'air: ${airTemp.toFixed(1)}°C
-      Température de l'eau: ${waterTemp.toFixed(1)}°C
-    `;
+    // Créer l'URL pour Google Calendar
+    const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${formattedStartDate}T${formattedStartTime}Z/${formattedEndDate}T${formattedEndTime}Z&details=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}&sprop=&sprop=name:`;
     
-    atcb_action({
-      name: `Session de surf à ${city}`,
-      description,
-      startDate: formattedDate,
-      endDate: formattedEndDate,
-      startTime,
-      endTime,
-      location: city,
-      options: ["Google", "Apple", "iCal", "Outlook.com"],
-      timeZone: 'Europe/Paris',
-      iCalFileName: `surf-session-${city}-${formattedDate}`,
-    });
+    // Ouvrir l'URL dans un nouvel onglet
+    window.open(googleUrl, '_blank');
+    
+    // Fermer la popup
+    onClose();
+  };
+  
+  // Gérer l'annulation
+  const handleCancel = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onClose();
+  };
+
+  // Empêcher les clics de se propager
+  const handlePopupClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
   };
 
   return (
-    <div className="calendar-popup-overlay">
-      <div className="calendar-popup">
-        <h2>Ajouter au calendrier</h2>
+    <div 
+      className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-[9999]"
+      onClick={onClose}
+    >
+      <div 
+        className="w-[90%] max-w-md bg-white rounded-xl p-5 shadow-lg"
+        onClick={handlePopupClick}
+      >
+        <h2 className="text-xl font-bold mb-4 text-sky-800 text-center">
+          Ajouter au calendrier
+        </h2>
         
-        <div className="calendar-details">
-          <p><strong>Date:</strong> {forecast.date instanceof Date ? formatDateForDisplay(forecast.date) : formatDateForDisplay(new Date(forecast.date))}</p>
-          <p><strong>Lieu:</strong> {city}</p>
-          <p><strong>Score:</strong> {totalScore}/100</p>
-          <p><strong>Hauteur des vagues:</strong> {waveHeight.toFixed(1)}m</p>
+        <div className="mb-4 bg-sky-50 p-3 rounded-lg">
+          <p className="mb-1">
+            <span className="font-semibold text-sky-800">Date:</span> {formatDisplayDate(forecast.date)}
+          </p>
+          <p className="mb-1">
+            <span className="font-semibold text-sky-800">Lieu:</span> {location}
+          </p>
+          <p>
+            <span className="font-semibold text-sky-800">Score:</span> {score}/100
+          </p>
         </div>
         
-        <div className="calendar-buttons">
-          <button onClick={handleAddToCalendar} className="add-button">
-            Ajouter au calendrier
+        <div className="grid grid-cols-2 gap-2 mb-4">
+          <div className="text-center bg-slate-50 p-2 rounded-lg">
+            <p className="text-lg font-semibold">{waveHeight.toFixed(1)}m</p>
+            <p className="text-xs text-slate-500">Hauteur</p>
+          </div>
+          <div className="text-center bg-slate-50 p-2 rounded-lg">
+            <p className="text-lg font-semibold">{wavePeriod.toFixed(1)}s</p>
+            <p className="text-xs text-slate-500">Période</p>
+          </div>
+          <div className="text-center bg-slate-50 p-2 rounded-lg">
+            <p className="text-lg font-semibold">{temperature.toFixed(1)}°C</p>
+            <p className="text-xs text-slate-500">Température</p>
+          </div>
+          <div className="text-center bg-slate-50 p-2 rounded-lg">
+            <p className="text-lg font-semibold">{windSpeed.toFixed(1)}km/h</p>
+            <p className="text-xs text-slate-500">Vent</p>
+          </div>
+        </div>
+        
+        <div className="flex flex-col gap-3">
+          <button
+            onClick={handleAddToCalendar}
+            className="w-full bg-sky-500 text-white py-3 px-4 rounded-lg font-medium active:bg-sky-600 touch-manipulation"
+            type="button"
+          >
+            Ajouter à Google Calendar
           </button>
-          <button onClick={onClose} className="cancel-button">
+          
+          <button
+            onClick={handleCancel}
+            className="w-full bg-gray-100 text-gray-700 py-3 px-4 rounded-lg font-medium active:bg-gray-200 touch-manipulation"
+            type="button"
+          >
             Annuler
           </button>
         </div>

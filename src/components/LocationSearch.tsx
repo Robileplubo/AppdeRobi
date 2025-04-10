@@ -63,46 +63,44 @@ const LocationSearch = () => {
   };
 
   return (
-    <div className="space-y-4">
-      {/* Bouton de géolocalisation centré */}
-      <div className="flex justify-center">
-        <button
-          onClick={handleGeolocation}
-          className="bg-sky-400 text-white px-6 py-3 rounded-full hover:bg-sky-500 transition-colors flex items-center space-x-2 shadow-sm text-sm font-medium touch-manipulation active:bg-sky-600"
-        >
-          <MapPinIcon className="h-5 w-5" />
-          <span>Me localiser</span>
-        </button>
-      </div>
-
+    <>
       {error && (
         <div className="error-popup animate-fade-out bg-red-400 text-white px-4 py-2 rounded-lg shadow-sm text-sm">
           {error}
         </div>
       )}
 
-      {/* Carte carrée */}
-      <div className="aspect-square w-full rounded-xl overflow-hidden shadow-sm border border-sky-50 touch-manipulation">
-        <MapContainer
-          center={[46.603354, 1.888334]}
-          zoom={6}
-          style={{ height: "100%", width: "100%" }}
-          minZoom={5}
-          maxZoom={15}
-        >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          />
-          <MapClickHandler onMapClick={handleMapClick} />
-          {selectedLocation && (
-            <Marker position={[selectedLocation.lat, selectedLocation.lon]} icon={customIcon}>
-              <Popup>Position sélectionnée</Popup>
-            </Marker>
-          )}
-        </MapContainer>
-      </div>
-    </div>
+      {/* Carte en plein écran */}
+      <MapContainer
+        center={[46.603354, 1.888334]}
+        zoom={6}
+        style={{ height: "100%", width: "100%" }}
+        minZoom={5}
+        maxZoom={15}
+        zoomControl={false}
+        attributionControl={false}
+      >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
+        <MapClickHandler onMapClick={handleMapClick} />
+        {selectedLocation && (
+          <Marker position={[selectedLocation.lat, selectedLocation.lon]} icon={customIcon}>
+            <Popup className="custom-popup">Spot sélectionné</Popup>
+          </Marker>
+        )}
+      </MapContainer>
+      
+      {/* Bouton de géolocalisation flottant */}
+      <button
+        onClick={handleGeolocation}
+        className="mobile-geolocation-button"
+        aria-label="Me localiser"
+      >
+        <MapPinIcon className="h-6 w-6" />
+      </button>
+    </>
   );
 };
 

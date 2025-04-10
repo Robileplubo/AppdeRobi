@@ -1,12 +1,14 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useStore } from './store/useStore'
 import { fetchWeatherData } from './services/weatherService'
 import LocationSearch from './components/LocationSearch'
 import SurfScore from './components/SurfScore'
 import { getAssetUrl } from './utils/vercelAdapter'
+import ForecastDisplay from './components/ForecastDisplay'
 
 function App() {
   const { location, setWeatherData, setLoading, setError } = useStore()
+  const [hasValidData, setHasValidData] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,6 +18,14 @@ function App() {
         setLoading(true)
         const apiData = await fetchWeatherData(location.lat, location.lon)
         
+        // Vérifier les données marines
+        if (!apiData.hourly?.wave_height || apiData.hourly.wave_height.length === 0 || 
+            apiData.hourly.wave_height.every(val => val === null || val === 0)) {
+          setHasValidData(false);
+          setLoading(false);
+          return;
+        }
+
         // Transformation des données API vers le format attendu par le store
         // Nous prenons le premier élément de chaque tableau de données horaires
         if (apiData.hourly) {
@@ -30,11 +40,14 @@ function App() {
             precipitation: 0 // Non fourni par l'API, valeur par défaut
           }
           setWeatherData(storeData)
+          setHasValidData(true);
         } else {
           setError('Aucune donnée météorologique disponible')
+          setHasValidData(false);
         }
       } catch (error) {
         setError('Erreur lors de la récupération des données météo')
+        setHasValidData(false);
       } finally {
         setLoading(false)
       }
@@ -47,22 +60,35 @@ function App() {
   const logoUrl = getAssetUrl('/graphic/surfscore_logo.png');
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-200 to-white p-0">
-      <div className="w-full py-6 mb-4" style={{ backgroundColor: "#FDFCFA" }}>
-        <div className="max-w-sm mx-auto">
-          <img 
-            src={logoUrl}
-            alt="SurfScore Logo" 
-            className="h-20 mx-auto"
-          />
-        </div>
-      </div>
-      <div className="max-w-sm mx-auto px-4 space-y-6">
-        <div className="bg-white rounded-xl shadow-sm p-5 space-y-6 border border-sky-50">
+    <div className="min-h-screen bg-gradient-to-b from-sky-100 to-white">
+      {/* Header fixe avec logo */}
+      <header className="mobile-header">
+        <img 
+          src={logoUrl}
+          alt="SurfScore" 
+          className="mobile-logo"
+        />
+      </header>
+      
+      {/* Corps principal */}
+      <main className="mobile-body">
+        {/* Composant carte */}
+        <section className="mobile-map-container">
           <LocationSearch />
+        </section>
+        
+        {/* Composant score */}
+        <section className="mobile-score-card">
           <SurfScore />
-        </div>
-      </div>
+        </section>
+        
+        {/* Prévisions - n'afficher que si nous avons des données valides */}
+        {location && hasValidData && (
+          <section className="mobile-score-card">
+            <ForecastDisplay />
+          </section>
+        )}
+      </main>
     </div>
   )
 }

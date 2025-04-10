@@ -9,7 +9,6 @@ import {
   calculateWavePowerScore,
   ScoreCircle
 } from './SurfScore';
-import CalendarPopup from './CalendarPopup';
 
 // Fonction utilitaire pour formater la date
 const formatDate = (dateString: string) => {
@@ -19,6 +18,21 @@ const formatDate = (dateString: string) => {
     day: 'numeric',
     month: 'short'
   }).format(date);
+};
+
+// Formater la date pour Google Calendar
+const formatCalendarDate = (date: Date): string => {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}${month}${day}`;
+};
+
+// Formater l'heure pour Google Calendar
+const formatCalendarTime = (date: Date): string => {
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
+  return `${hours}${minutes}00`;
 };
 
 // Fonction pour obtenir une icône basée sur le code météo
@@ -121,19 +135,6 @@ const ForecastDisplay = () => {
   } | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [calendarPopup, setCalendarPopup] = useState<{
-    show: boolean;
-    date: string;
-    forecasts: {
-      temperature: number;
-      waveHeight: number;
-      score: number;
-    };
-  }>({
-    show: false,
-    date: '',
-    forecasts: { temperature: 0, waveHeight: 0, score: 0 }
-  });
 
   useEffect(() => {
     const fetchForecast = async () => {
@@ -147,6 +148,14 @@ const ForecastDisplay = () => {
 
       try {
         const data = await fetchWeatherData(location.lat, location.lon);
+
+        // Vérifier si les données marines sont disponibles
+        if (!data.hourly?.wave_height || data.hourly.wave_height.length === 0 || 
+            data.hourly.wave_height.every(val => val === null || val === 0)) {
+          setError('Aucune donnée marine pour cette position');
+          setLoading(false);
+          return;
+        }
 
         if (!data.hourly?.time || data.hourly.time.length === 0) {
           setError('Aucune donnée de prévision disponible');
@@ -228,93 +237,100 @@ const ForecastDisplay = () => {
     fetchForecast();
   }, [location]);
 
-  // Fonction pour ouvrir la popup de confirmation
-  const handleAddToCalendar = (date: string, index: number) => {
+  // Fonction pour ajouter directement au calendrier Google
+  const handleAddToCalendar = (date: string, index: number, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
     if (!forecastData) return;
     
-    setCalendarPopup({
-      show: true,
-      date: date,
-      forecasts: {
-        temperature: forecastData.temperatures[index],
-        waveHeight: forecastData.waveHeights[index],
-        score: forecastData.scores[index]
-      }
-    });
-  };
+    const startDate = new Date(date);
+    const endDate = new Date(startDate);
+    endDate.setHours(endDate.getHours() + 3); // Session de surf de 3 heures
+    
+    const locationName = location ? getNearestCityName(location.lat, location.lon) : "Spot de surf";
+    
+    // Préparer les données pour l'événement
+    const title = `Session de surf à ${locationName}`;
+    const description = `Conditions de surf à ${locationName}:
 
-  // Fonction pour fermer la popup
-  const handleClosePopup = () => {
-    setCalendarPopup(prev => ({ ...prev, show: false }));
+Score: ${forecastData.scores[index]}/100
+Hauteur des vagues: ${forecastData.waveHeights[index].toFixed(1)}m
+Période: ${forecastData.wavePeriods[index].toFixed(1)}s
+Vent: ${forecastData.windSpeeds[index].toFixed(1)}km/h
+Température: ${forecastData.temperatures[index].toFixed(1)}°C
+Température de l'eau: ${forecastData.waterTemps[index].toFixed(1)}°C`;
+    
+    // Formater les dates pour l'URL
+    const formattedStartDate = formatCalendarDate(startDate);
+    const formattedEndDate = formatCalendarDate(endDate);
+    const formattedStartTime = formatCalendarTime(startDate);
+    const formattedEndTime = formatCalendarTime(endDate);
+    
+    // Créer l'URL pour Google Calendar
+    const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${formattedStartDate}T${formattedStartTime}Z/${formattedEndDate}T${formattedEndTime}Z&details=${encodeURIComponent(description)}&location=${encodeURIComponent(locationName)}&sprop=&sprop=name:`;
+    
+    // Ouvrir l'URL dans un nouvel onglet
+    window.open(googleUrl, '_blank');
   };
 
   if (!location) {
     return null;
   }
 
-  if (loading) {
-    return <div className="text-center p-4">Chargement des prévisions...</div>;
-  }
-
-  if (error) {
-    return <div className="text-red-500 p-4">{error}</div>;
-  }
-
-  if (!forecastData || forecastData.dates.length === 0) {
-    return <div className="text-center p-4">Aucune prévision disponible</div>;
-  }
-
   return (
     <>
-      <div className="mt-8 bg-white rounded-xl p-4 shadow-sm">
-        <h2 className="text-xl font-semibold mb-4 text-sky-800 text-center">Prévisions sur 7 jours</h2>
-        
-        <div className="overflow-x-auto">
-          <div className="flex space-x-2 min-w-max">
-            {forecastData.dates.map((date, index) => (
-              <div key={date} className="flex-shrink-0 w-24 p-2 bg-gradient-to-br from-white to-sky-50 rounded-lg border border-sky-100 text-center">
-                <div className="font-medium text-sky-700 text-sm mb-1">{formatDate(date)}</div>
-                
-                <ForecastScoreCircle score={forecastData.scores[index]} />
-                
-                <div className="flex items-center justify-center mt-2 space-x-1">
-                  <span className="text-xl">{getWeatherIcon(forecastData.weatherCodes[index])}</span>
-                  <span className="font-bold text-sky-700">{forecastData.temperatures[index].toFixed(1)}°C</span>
+      {loading ? (
+        <div className="text-center p-4">
+          <div className="flex justify-center">
+            <svg className="animate-spin -ml-1 mr-3 h-8 w-8 text-sky-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+          </div>
+          <p className="mt-2 text-slate-600 text-sm">Chargement des prévisions...</p>
+        </div>
+      ) : error ? (
+        <div className="text-center p-4">
+          <p className="text-red-500 text-sm">{error}</p>
+        </div>
+      ) : !forecastData || forecastData.dates.length === 0 ? (
+        <div className="text-center p-4">
+          <p className="text-slate-600 text-sm">Aucune prévision disponible</p>
+        </div>
+      ) : (
+        <div>
+          <h2 className="text-lg font-semibold mb-3 text-center text-slate-800">Prévisions sur 7 jours</h2>
+          
+          <div className="mobile-forecast-scroll">
+            <div className="flex">
+              {forecastData.dates.map((date, index) => (
+                <div key={date} className="mobile-forecast-item">
+                  <div className="font-medium text-sky-700 text-xs mb-1 whitespace-nowrap overflow-hidden text-ellipsis">{formatDate(date)}</div>
+                  
+                  <ForecastScoreCircle score={forecastData.scores[index]} size={50} />
+                  
+                  <div className="mt-2 flex flex-col items-center">
+                    <span className="text-xl mb-1">{getWeatherIcon(forecastData.weatherCodes[index])}</span>
+                    <span className="font-medium text-slate-800 text-sm">{forecastData.temperatures[index].toFixed(1)}°C</span>
+                  </div>
+                  
+                  <div className="mt-2 text-sm text-sky-600 font-medium">
+                    {forecastData.waveHeights[index].toFixed(1)}m
+                  </div>
+                  
+                  <button 
+                    onClick={(e) => handleAddToCalendar(date, index, e)}
+                    className="mt-2 w-8 h-8 rounded-full bg-sky-500 text-white flex items-center justify-center hover:bg-sky-600 text-sm"
+                    title="Ajouter à l'agenda"
+                  >
+                    +
+                  </button>
                 </div>
-                
-                <div className="mt-2 text-sm font-medium text-sky-600">
-                  {forecastData.waveHeights[index].toFixed(1)}m
-                </div>
-                
-                {/* Bouton pour ajouter au calendrier */}
-                <button 
-                  onClick={() => handleAddToCalendar(date, index)}
-                  className="mt-2 w-6 h-6 rounded-full bg-sky-500 text-white flex items-center justify-center hover:bg-sky-600 mx-auto text-sm"
-                  title="Ajouter à l'agenda"
-                >
-                  +
-                </button>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Popup de confirmation pour l'ajout au calendrier */}
-      {calendarPopup.show && forecastData && (
-        <CalendarPopup
-          onClose={handleClosePopup}
-          forecast={{ date: calendarPopup.date }}
-          waveHeight={calendarPopup.forecasts.waveHeight}
-          wavePeriod={forecastData.wavePeriods[forecastData.dates.findIndex(d => d === calendarPopup.date)]}
-          waveDirection={0} // À remplacer par la vraie valeur si disponible
-          windSpeed={forecastData.windSpeeds[forecastData.dates.findIndex(d => d === calendarPopup.date)]}
-          windDirection={0} // À remplacer par la vraie valeur si disponible
-          airTemp={calendarPopup.forecasts.temperature}
-          waterTemp={forecastData.waterTemps[forecastData.dates.findIndex(d => d === calendarPopup.date)]}
-          totalScore={calendarPopup.forecasts.score}
-          city={location ? getNearestCityName(location.lat, location.lon) : "Spot de surf"}
-        />
       )}
     </>
   );

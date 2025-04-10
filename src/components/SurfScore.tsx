@@ -278,8 +278,9 @@ const SurfScore = () => {
         // Vérification des données de vagues
         if (!data.hourly?.wave_height || data.hourly.wave_height.length === 0 || 
             data.hourly.wave_height.every(val => val === null || val === 0)) {
-          setPopupMessage("Veuillez sélectionner un point plus proche de la mer")
-          setShowPopup(true)
+          // Ne plus afficher la popup d'attention
+          // setPopupMessage("Veuillez sélectionner un point plus proche de la mer")
+          // setShowPopup(true)
           setScores({
             heightScore: 0,
             windScore: 0,
@@ -362,117 +363,93 @@ const SurfScore = () => {
   }
 
   return (
-    <>
+    <div className="relative">
       {showPopup && (
-        <Popup 
-          message={popupMessage} 
-          onClose={() => setShowPopup(false)} 
-        />
+        <Popup message={popupMessage} onClose={() => setShowPopup(false)} />
       )}
-      
-      {hasValidData && !showPopup && (
-        <>
-          <div className="text-center p-4 bg-white rounded-xl mb-6">
-            {/* Nouvel agencement du score du jour même */}
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex-shrink-0">
-                <MainScoreCircle score={scores.totalScore} />
+
+      {!location ? (
+        <div className="p-4 text-center">
+          <p className="text-slate-600 mb-2">Pointez sur la carte pour connaître les conditions de surf</p>
+          <div className="flex justify-center">
+            <svg className="w-12 h-12 text-sky-400 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
+            </svg>
+          </div>
+        </div>
+      ) : !hasValidData ? (
+        <div className="p-4 text-center">
+          <p className="text-red-500 mb-2">Aucune donnée disponible pour cette position</p>
+          <p className="text-sm text-slate-500">Essayez un autre emplacement proche de la côte</p>
+        </div>
+      ) : (
+        <div>
+          {/* Affichage du score principal */}
+          <div className="flex items-center justify-center mb-4">
+            <div className="pulse-animation">
+              <MainScoreCircle score={scores.totalScore} />
+            </div>
+          </div>
+          
+          {/* Bouton pour afficher/masquer les détails */}
+          <div className="flex justify-center mb-4">
+            <button
+              onClick={() => setShowDetails(!showDetails)}
+              className="mobile-action-button"
+            >
+              {showDetails ? 'Masquer les détails' : 'Voir les détails'}
+            </button>
+          </div>
+          
+          {/* Données détaillées en grille */}
+          {showDetails && (
+            <div className="mobile-details-grid">
+              <div className="mobile-detail-item">
+                <div className="mobile-detail-value">
+                  {weatherData.waveHeight !== null ? `${weatherData.waveHeight.toFixed(1)}m` : '-'}
+                </div>
+                <div className="mobile-detail-label">Hauteur des vagues</div>
               </div>
               
-              <div className="flex-grow ml-4 text-left">
-                <div className="flex items-center mb-2">
-                  <span className="text-3xl mr-2">
-                    {weatherData.airTemp !== null ? 
-                     getWeatherIcon(weatherData.weatherCode || 0) : '🌡️'}
-                  </span>
-                  <span className="text-2xl font-bold text-sky-700">
-                    {weatherData.airTemp !== null ? `${weatherData.airTemp.toFixed(1)} °C` : 'N/A'}
-                  </span>
+              <div className="mobile-detail-item">
+                <div className="mobile-detail-value">
+                  {weatherData.wavePeriod !== null ? `${weatherData.wavePeriod.toFixed(1)}s` : '-'}
                 </div>
-                
-                <div className="text-xl font-medium text-sky-600">
-                  Vagues: <span className="font-bold">{weatherData.waveHeight !== null ? `${weatherData.waveHeight.toFixed(1)} m` : 'N/A'}</span>
+                <div className="mobile-detail-label">Période des vagues</div>
+              </div>
+              
+              <div className="mobile-detail-item">
+                <div className="mobile-detail-value">
+                  {weatherData.windSpeed !== null ? `${weatherData.windSpeed.toFixed(1)}km/h` : '-'}
                 </div>
+                <div className="mobile-detail-label">Force du vent</div>
+              </div>
+              
+              <div className="mobile-detail-item">
+                <div className="mobile-detail-value">
+                  {weatherData.airTemp !== null ? `${weatherData.airTemp.toFixed(1)}°C` : '-'}
+                </div>
+                <div className="mobile-detail-label">Température</div>
+              </div>
+              
+              <div className="mobile-detail-item">
+                <div className="mobile-detail-value">
+                  {weatherData.waterTemp !== null ? `${weatherData.waterTemp.toFixed(1)}°C` : '-'}
+                </div>
+                <div className="mobile-detail-label">Température eau</div>
+              </div>
+              
+              <div className="mobile-detail-item">
+                <div className="mobile-detail-value">
+                  {weatherData.wavePower !== null ? `${weatherData.wavePower.toFixed(1)}kW/m` : '-'}
+                </div>
+                <div className="mobile-detail-label">Puissance des vagues</div>
               </div>
             </div>
-            
-            {/* Prévisions des jours suivants */}
-            <ForecastDisplay />
-            
-            <button 
-              onClick={() => setShowDetails(!showDetails)}
-              className="mt-4 px-6 py-3 bg-sky-400 text-white rounded-full hover:bg-sky-500 transition-colors shadow-sm text-sm font-medium touch-manipulation active:bg-sky-600"
-            >
-              {showDetails ? 'Masquer les détails' : 'Afficher les détails'}
-            </button>
-            
-            {showDetails && (
-              <>
-                <h2 className="text-xl font-semibold mt-6 mb-4 text-sky-800">Conditions météorologiques actuelles</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
-                    <h3 className="text-base font-medium mb-2 text-sky-700">Hauteur des vagues</h3>
-                    <div className="text-3xl font-bold text-sky-800">
-                      {weatherData.waveHeight !== null ? `${weatherData.waveHeight.toFixed(1)} m` : 'N/A'}
-                    </div>
-                    <div className="text-xs mt-1 text-sky-600">
-                      Score: {scores.heightScore.toFixed(1)}/80
-                    </div>
-                  </div>
-                  <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
-                    <h3 className="text-base font-medium mb-2 text-sky-700">Période des vagues</h3>
-                    <div className="text-3xl font-bold text-sky-800">
-                      {weatherData.wavePeriod !== null ? `${weatherData.wavePeriod.toFixed(1)} s` : 'N/A'}
-                    </div>
-                    <div className="text-xs mt-1 text-sky-600">
-                      Score: {scores.periodScore.toFixed(1)}/5
-                    </div>
-                  </div>
-                  <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
-                    <h3 className="text-base font-medium mb-2 text-sky-700">Puissance des vagues</h3>
-                    <div className="text-3xl font-bold text-sky-800">
-                      {weatherData.wavePower !== null ? Math.round(weatherData.wavePower) : 'N/A'}
-                    </div>
-                    <div className="text-xs mt-1 text-sky-600">
-                      Score: {scores.powerScore.toFixed(1)}/5
-                    </div>
-                  </div>
-                  <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50">
-                    <h3 className="text-base font-medium mb-2 text-sky-700">Vitesse du vent</h3>
-                    <div className="text-3xl font-bold text-sky-800">
-                      {weatherData.windSpeed !== null ? `${weatherData.windSpeed.toFixed(1)} km/h` : 'N/A'}
-                    </div>
-                    <div className="text-xs mt-1 text-sky-600">
-                      Score: {scores.windScore.toFixed(1)}/5
-                    </div>
-                  </div>
-                  <div className="p-4 bg-gradient-to-br from-white to-sky-50 rounded-xl shadow-sm border border-sky-50 col-span-1 sm:col-span-2">
-                    <h3 className="text-base font-medium mb-2 text-sky-700">Températures</h3>
-                    <div className="flex justify-center space-x-6 sm:space-x-8">
-                      <div className="text-center">
-                        <span className="text-xs text-sky-600">Air</span>
-                        <div className="text-2xl font-bold text-sky-800">
-                          {weatherData.airTemp !== null ? `${weatherData.airTemp.toFixed(1)} °C` : 'N/A'}
-                        </div>
-                      </div>
-                      <div className="text-center">
-                        <span className="text-xs text-sky-600">Eau</span>
-                        <div className="text-2xl font-bold text-sky-800">
-                          {weatherData.waterTemp !== null ? `${weatherData.waterTemp.toFixed(1)} °C` : 'N/A'}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="text-xs mt-1 text-sky-600">
-                      Score: {scores.temperatureScore.toFixed(1)}/5
-                    </div>
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
-        </>
+          )}
+        </div>
       )}
-    </>
+    </div>
   )
 }
 
