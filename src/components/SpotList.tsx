@@ -17,7 +17,7 @@ const SpotList = () => {
   const { setLocation, location } = useStore()
 
   const handleSpotClick = (lat: number, lon: number) => {
-    setLocation(lat, lon)
+    setLocation({ lat, lon })
   }
 
   return (
