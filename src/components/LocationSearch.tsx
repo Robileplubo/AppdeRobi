@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { useStore } from "../store/useStore";
-import { MapPinIcon } from "@heroicons/react/24/outline";
+import { getCityName } from "../utils/locationUtils";
 
 // Créer une icône personnalisée pour le marqueur
 const customIcon = new L.Icon({
@@ -24,7 +24,14 @@ const MapClickHandler = ({ onMapClick }: { onMapClick: (e: L.LeafletMouseEvent) 
 const LocationSearch = () => {
   const [error, setError] = useState<string | null>(null);
   const [selectedLocation, setSelectedLocation] = useState<{ lat: number; lon: number } | null>(null);
-  const setLocation = useStore((state) => state.setLocation);
+  const { setLocation, location } = useStore();
+
+  // Synchroniser l'état local avec le store si location existe déjà
+  useEffect(() => {
+    if (location && !selectedLocation) {
+      setSelectedLocation({ lat: location.lat, lon: location.lon });
+    }
+  }, [location, selectedLocation]);
 
   const handleMapClick = async (e: L.LeafletMouseEvent) => {
     try {
@@ -33,7 +40,10 @@ const LocationSearch = () => {
       // Définir la position et l'envoyer au store
       setSelectedLocation({ lat, lon: lng });
       setLocation({ lat, lon: lng });
+
+      console.log("Position sélectionnée:", { lat, lng });
     } catch (error) {
+      console.error("Erreur lors de la sélection:", error);
       setError("Erreur lors de la sélection de l'emplacement");
       setTimeout(() => setError(null), 5000);
     }
@@ -53,12 +63,15 @@ const LocationSearch = () => {
         // Définir la position et l'envoyer au store
         setSelectedLocation({ lat: latitude, lon: longitude });
         setLocation({ lat: latitude, lon: longitude });
+        
+        console.log("Position géolocalisée:", { latitude, longitude });
       },
-      (_error) => {
+      (error) => {
+        console.error("Erreur de géolocalisation:", error);
         setError("Impossible d'obtenir votre position");
         setTimeout(() => setError(null), 5000);
       },
-      { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
+      { enableHighAccuracy: true, timeout: 8000, maximumAge: 0 }
     );
   };
 
@@ -79,6 +92,7 @@ const LocationSearch = () => {
         maxZoom={15}
         zoomControl={false}
         attributionControl={false}
+        className="z-10"
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

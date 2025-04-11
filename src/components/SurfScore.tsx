@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useStore } from '../store/useStore'
 import { fetchWeatherData } from '../services/weatherService'
-import ForecastDisplay from './ForecastDisplay'
 
 // Export des fonctions de calcul pour les réutiliser dans ForecastDisplay
 export const calculateWaveHeightScore = (height: number): number => {
@@ -126,7 +125,8 @@ export const ScoreCircle = ({ score, size = 120, fontSize = '3xl' }: { score: nu
           y={size/2 + 5}
           textAnchor="middle"
           dominantBaseline="middle"
-          className={`text-${fontSize} font-bold`}
+          className="font-bold"
+          style={{ fontSize: fontSize === '3xl' ? '1.875rem' : '1.25rem' }}
         >
           {score}
         </text>
@@ -199,7 +199,8 @@ const MainScoreCircle = ({ score }: { score: number }) => {
           y="65"
           textAnchor="middle"
           dominantBaseline="middle"
-          className="text-3xl font-bold"
+          className="font-bold"
+          style={{ fontSize: '1.875rem' }}
         >
           {score}
         </text>
@@ -244,7 +245,7 @@ const SurfScore = () => {
   })
   const [error, setError] = useState<string | null>(null)
   const [showPopup, setShowPopup] = useState(false)
-  const [popupMessage, setPopupMessage] = useState("")
+  const [popupMessage] = useState("")
   const [hasValidData, setHasValidData] = useState(false)
   const [showDetails, setShowDetails] = useState(false)
 
@@ -368,16 +369,7 @@ const SurfScore = () => {
         <Popup message={popupMessage} onClose={() => setShowPopup(false)} />
       )}
 
-      {!location ? (
-        <div className="p-4 text-center">
-          <p className="text-slate-600 mb-2">Pointez sur la carte pour connaître les conditions de surf</p>
-          <div className="flex justify-center">
-            <svg className="w-12 h-12 text-sky-400 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z" />
-            </svg>
-          </div>
-        </div>
-      ) : !hasValidData ? (
+      {!hasValidData ? (
         <div className="p-4 text-center">
           <p className="text-red-500 mb-2">Aucune donnée disponible pour cette position</p>
           <p className="text-sm text-slate-500">Essayez un autre emplacement proche de la côte</p>
@@ -452,16 +444,5 @@ const SurfScore = () => {
     </div>
   )
 }
-
-// Fonction pour obtenir une icône basée sur le code météo
-const getWeatherIcon = (weatherCode: number) => {
-  // Codes basés sur la documentation Open-Meteo
-  if (weatherCode <= 3) return '☀️'; // Ciel dégagé à partiellement nuageux
-  if (weatherCode <= 49) return '☁️'; // Nuageux ou brumeux
-  if (weatherCode <= 69) return '🌧️'; // Pluie
-  if (weatherCode <= 79) return '❄️'; // Neige
-  if (weatherCode <= 99) return '⛈️'; // Orage
-  return '🌡️'; // Par défaut
-};
 
 export default SurfScore 

@@ -37,13 +37,20 @@ const formatCalendarTime = (date: Date): string => {
 
 // Fonction pour obtenir une icône basée sur le code météo
 const getWeatherIcon = (weatherCode: number) => {
+  // Chemins des icônes
+  const sunIcon = '/graphic/sun.png';
+  const cloudIcon = '/graphic/cloud.png'; // Note: cette icône n'est pas listée, utiliser un fallback
+  const rainIcon = '/graphic/rain.png';
+  const snowIcon = '/graphic/snow.png';
+  const stormIcon = '/graphic/storm.png';
+  
   // Codes basés sur la documentation Open-Meteo
-  if (weatherCode <= 3) return '☀️'; // Ciel dégagé à partiellement nuageux
-  if (weatherCode <= 49) return '☁️'; // Nuageux ou brumeux
-  if (weatherCode <= 69) return '🌧️'; // Pluie
-  if (weatherCode <= 79) return '❄️'; // Neige
-  if (weatherCode <= 99) return '⛈️'; // Orage
-  return '🌡️'; // Par défaut
+  if (weatherCode <= 3) return sunIcon; // Ciel dégagé à partiellement nuageux
+  if (weatherCode <= 49) return cloudIcon; // Nuageux ou brumeux
+  if (weatherCode <= 69) return rainIcon; // Pluie
+  if (weatherCode <= 79) return snowIcon; // Neige
+  if (weatherCode <= 99) return stormIcon; // Orage
+  return sunIcon; // Par défaut
 };
 
 // Fonction pour calculer le score total de surf
@@ -311,7 +318,11 @@ Température de l'eau: ${forecastData.waterTemps[index].toFixed(1)}°C`;
                   <ForecastScoreCircle score={forecastData.scores[index]} size={50} />
                   
                   <div className="mt-2 flex flex-col items-center">
-                    <span className="text-xl mb-1">{getWeatherIcon(forecastData.weatherCodes[index])}</span>
+                    <img 
+                      src={getWeatherIcon(forecastData.weatherCodes[index])} 
+                      alt="Weather icon" 
+                      className="w-6 h-6 mb-1"
+                    />
                     <span className="font-medium text-slate-800 text-sm">{forecastData.temperatures[index].toFixed(1)}°C</span>
                   </div>
                   
@@ -321,10 +332,10 @@ Température de l'eau: ${forecastData.waterTemps[index].toFixed(1)}°C`;
                   
                   <button 
                     onClick={(e) => handleAddToCalendar(date, index, e)}
-                    className="mt-2 w-8 h-8 rounded-full bg-sky-500 text-white flex items-center justify-center hover:bg-sky-600 text-sm"
+                    className="mt-2 w-8 h-8 rounded-full bg-sky-500 text-white flex items-center justify-center hover:bg-sky-600"
                     title="Ajouter à l'agenda"
                   >
-                    +
+                    <img src="/graphic/calendar.png" alt="Calendar" className="w-4 h-4" />
                   </button>
                 </div>
               ))}

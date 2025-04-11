@@ -18,11 +18,13 @@ interface WeatherData {
 
 interface SurfScoreState {
   location: Location | null
+  locationName: string | null
   weatherData: WeatherData | null
   surfScore: number
   isLoading: boolean
   error: string | null
   setLocation: (location: Location) => void
+  setLocationName: (name: string | null) => void
   setWeatherData: (data: WeatherData) => void
   setSurfScore: (score: number) => void
   setLoading: (loading: boolean) => void
@@ -32,6 +34,7 @@ interface SurfScoreState {
 
 export const useStore = create<SurfScoreState>((set, get) => ({
   location: null,
+  locationName: null,
   weatherData: null,
   surfScore: 0,
   isLoading: false,
@@ -40,6 +43,9 @@ export const useStore = create<SurfScoreState>((set, get) => ({
   setLocation: (location) => {
     set({ location })
     set({ surfScore: 0 })
+  },
+  setLocationName: (name) => {
+    set({ locationName: name })
   },
   setWeatherData: (data) => {
     set({ weatherData: data })

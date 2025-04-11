@@ -9,21 +9,23 @@
 
 /* Header fixe avec logo */
 .mobile-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 50;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   width: 100%;
   backdrop-filter: blur(8px);
-  background-color: rgba(253, 252, 250, 0.9);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  padding: 0.75rem 0;
+  background-color: rgba(253, 252, 250, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.25rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .mobile-logo {
-  height: 2.5rem;
+  height: 1.75rem;
   transition: transform 0.3s ease;
 }
 
@@ -34,6 +36,7 @@
 /* Corps de l'application */
 .mobile-body {
   padding: 0.5rem;
+  padding-top: 2.75rem; /* Réduire pour libérer plus d'espace */
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -44,10 +47,11 @@
   border-radius: 1rem;
   overflow: hidden;
   border: 1px solid #e5f6ff;
-  height: 60vh;
-  max-height: 500px;
+  height: 72vh; /* Augmenter la hauteur de la carte */
+  max-height: 650px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   position: relative;
+  margin-top: 0.5rem; /* Réduire la marge supérieure */
 }
 
 /* Bouton de géolocalisation flottant */
