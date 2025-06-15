@@ -7,7 +7,6 @@ import {
   calculateWavePeriodScore, 
   calculateTemperatureScore, 
   calculateWavePowerScore,
-  ScoreCircle
 } from './SurfScore';
 
 // Fonction utilitaire pour formater la date
@@ -142,6 +141,7 @@ const ForecastDisplay = () => {
   } | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [cityName, setCityName] = useState<string>('Spot de surf');
 
   useEffect(() => {
     const fetchForecast = async () => {
@@ -158,7 +158,7 @@ const ForecastDisplay = () => {
 
         // Vérifier si les données marines sont disponibles
         if (!data.hourly?.wave_height || data.hourly.wave_height.length === 0 || 
-            data.hourly.wave_height.every(val => val === null || val === 0)) {
+            data.hourly.wave_height.every((val: any) => val === null || val === 0)) {
           setError('Aucune donnée marine pour cette position');
           setLoading(false);
           return;
@@ -244,6 +244,16 @@ const ForecastDisplay = () => {
     fetchForecast();
   }, [location]);
 
+  useEffect(() => {
+    const fetchCity = async () => {
+      if (location) {
+        const name = await getNearestCityName(location.lat, location.lon);
+        setCityName(name);
+      }
+    };
+    fetchCity();
+  }, [location]);
+
   // Fonction pour ajouter directement au calendrier Google
   const handleAddToCalendar = (date: string, index: number, e: React.MouseEvent) => {
     e.preventDefault();
@@ -255,7 +265,7 @@ const ForecastDisplay = () => {
     const endDate = new Date(startDate);
     endDate.setHours(endDate.getHours() + 3); // Session de surf de 3 heures
     
-    const locationName = location ? getNearestCityName(location.lat, location.lon) : "Spot de surf";
+    const locationName = cityName;
     
     // Préparer les données pour l'événement
     const title = `Session de surf à ${locationName}`;
@@ -347,11 +357,17 @@ Température de l'eau: ${forecastData.waterTemps[index].toFixed(1)}°C`;
   );
 };
 
-// Fonction pour obtenir le nom de la ville la plus proche (simplifiée)
-const getNearestCityName = (lat: number, lon: number): string => {
-  // Cette fonction pourrait être améliorée avec une API de géocodage inversé
-  // Mais pour l'instant, nous retournons juste une valeur par défaut
-  return "Spot de surf";
+const getNearestCityName = async (lat: number, lon: number): Promise<string> => {
+  try {
+    const response = await fetch(
+      `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&zoom=10&addressdetails=1`
+    );
+    const data = await response.json();
+    return data.display_name || 'Lieu inconnu';
+  } catch (error) {
+    console.error('Erreur lors de la récupération du nom de la ville:', error);
+    return 'Lieu inconnu';
+  }
 };
 
 export default ForecastDisplay; 

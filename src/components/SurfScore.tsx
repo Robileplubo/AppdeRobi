@@ -278,7 +278,7 @@ const SurfScore = () => {
         
         // Vérification des données de vagues
         if (!data.hourly?.wave_height || data.hourly.wave_height.length === 0 || 
-            data.hourly.wave_height.every(val => val === null || val === 0)) {
+            data.hourly.wave_height.every((val: any) => val === null || val === 0)) {
           // Ne plus afficher la popup d'attention
           // setPopupMessage("Veuillez sélectionner un point plus proche de la mer")
           // setShowPopup(true)
@@ -401,6 +401,9 @@ const SurfScore = () => {
                   {weatherData.waveHeight !== null ? `${weatherData.waveHeight.toFixed(1)}m` : '-'}
                 </div>
                 <div className="mobile-detail-label">Hauteur des vagues</div>
+                <div className="mobile-detail-points">
+                  +{scores.heightScore.toFixed(1)} pts (30%)
+                </div>
               </div>
               
               <div className="mobile-detail-item">
@@ -408,6 +411,9 @@ const SurfScore = () => {
                   {weatherData.wavePeriod !== null ? `${weatherData.wavePeriod.toFixed(1)}s` : '-'}
                 </div>
                 <div className="mobile-detail-label">Période des vagues</div>
+                <div className="mobile-detail-points">
+                  +{scores.periodScore.toFixed(1)} pts (30%)
+                </div>
               </div>
               
               <div className="mobile-detail-item">
@@ -415,20 +421,20 @@ const SurfScore = () => {
                   {weatherData.windSpeed !== null ? `${weatherData.windSpeed.toFixed(1)}km/h` : '-'}
                 </div>
                 <div className="mobile-detail-label">Force du vent</div>
+                <div className="mobile-detail-points">
+                  +{scores.windScore.toFixed(1)} pts (10%)
+                </div>
               </div>
               
               <div className="mobile-detail-item">
                 <div className="mobile-detail-value">
-                  {weatherData.airTemp !== null ? `${weatherData.airTemp.toFixed(1)}°C` : '-'}
+                  {weatherData.airTemp !== null && weatherData.waterTemp !== null ? 
+                    `${weatherData.airTemp.toFixed(1)}°C / ${weatherData.waterTemp.toFixed(1)}°C` : '-'}
                 </div>
-                <div className="mobile-detail-label">Température</div>
-              </div>
-              
-              <div className="mobile-detail-item">
-                <div className="mobile-detail-value">
-                  {weatherData.waterTemp !== null ? `${weatherData.waterTemp.toFixed(1)}°C` : '-'}
+                <div className="mobile-detail-label">Temp. air / eau</div>
+                <div className="mobile-detail-points">
+                  +{scores.temperatureScore.toFixed(1)} pts (10%)
                 </div>
-                <div className="mobile-detail-label">Température eau</div>
               </div>
               
               <div className="mobile-detail-item">
@@ -436,6 +442,19 @@ const SurfScore = () => {
                   {weatherData.wavePower !== null ? `${weatherData.wavePower.toFixed(1)}kW/m` : '-'}
                 </div>
                 <div className="mobile-detail-label">Puissance des vagues</div>
+                <div className="mobile-detail-points">
+                  +{scores.powerScore.toFixed(1)} pts (20%)
+                </div>
+              </div>
+              
+              <div className="mobile-detail-item">
+                <div className="mobile-detail-value">
+                  {scores.totalScore}
+                </div>
+                <div className="mobile-detail-label">Score total</div>
+                <div className="mobile-detail-points text-green-500 font-bold">
+                  Sur 100
+                </div>
               </div>
             </div>
           )}

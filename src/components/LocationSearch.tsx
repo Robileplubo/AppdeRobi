@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
-import { useStore } from "../store/useStore";
-import { getCityName } from "../utils/locationUtils";
+import { useState, useEffect } from 'react';
+import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet';
+import { Icon } from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import { useStore } from '../store/useStore';
 
 // Créer une icône personnalisée pour le marqueur
-const customIcon = new L.Icon({
+const customIcon = new Icon({
   iconUrl: '/graphic/beacon.png',
   iconSize: [40, 40],
   iconAnchor: [20, 40],

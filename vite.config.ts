@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 // import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
@@ -38,9 +39,14 @@ export default defineConfig({
       }
     }) */
   ],
+  base: './',
   server: {
-    port: 5173,
-    open: true,
+    host: true,
+    port: 3000,
+    strictPort: true,
+    hmr: {
+      port: 3000,
+    },
     proxy: {
       '/api': {
         target: 'https://marine-api.open-meteo.com',
@@ -51,14 +57,16 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': '/src'
-    }
+      '@': path.resolve(__dirname, './src'),
+    },
   },
   build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: true,
     target: 'esnext', // Optimisation pour les navigateurs modernes
     minify: 'terser',
     cssMinify: true,
-    sourcemap: process.env.NODE_ENV === 'development',
     rollupOptions: {
       output: {
         manualChunks: {

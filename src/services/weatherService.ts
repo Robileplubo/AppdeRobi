@@ -1,5 +1,7 @@
 import { WeatherData } from '../types/weather';
-import { prepareApiUrl } from '../utils/vercelAdapter';
+
+const WEATHER_API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+const WEATHER_API_URL = import.meta.env.VITE_WEATHER_API_URL;
 
 // URLs des API
 const MARINE_API_URL = import.meta.env.VITE_WEATHER_API_URL || 'https://marine-api.open-meteo.com/v1';
@@ -79,7 +81,7 @@ export const fetchWeatherData = async (latitude: number, longitude: number): Pro
     return combinedData;
     
   } catch (error) {
-    console.error('Error fetching weather data:', error);
+    console.error('Erreur lors de la récupération des données météo:', error);
     throw error;
   }
 }; 
