@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaf
 import { Icon } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useStore } from '../store/useStore';
+import { CityDisplay } from './CityDisplay';
 
 // Créer une icône personnalisée pour le marqueur
 const customIcon = new Icon({
@@ -79,6 +80,13 @@ const LocationSearch = () => {
       {error && (
         <div className="error-popup animate-fade-out bg-red-400 text-white px-4 py-2 rounded-lg shadow-sm text-sm">
           {error}
+        </div>
+      )}
+
+      {/* Affichage de la ville */}
+      {selectedLocation && (
+        <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20 bg-white/90 px-4 py-2 rounded-lg shadow-md">
+          <CityDisplay lat={selectedLocation.lat} lon={selectedLocation.lon} />
         </div>
       )}
 
